@@ -16,9 +16,9 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * Action builders.
+ * Actions provider.
  */
-public interface ActionBuilders {
+public interface Actions {
 
   static Executor runner(Runnable runnable) {
     return new RunnableBasedExecutor(runnable);
@@ -48,7 +48,7 @@ public interface ActionBuilders {
    * @return getter action.
    */
   static <V> Getter<V> cachedLazyGetter(Supplier<V> supplier) {
-    return new SupplierBasedGetter<>(supplier).wrap(cachedFirstTimeOnlyAction());
+    return new SupplierBasedGetter<>(supplier).wrap(cachedFirstTimeOnlyActionFactory());
   }
 
   /**
@@ -125,15 +125,15 @@ public interface ActionBuilders {
     return new ConsumerBasedHandler1<>(consumer);
   }
 
-  static <V, D1, D2, D3, D4, D5> Function<Action<V, D1, D2, D3, D4, D5>, Action<V, D1, D2, D3, D4, D5>> firstTimeOnlyAction() {
+  static <V, D1, D2, D3, D4, D5> Function<Action<V, D1, D2, D3, D4, D5>, Action<V, D1, D2, D3, D4, D5>> firstTimeOnlyActionFactory() {
     return FirstTimeOnlyAction::new;
   }
 
-  static <V, D1, D2, D3, D4, D5> Function<Action<V, D1, D2, D3, D4, D5>, Action<V, D1, D2, D3, D4, D5>> cachedFirstTimeOnlyAction() {
+  static <V, D1, D2, D3, D4, D5> Function<Action<V, D1, D2, D3, D4, D5>, Action<V, D1, D2, D3, D4, D5>> cachedFirstTimeOnlyActionFactory() {
     return CachedFirstTimeOnlyAction::new;
   }
 
-  static <V, D1, D2, D3, D4, D5> Function<Action<V, D1, D2, D3, D4, D5>, Action<V, D1, D2, D3, D4, D5>> notFirstTimeOnlyAction() {
+  static <V, D1, D2, D3, D4, D5> Function<Action<V, D1, D2, D3, D4, D5>, Action<V, D1, D2, D3, D4, D5>> notFirstTimeOnlyActionFactory() {
     return NotFirstTimeOnlyAction::new;
   }
 }

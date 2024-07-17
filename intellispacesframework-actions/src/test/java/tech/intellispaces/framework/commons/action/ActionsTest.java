@@ -13,16 +13,16 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Tests for {@link ActionBuilders}.
+ * Tests for {@link Actions}.
  */
-public class ActionBuildersTest {
+public class ActionsTest {
 
   @Test
   public void testRunner_whenRunnable() {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = ActionBuilders.runner(runnable);
+    Executor executor = Actions.runner(runnable);
 
     // When
     executor.execute();
@@ -38,7 +38,7 @@ public class ActionBuildersTest {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = ActionBuilders.runner(runnable).wrap(FirstTimeOnlyAction::new);
+    Executor executor = Actions.runner(runnable).wrap(FirstTimeOnlyAction::new);
 
     // When
     executor.execute();
@@ -54,7 +54,7 @@ public class ActionBuildersTest {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = ActionBuilders.runner(runnable).wrap(NotFirstTimeOnlyAction::new);
+    Executor executor = Actions.runner(runnable).wrap(NotFirstTimeOnlyAction::new);
 
     // When
     executor.execute();
@@ -69,7 +69,7 @@ public class ActionBuildersTest {
   public void testRunner_whenConsumer() {
     // Given
     List<Integer> values = new ArrayList<>();
-    Executor executor = ActionBuilders.runner(values::add, 1);
+    Executor executor = Actions.runner(values::add, 1);
 
     // When
     executor.execute();
@@ -84,8 +84,8 @@ public class ActionBuildersTest {
   public void testJoinedRunners() {
     // Given
     List<Integer> values = new ArrayList<>();
-    Executor executor = ActionBuilders.runner(values::add, 1)
-        .then(ActionBuilders.runner(values::add, 2));
+    Executor executor = Actions.runner(values::add, 1)
+        .then(Actions.runner(values::add, 2));
 
     // When
     executor.execute();
@@ -98,7 +98,7 @@ public class ActionBuildersTest {
 
   @Test
   public void testResettableGetter_whenNoInitValue() {
-    ResettableGetter<String> getter = ActionBuilders.resettableGetter();
+    ResettableGetter<String> getter = Actions.resettableGetter();
     assertThat(getter.get()).isNull();
 
     getter.set("value1");
@@ -110,7 +110,7 @@ public class ActionBuildersTest {
 
   @Test
   public void testResettableGetter_whenInitValue() {
-    ResettableGetter<String> getter = ActionBuilders.resettableGetter("value1");
+    ResettableGetter<String> getter = Actions.resettableGetter("value1");
     assertThat(getter.get()).isEqualTo("value1");
 
     getter.set("value2");
@@ -126,7 +126,7 @@ public class ActionBuildersTest {
     Deque<String> deque = new ArrayDeque<>(List.of("a", "b", "c"));
 
     // When
-    Getter<String> getterAction = ActionBuilders.cachedLazyGetter(deque::pollFirst);
+    Getter<String> getterAction = Actions.cachedLazyGetter(deque::pollFirst);
     String result1 = getterAction.get();
     String result2 = getterAction.get();
     String result3 = getterAction.get();
@@ -142,7 +142,7 @@ public class ActionBuildersTest {
     Deque<String> deque = new ArrayDeque<>(List.of("a", "b", "c"));
 
     // When
-    Getter<String> getterAction = ActionBuilders.cachedLazyGetter(v -> deque.pollFirst(), 1);
+    Getter<String> getterAction = Actions.cachedLazyGetter(v -> deque.pollFirst(), 1);
     String result1 = getterAction.get();
     String result2 = getterAction.get();
     String result3 = getterAction.get();
@@ -158,7 +158,7 @@ public class ActionBuildersTest {
     Deque<String> deque = new ArrayDeque<>(List.of("a", "b", "c"));
 
     // When
-    Getter<String> getterAction = ActionBuilders.cachedLazyGetter((v1, v2) -> deque.pollFirst(), 1, 2);
+    Getter<String> getterAction = Actions.cachedLazyGetter((v1, v2) -> deque.pollFirst(), 1, 2);
     String result1 = getterAction.get();
     String result2 = getterAction.get();
     String result3 = getterAction.get();
@@ -174,7 +174,7 @@ public class ActionBuildersTest {
     Deque<String> deque = new ArrayDeque<>(List.of("a", "b", "c"));
 
     // When
-    Getter<String> getterAction = ActionBuilders.cachedLazyGetter((v1, v2, v3) -> deque.pollFirst(), 1, 2, 3);
+    Getter<String> getterAction = Actions.cachedLazyGetter((v1, v2, v3) -> deque.pollFirst(), 1, 2, 3);
     String result1 = getterAction.get();
     String result2 = getterAction.get();
     String result3 = getterAction.get();
@@ -190,7 +190,7 @@ public class ActionBuildersTest {
     Deque<String> deque = new ArrayDeque<>(List.of("a", "b", "c"));
 
     // When
-    Getter<String> getterAction = ActionBuilders.cachedLazyGetter((v1, v2, v3, v4) -> deque.pollFirst(), 1, 2, 3, 4);
+    Getter<String> getterAction = Actions.cachedLazyGetter((v1, v2, v3, v4) -> deque.pollFirst(), 1, 2, 3, 4);
     String result1 = getterAction.get();
     String result2 = getterAction.get();
     String result3 = getterAction.get();
