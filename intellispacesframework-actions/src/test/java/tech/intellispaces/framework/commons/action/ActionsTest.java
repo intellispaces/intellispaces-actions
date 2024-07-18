@@ -18,11 +18,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ActionsTest {
 
   @Test
-  public void testRunner_whenRunnable() {
+  public void testExecutor_whenRunnable() {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = Actions.runner(runnable);
+    Executor executor = Actions.executor(runnable);
 
     // When
     executor.execute();
@@ -34,11 +34,11 @@ public class ActionsTest {
   }
 
   @Test
-  public void testRunner_whenRunnable_andFirstTimeOnly() {
+  public void testExecutor_whenRunnable_andFirstTimeOnly() {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = Actions.runner(runnable).wrap(FirstTimeOnlyAction::new);
+    Executor executor = Actions.executor(runnable).wrap(FirstTimeOnlyAction::new);
 
     // When
     executor.execute();
@@ -50,11 +50,11 @@ public class ActionsTest {
   }
 
   @Test
-  public void testRunner_whenRunnable_andNotFirstTimeOnly() {
+  public void testExecutor_whenRunnable_andNotFirstTimeOnly() {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = Actions.runner(runnable).wrap(NotFirstTimeOnlyAction::new);
+    Executor executor = Actions.executor(runnable).wrap(NotFirstTimeOnlyAction::new);
 
     // When
     executor.execute();
@@ -66,10 +66,10 @@ public class ActionsTest {
   }
 
   @Test
-  public void testRunner_whenConsumer() {
+  public void testExecutor_whenConsumer() {
     // Given
     List<Integer> values = new ArrayList<>();
-    Executor executor = Actions.runner(values::add, 1);
+    Executor executor = Actions.executor(values::add, 1);
 
     // When
     executor.execute();
@@ -81,11 +81,11 @@ public class ActionsTest {
   }
 
   @Test
-  public void testJoinedRunners() {
+  public void testJoinedExecutors() {
     // Given
     List<Integer> values = new ArrayList<>();
-    Executor executor = Actions.runner(values::add, 1)
-        .then(Actions.runner(values::add, 2));
+    Executor executor = Actions.executor(values::add, 1)
+        .then(Actions.executor(values::add, 2));
 
     // When
     executor.execute();

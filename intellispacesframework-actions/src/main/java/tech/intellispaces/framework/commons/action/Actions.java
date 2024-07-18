@@ -20,12 +20,12 @@ import java.util.function.Supplier;
  */
 public interface Actions {
 
-  static Executor runner(Runnable runnable) {
+  static Executor executor(Runnable runnable) {
     return new RunnableBasedExecutor(runnable);
   }
 
-  static <D> Executor runner(Consumer<D> consumer, D value) {
-    return runner(() -> consumer.accept(value));
+  static <D> Executor executor(Consumer<D> consumer, D value) {
+    return executor(() -> consumer.accept(value));
   }
 
   static <V> Getter<V> getter(V value) {
