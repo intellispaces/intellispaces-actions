@@ -3,7 +3,7 @@ package tech.intellispaces.framework.commons.action;
 import tech.intellispaces.framework.commons.action.executor.RunnableBasedExecutor;
 import tech.intellispaces.framework.commons.action.getter.ResettableGetter;
 import tech.intellispaces.framework.commons.action.getter.SupplierBasedGetter;
-import tech.intellispaces.framework.commons.action.handler.ConsumerBasedHandler1;
+import tech.intellispaces.framework.commons.action.processor.ConsumerBasedProcessor1;
 import tech.intellispaces.framework.commons.action.onetime.CachedFirstTimeOnlyAction;
 import tech.intellispaces.framework.commons.action.onetime.FirstTimeOnlyAction;
 import tech.intellispaces.framework.commons.action.onetime.NotFirstTimeOnlyAction;
@@ -121,8 +121,8 @@ public interface Actions {
     return cachedLazyGetter(() -> function.apply(arg1, arg2, arg3, arg4));
   }
 
-  static <D> Handler1<D> handler(Consumer<D> consumer) {
-    return new ConsumerBasedHandler1<>(consumer);
+  static <D> Processor1<D> processor(Consumer<D> consumer) {
+    return new ConsumerBasedProcessor1<>(consumer);
   }
 
   static <V, D1, D2, D3, D4, D5> Function<Action<V, D1, D2, D3, D4, D5>, Action<V, D1, D2, D3, D4, D5>> firstTimeOnlyActionFactory() {

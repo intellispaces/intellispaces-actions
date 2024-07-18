@@ -1,17 +1,17 @@
-package tech.intellispaces.framework.commons.action.handler;
+package tech.intellispaces.framework.commons.action.processor;
 
 import tech.intellispaces.framework.commons.action.Action;
 import tech.intellispaces.framework.commons.action.Action1;
-import tech.intellispaces.framework.commons.action.Handler1;
+import tech.intellispaces.framework.commons.action.Processor1;
 import tech.intellispaces.framework.commons.action.multi.MultiAction;
 
 import java.util.function.Function;
 
-abstract class AbstractHandler1<D> implements Handler1<D> {
+abstract class AbstractProcessor1<D> implements Processor1<D> {
 
   @Override
-  public Handler1<D> then(Action1<D, D> otherAction) {
-    return new Handler1Wrapper<>(new MultiAction<>(this, otherAction));
+  public Processor1<D> then(Action1<D, D> otherAction) {
+    return new Processor1Wrapper<>(new MultiAction<>(this, otherAction));
   }
 
   @Override
@@ -22,9 +22,9 @@ abstract class AbstractHandler1<D> implements Handler1<D> {
   }
 
   @Override
-  public Handler1<D> wrap(
+  public Processor1<D> wrap(
       Function<Action<D, D, Void, Void, Void, Void>, Action<D, D, Void, Void, Void, Void>> wrapperFactory
   ) {
-    return this.wrapAction(wrapperFactory).wrapAction(Handler1Wrapper::new);
+    return this.wrapAction(wrapperFactory).wrapAction(Processor1Wrapper::new);
   }
 }
