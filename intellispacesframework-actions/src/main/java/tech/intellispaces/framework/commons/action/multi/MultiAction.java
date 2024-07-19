@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
-public class MultiAction<V, D1, D2, D3, D4, D5> implements Action<V, D1, D2, D3, D4, D5> {
+class MultiAction<V, D1, D2, D3, D4, D5> implements Action<V, D1, D2, D3, D4, D5> {
   private final List<Action<V, D1, D2, D3, D4, D5>> actions;
 
-  public MultiAction(Action<V, D1, D2, D3, D4, D5> action1, Action<V, D1, D2, D3, D4, D5> action2) {
+  MultiAction(Action<V, D1, D2, D3, D4, D5> action1, Action<V, D1, D2, D3, D4, D5> action2) {
     this.actions = new ArrayList<>();
     this.actions.addAll(getActions(action1));
     this.actions.addAll(getActions(action2));

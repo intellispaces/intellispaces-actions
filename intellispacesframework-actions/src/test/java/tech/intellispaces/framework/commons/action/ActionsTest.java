@@ -1,9 +1,8 @@
 package tech.intellispaces.framework.commons.action;
 
 import org.junit.jupiter.api.Test;
-import tech.intellispaces.framework.commons.action.getter.ResettableGetter;
-import tech.intellispaces.framework.commons.action.onetime.FirstTimeOnlyAction;
-import tech.intellispaces.framework.commons.action.onetime.NotFirstTimeOnlyAction;
+import tech.intellispaces.framework.commons.action.onetime.FirstTimeOnlyActions;
+import tech.intellispaces.framework.commons.action.onetime.NotFirstTimeOnlyActions;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -38,7 +37,7 @@ public class ActionsTest {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = Actions.executor(runnable).wrap(FirstTimeOnlyAction::new);
+    Executor executor = Actions.executor(runnable).wrap(FirstTimeOnlyActions.factory());
 
     // When
     executor.execute();
@@ -54,7 +53,7 @@ public class ActionsTest {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = Actions.executor(runnable).wrap(NotFirstTimeOnlyAction::new);
+    Executor executor = Actions.executor(runnable).wrap(NotFirstTimeOnlyActions.factory());
 
     // When
     executor.execute();

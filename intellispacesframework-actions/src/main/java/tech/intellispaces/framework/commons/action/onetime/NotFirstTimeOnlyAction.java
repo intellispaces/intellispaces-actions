@@ -4,11 +4,11 @@ import tech.intellispaces.framework.commons.action.Action;
 
 import java.util.function.Function;
 
-public class NotFirstTimeOnlyAction<V, D1, D2, D3, D4, D5> implements Action<V, D1, D2, D3, D4, D5> {
+class NotFirstTimeOnlyAction<V, D1, D2, D3, D4, D5> implements Action<V, D1, D2, D3, D4, D5> {
   private final Action<V, D1, D2, D3, D4, D5> action;
   private boolean first = true;
 
-  public NotFirstTimeOnlyAction(Action<V, D1, D2, D3, D4, D5> action) {
+  NotFirstTimeOnlyAction(Action<V, D1, D2, D3, D4, D5> action) {
     this.action = action;
   }
 

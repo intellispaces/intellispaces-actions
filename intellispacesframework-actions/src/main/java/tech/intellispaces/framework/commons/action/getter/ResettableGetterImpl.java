@@ -1,14 +1,13 @@
 package tech.intellispaces.framework.commons.action.getter;
 
-import tech.intellispaces.framework.commons.action.SettableGetter;
+import tech.intellispaces.framework.commons.action.ResettableGetter;
 
-public class ResettableGetter<V> extends AbstractGetter<V> implements SettableGetter<V> {
+class ResettableGetterImpl<V> extends AbstractGetter<V> implements ResettableGetter<V> {
   private V value;
 
-  public ResettableGetter() {
-  }
+  ResettableGetterImpl() {}
 
-  public ResettableGetter(V value) {
+  ResettableGetterImpl(V value) {
     this.value = value;
   }
 

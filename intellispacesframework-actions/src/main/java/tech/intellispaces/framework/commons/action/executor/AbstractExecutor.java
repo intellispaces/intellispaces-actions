@@ -3,7 +3,7 @@ package tech.intellispaces.framework.commons.action.executor;
 import tech.intellispaces.framework.commons.action.Action;
 import tech.intellispaces.framework.commons.action.Action0;
 import tech.intellispaces.framework.commons.action.Executor;
-import tech.intellispaces.framework.commons.action.multi.MultiAction;
+import tech.intellispaces.framework.commons.action.multi.MultiActions;
 
 import java.util.function.Function;
 
@@ -11,7 +11,7 @@ abstract class AbstractExecutor implements Executor {
 
   @Override
   public Executor then(Action0<Void> otherAction) {
-    return new ExecutorWrapper(new MultiAction<>(this, otherAction));
+    return new ExecutorWrapper(MultiActions.of(this, otherAction));
   }
 
   @Override

@@ -3,7 +3,7 @@ package tech.intellispaces.framework.commons.action.processor;
 import tech.intellispaces.framework.commons.action.Action;
 import tech.intellispaces.framework.commons.action.Action1;
 import tech.intellispaces.framework.commons.action.Processor1;
-import tech.intellispaces.framework.commons.action.multi.MultiAction;
+import tech.intellispaces.framework.commons.action.multi.MultiActions;
 
 import java.util.function.Function;
 
@@ -11,7 +11,7 @@ abstract class AbstractProcessor1<D> implements Processor1<D> {
 
   @Override
   public Processor1<D> then(Action1<D, D> otherAction) {
-    return new Processor1Wrapper<>(new MultiAction<>(this, otherAction));
+    return new Processor1Wrapper<>(MultiActions.of(this, otherAction));
   }
 
   @Override

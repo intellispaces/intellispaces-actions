@@ -5,7 +5,7 @@ package tech.intellispaces.framework.commons.action;
  *
  * @param <T> getter result value type.
  */
-public interface SettableGetter<T> extends Getter<T> {
+public interface ResettableGetter<T> extends Getter<T> {
 
   void set(T value);
 }

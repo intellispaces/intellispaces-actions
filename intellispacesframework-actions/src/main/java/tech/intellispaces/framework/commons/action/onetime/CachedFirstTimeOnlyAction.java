@@ -4,12 +4,12 @@ import tech.intellispaces.framework.commons.action.Action;
 
 import java.util.function.Function;
 
-public class CachedFirstTimeOnlyAction<V, D1, D2, D3, D4, D5> implements Action<V, D1, D2, D3, D4, D5> {
+class CachedFirstTimeOnlyAction<V, D1, D2, D3, D4, D5> implements Action<V, D1, D2, D3, D4, D5> {
   private final Action<V, D1, D2, D3, D4, D5> action;
   private boolean first = true;
   private V cachedValue = null;
 
-  public CachedFirstTimeOnlyAction(Action<V, D1, D2, D3, D4, D5> action) {
+  CachedFirstTimeOnlyAction(Action<V, D1, D2, D3, D4, D5> action) {
     this.action = action;
   }
 
