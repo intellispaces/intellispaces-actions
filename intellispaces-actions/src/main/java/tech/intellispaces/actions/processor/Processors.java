@@ -1,7 +1,5 @@
 package tech.intellispaces.actions.processor;
 
-import tech.intellispaces.actions.Processor1;
-
 import java.util.function.Consumer;
 
 public interface Processors {

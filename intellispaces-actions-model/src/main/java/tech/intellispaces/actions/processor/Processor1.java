@@ -1,4 +1,7 @@
-package tech.intellispaces.actions;
+package tech.intellispaces.actions.processor;
+
+import tech.intellispaces.actions.Action1;
+import tech.intellispaces.actions.Action5;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -28,11 +31,26 @@ public interface Processor1<D> extends Action1<D, D>, Consumer<D> {
   }
 
   @Override
+  default D execute(D data1, Void data2) {
+    return execute(data1);
+  }
+
+  @Override
+  default D execute(D data1, Void data2, Void data3) {
+    return execute(data1);
+  }
+
+  @Override
+  default D execute(D data1, Void data2, Void data3, Void data4) {
+    return execute(data1);
+  }
+
+  @Override
   default void accept(D value) {
     process(value);
   }
 
   Processor1<D> wrap(
-      Function<Action<D, D, Void, Void, Void, Void>, Action<D, D, Void, Void, Void, Void>> wrapperFactory
+      Function<Action5<D, D, Void, Void, Void, Void>, Action5<D, D, Void, Void, Void, Void>> wrapperFactory
   );
 }

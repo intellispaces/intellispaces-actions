@@ -1,12 +1,11 @@
 package tech.intellispaces.actions.executor;
 
-import tech.intellispaces.actions.Action;
-import tech.intellispaces.actions.Executor;
+import tech.intellispaces.actions.Action5;
 
 class ExecutorWrapper extends AbstractExecutor implements Executor {
-  private final Action<Void, Void, Void, Void, Void, Void> action;
+  private final Action5<Void, Void, Void, Void, Void, Void> action;
 
-  ExecutorWrapper(Action<Void, Void, Void, Void, Void, Void> action) {
+  ExecutorWrapper(Action5<Void, Void, Void, Void, Void, Void> action) {
     this.action = action;
   }
 

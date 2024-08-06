@@ -1,11 +1,11 @@
 package tech.intellispaces.actions.processor;
 
-import tech.intellispaces.actions.Action;
+import tech.intellispaces.actions.Action5;
 
 class Processor1Wrapper<D> extends AbstractProcessor1<D> {
-  private final Action<D, D, Void, Void, Void, Void> action;
+  private final Action5<D, D, Void, Void, Void, Void> action;
 
-  Processor1Wrapper(Action<D, D, Void, Void, Void, Void> action) {
+  Processor1Wrapper(Action5<D, D, Void, Void, Void, Void> action) {
     this.action = action;
   }
 

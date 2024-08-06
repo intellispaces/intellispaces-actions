@@ -1,7 +1,6 @@
 package tech.intellispaces.actions.getter;
 
 import tech.intellispaces.actions.onetime.CachedFirstTimeOnlyActions;
-import tech.intellispaces.actions.Getter;
 import tech.intellispaces.commons.function.QuadFunction;
 import tech.intellispaces.commons.function.TriFunction;
 

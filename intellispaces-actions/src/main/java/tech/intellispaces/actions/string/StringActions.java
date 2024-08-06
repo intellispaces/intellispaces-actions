@@ -1,7 +1,7 @@
 package tech.intellispaces.actions.string;
 
 import tech.intellispaces.actions.Actions;
-import tech.intellispaces.actions.Executor;
+import tech.intellispaces.actions.executor.Executor;
 
 import java.util.Objects;
 

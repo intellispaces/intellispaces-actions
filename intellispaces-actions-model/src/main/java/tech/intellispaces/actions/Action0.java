@@ -1,14 +1,17 @@
 package tech.intellispaces.actions;
 
-public interface Action0<V> extends Action<V, Void, Void, Void, Void, Void> {
-
+public interface Action0<R> extends
+  Action,
+  Action1<R, Void>,
+  Action5<R, Void, Void, Void, Void, Void>
+{
   /**
    * Executes action.
    */
-  V execute();
+  R execute();
 
   @Override
-  default V execute(Void data1, Void data2, Void data3, Void data4, Void data5) {
+  default R execute(Void data1, Void data2, Void data3, Void data4, Void data5) {
     return execute();
   }
 }

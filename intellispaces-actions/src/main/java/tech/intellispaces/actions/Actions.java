@@ -1,11 +1,15 @@
 package tech.intellispaces.actions;
 
+import tech.intellispaces.actions.executor.Executor;
 import tech.intellispaces.actions.executor.Executors;
+import tech.intellispaces.actions.getter.Getter;
 import tech.intellispaces.actions.getter.Getters;
+import tech.intellispaces.actions.getter.ResettableGetter;
 import tech.intellispaces.actions.getter.ResettableGetters;
 import tech.intellispaces.actions.onetime.CachedFirstTimeOnlyActions;
 import tech.intellispaces.actions.onetime.FirstTimeOnlyActions;
 import tech.intellispaces.actions.onetime.NotFirstTimeOnlyActions;
+import tech.intellispaces.actions.processor.Processor1;
 import tech.intellispaces.actions.processor.Processors;
 import tech.intellispaces.commons.function.QuadFunction;
 import tech.intellispaces.commons.function.TriFunction;
@@ -125,15 +129,15 @@ public interface Actions {
     return Processors.of(consumer);
   }
 
-  static <V, D1, D2, D3, D4, D5> Function<Action<V, D1, D2, D3, D4, D5>, Action<V, D1, D2, D3, D4, D5>> firstTimeOnlyActionFactory() {
+  static <V, D1, D2, D3, D4, D5> Function<Action5<V, D1, D2, D3, D4, D5>, Action5<V, D1, D2, D3, D4, D5>> firstTimeOnlyActionFactory() {
     return FirstTimeOnlyActions.factory();
   }
 
-  static <V, D1, D2, D3, D4, D5> Function<Action<V, D1, D2, D3, D4, D5>, Action<V, D1, D2, D3, D4, D5>> cachedFirstTimeOnlyActionFactory() {
+  static <V, D1, D2, D3, D4, D5> Function<Action5<V, D1, D2, D3, D4, D5>, Action5<V, D1, D2, D3, D4, D5>> cachedFirstTimeOnlyActionFactory() {
     return CachedFirstTimeOnlyActions.factory();
   }
 
-  static <V, D1, D2, D3, D4, D5> Function<Action<V, D1, D2, D3, D4, D5>, Action<V, D1, D2, D3, D4, D5>> notFirstTimeOnlyActionFactory() {
+  static <V, D1, D2, D3, D4, D5> Function<Action5<V, D1, D2, D3, D4, D5>, Action5<V, D1, D2, D3, D4, D5>> notFirstTimeOnlyActionFactory() {
     return NotFirstTimeOnlyActions.factory();
   }
 }

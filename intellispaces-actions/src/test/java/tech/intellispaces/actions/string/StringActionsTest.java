@@ -1,7 +1,7 @@
 package tech.intellispaces.actions.string;
 
 import org.junit.jupiter.api.Test;
-import tech.intellispaces.actions.Executor;
+import tech.intellispaces.actions.executor.Executor;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

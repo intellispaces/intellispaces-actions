@@ -1,14 +1,14 @@
 package tech.intellispaces.actions.onetime;
 
-import tech.intellispaces.actions.Action;
+import tech.intellispaces.actions.Action5;
 
 import java.util.function.Function;
 
-class FirstTimeOnlyAction<V, D1, D2, D3, D4, D5> implements Action<V, D1, D2, D3, D4, D5> {
-  private final Action<V, D1, D2, D3, D4, D5> action;
+class FirstTimeOnlyAction<V, D1, D2, D3, D4, D5> implements Action5<V, D1, D2, D3, D4, D5> {
+  private final Action5<V, D1, D2, D3, D4, D5> action;
   private boolean first = true;
 
-  FirstTimeOnlyAction(Action<V, D1, D2, D3, D4, D5> action) {
+  FirstTimeOnlyAction(Action5<V, D1, D2, D3, D4, D5> action) {
     this.action = action;
   }
 
@@ -23,8 +23,8 @@ class FirstTimeOnlyAction<V, D1, D2, D3, D4, D5> implements Action<V, D1, D2, D3
   }
 
   @Override
-  public <A extends Action<_V, _D1, _D2, _D3, _D4, _D5>, _V, _D1, _D2, _D3, _D4, _D5> A wrapAction(
-      Function<Action<V, D1, D2, D3, D4, D5>, A> wrapperFactory
+  public <A extends Action5<_V, _D1, _D2, _D3, _D4, _D5>, _V, _D1, _D2, _D3, _D4, _D5> A wrapAction(
+      Function<Action5<V, D1, D2, D3, D4, D5>, A> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
   }

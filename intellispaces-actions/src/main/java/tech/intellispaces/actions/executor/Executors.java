@@ -1,7 +1,5 @@
 package tech.intellispaces.actions.executor;
 
-import tech.intellispaces.actions.Executor;
-
 import java.util.function.Consumer;
 
 public interface Executors {
