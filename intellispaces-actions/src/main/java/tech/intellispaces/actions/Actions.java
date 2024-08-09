@@ -25,12 +25,20 @@ import java.util.function.Supplier;
  */
 public interface Actions {
 
+  static <R> Action0<R> get(Supplier<R> supplier) {
+    return FunctionalActions.get(supplier);
+  }
+
   static <R, D> Action1<R, D> get(Function<D, R> function) {
     return FunctionalActions.get(function);
   }
 
   static <R, D1, D2> Action2<R, D1, D2> get(BiFunction<D1, D2, R> function) {
     return FunctionalActions.get(function);
+  }
+
+  static <R> Action0<R> get(Supplier<R> supplier, Class<R> resultClass) {
+    return FunctionalActions.get(supplier);
   }
 
   static <R, D> Action1<R, D> get(Function<D, R> function, Class<R> resultClass, Class<D> dataClass) {
