@@ -1,4 +1,4 @@
-package tech.intellispaces.actions.string;
+package tech.intellispaces.actions.common.string;
 
 import org.junit.jupiter.api.Test;
 import tech.intellispaces.actions.executor.Executor;

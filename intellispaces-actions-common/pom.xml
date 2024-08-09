@@ -7,7 +7,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>intellispaces-actions</artifactId>
+    <artifactId>intellispaces-actions-common</artifactId>
     <packaging>jar</packaging>
 	
     <build>
@@ -31,17 +31,8 @@
         <!-- Intellispaces -->
         <dependency>
             <groupId>intellispaces</groupId>
-            <artifactId>intellispaces-actions-model</artifactId>
-        </dependency>
-
-        <!-- Logging -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
+            <artifactId>intellispaces-actions</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <!-- Testing -->

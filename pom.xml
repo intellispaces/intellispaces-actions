@@ -13,6 +13,7 @@
 	<modules>
         <module>intellispaces-actions-model</module>
 	    <module>intellispaces-actions</module>
+        <module>intellispaces-actions-common</module>
 	</modules>
 
     <dependencies>
@@ -25,6 +26,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- Intellispaces -->
             <dependency>
                 <groupId>intellispaces</groupId>
                 <artifactId>intellispaces-actions-model</artifactId>

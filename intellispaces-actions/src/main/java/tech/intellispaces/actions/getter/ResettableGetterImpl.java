@@ -1,21 +1,21 @@
 package tech.intellispaces.actions.getter;
 
-class ResettableGetterImpl<V> extends AbstractGetter<V> implements ResettableGetter<V> {
-  private V value;
+class ResettableGetterImpl<R> extends AbstractGetter<R> implements ResettableGetter<R> {
+  private R value;
 
   ResettableGetterImpl() {}
 
-  ResettableGetterImpl(V value) {
+  ResettableGetterImpl(R value) {
     this.value = value;
   }
 
   @Override
-  public V get() {
+  public R get() {
     return value;
   }
 
   @Override
-  public void set(V value) {
+  public void set(R value) {
     this.value = value;
   }
 }

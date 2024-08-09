@@ -1,22 +1,16 @@
 package tech.intellispaces.actions.getter;
 
+import tech.intellispaces.actions.AbstractAction0;
 import tech.intellispaces.actions.Action5;
 
 import java.util.function.Function;
 
-abstract class AbstractGetter<V> implements Getter<V> {
+abstract class AbstractGetter<R> extends AbstractAction0<R> implements Getter<R> {
 
   @Override
-  public <A extends Action5<_V, _D1, _D2, _D3, _D4, _D5>, _V, _D1, _D2, _D3, _D4, _D5> A wrapAction(
-      Function<Action5<V, Void, Void, Void, Void, Void>, A> wrapperFactory
+  public Getter<R> wrap(
+      Function<Action5<R, Void, Void, Void, Void, Void>, Action5<R, Void, Void, Void, Void, Void>> wrapperFactory
   ) {
-    return wrapperFactory.apply(this);
-  }
-
-  @Override
-  public Getter<V> wrap(
-      Function<Action5<V, Void, Void, Void, Void, Void>, Action5<V, Void, Void, Void, Void, Void>> wrapperFactory
-  ) {
-    return wrapperFactory.apply(this).wrapAction(GetterWrapper::new);
+    return wrapperFactory.apply(this).wrapAction5(GetterWrapper::new);
   }
 }

@@ -2,11 +2,11 @@ package tech.intellispaces.actions.getter;
 
 public interface ResettableGetters {
 
-  static <V> ResettableGetterImpl<V> get() {
+  static <R> ResettableGetter<R> get() {
     return new ResettableGetterImpl<>();
   }
 
-  static <V> ResettableGetterImpl<V> get(V initValue) {
+  static <R> ResettableGetter<R> get(R initValue) {
     return new ResettableGetterImpl<>(initValue);
   }
 }

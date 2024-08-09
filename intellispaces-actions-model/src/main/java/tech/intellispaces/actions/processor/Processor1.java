@@ -31,21 +31,6 @@ public interface Processor1<D> extends Action1<D, D>, Consumer<D> {
   }
 
   @Override
-  default D execute(D data1, Void data2) {
-    return execute(data1);
-  }
-
-  @Override
-  default D execute(D data1, Void data2, Void data3) {
-    return execute(data1);
-  }
-
-  @Override
-  default D execute(D data1, Void data2, Void data3, Void data4) {
-    return execute(data1);
-  }
-
-  @Override
   default void accept(D value) {
     process(value);
   }

@@ -2,6 +2,7 @@ package tech.intellispaces.actions;
 
 import tech.intellispaces.actions.executor.Executor;
 import tech.intellispaces.actions.executor.Executors;
+import tech.intellispaces.actions.functional.FunctionalActions;
 import tech.intellispaces.actions.getter.Getter;
 import tech.intellispaces.actions.getter.Getters;
 import tech.intellispaces.actions.getter.ResettableGetter;
@@ -24,6 +25,24 @@ import java.util.function.Supplier;
  */
 public interface Actions {
 
+  static <R, D> Action1<R, D> get(Function<D, R> function) {
+    return FunctionalActions.get(function);
+  }
+
+  static <R, D1, D2> Action2<R, D1, D2> get(BiFunction<D1, D2, R> function) {
+    return FunctionalActions.get(function);
+  }
+
+  static <R, D> Action1<R, D> get(Function<D, R> function, Class<R> resultClass, Class<D> dataClass) {
+    return FunctionalActions.get(function);
+  }
+
+  static <R, D1, D2> Action2<R, D1, D2> get(
+      BiFunction<D1, D2, R> function, Class<R> resultClass, Class<D1> dataClass1, Class<D2> dataClass2
+  ) {
+    return FunctionalActions.get(function);
+  }
+
   static Executor executor(Runnable runnable) {
     return Executors.of(runnable);
   }
@@ -32,15 +51,15 @@ public interface Actions {
     return Executors.of(consumer, value);
   }
 
-  static <V> Getter<V> getter(V value) {
+  static <R> Getter<R> getter(R value) {
     return Getters.of(value);
   }
 
-  static <V> ResettableGetter<V> resettableGetter() {
+  static <R> ResettableGetter<R> resettableGetter() {
     return ResettableGetters.get();
   }
 
-  static <V> ResettableGetter<V> resettableGetter(V initValue) {
+  static <R> ResettableGetter<R> resettableGetter(R initValue) {
     return ResettableGetters.get(initValue);
   }
 
@@ -48,10 +67,10 @@ public interface Actions {
    * Builds getter action on base given supplier.
    *
    * @param supplier value supplier
-   * @param <V> getter result value type.
+   * @param <R> getter result value type.
    * @return getter action.
    */
-  static <V> Getter<V> cachedLazyGetter(Supplier<V> supplier) {
+  static <R> Getter<R> cachedLazyGetter(Supplier<R> supplier) {
     return Getters.cachedLazy(supplier);
   }
 
@@ -60,11 +79,11 @@ public interface Actions {
    *
    * @param function calculating function.
    * @param arg function argument.
-   * @param <V> getter result value type.
+   * @param <R> getter result value type.
    * @param <D> type of the function argument.
    * @return getter action.
    */
-  static <V, D> Getter<V> cachedLazyGetter(Function<D, V> function, D arg) {
+  static <R, D> Getter<R> cachedLazyGetter(Function<D, R> function, D arg) {
     return Getters.cachedLazy(function, arg);
   }
 
@@ -74,13 +93,13 @@ public interface Actions {
    * @param function calculating function.
    * @param arg1 first function argument.
    * @param arg2 second function argument.
-   * @param <V> getter result value type.
+   * @param <R> getter result value type.
    * @param <D1> type of the first function argument.
    * @param <D2> type of the second function argument.
    * @return getter action.
    */
-  static <V, D1, D2> Getter<V> cachedLazyGetter(
-      BiFunction<D1, D2, V> function, D1 arg1, D2 arg2
+  static <R, D1, D2> Getter<R> cachedLazyGetter(
+      BiFunction<D1, D2, R> function, D1 arg1, D2 arg2
   ) {
     return Getters.cachedLazy(function, arg1, arg2);
   }
@@ -92,14 +111,14 @@ public interface Actions {
    * @param arg1 first function argument.
    * @param arg2 second function argument.
    * @param arg3 third function argument.
-   * @param <V> getter result value type.
+   * @param <R> getter result value type.
    * @param <D1> type of the first function argument.
    * @param <D2> type of the second function argument.
    * @param <D3> type of the third function argument.
    * @return getter action.
    */
-  static <V, D1, D2, D3> Getter<V> cachedLazyGetter(
-      TriFunction<D1, D2, D3, V> function, D1 arg1, D2 arg2, D3 arg3
+  static <R, D1, D2, D3> Getter<R> cachedLazyGetter(
+      TriFunction<D1, D2, D3, R> function, D1 arg1, D2 arg2, D3 arg3
   ) {
     return Getters.cachedLazy(function, arg1, arg2, arg3);
   }
@@ -112,32 +131,32 @@ public interface Actions {
    * @param arg2 second function argument.
    * @param arg3 third function argument.
    * @param arg4 fourth source value.
-   * @param <V> getter result value type.
+   * @param <R> getter result value type.
    * @param <D1> type of the first function argument.
    * @param <D2> type of the second function argument.
    * @param <D3> type of the third function argument.
    * @param <D4> type of the fourth function argument.
    * @return getter action.
    */
-  static <V, D1, D2, D3, D4> Getter<V> cachedLazyGetter(
-      QuadFunction<D1, D2, D3, D4, V> function, D1 arg1, D2 arg2, D3 arg3, D4 arg4
+  static <R, D1, D2, D3, D4> Getter<R> cachedLazyGetter(
+      QuadFunction<D1, D2, D3, D4, R> function, D1 arg1, D2 arg2, D3 arg3, D4 arg4
   ) {
     return Getters.cachedLazy(function, arg1, arg2, arg3, arg4);
   }
 
-  static <D> Processor1<D> processor(Consumer<D> consumer) {
+  static <R> Processor1<R> processor(Consumer<R> consumer) {
     return Processors.of(consumer);
   }
 
-  static <V, D1, D2, D3, D4, D5> Function<Action5<V, D1, D2, D3, D4, D5>, Action5<V, D1, D2, D3, D4, D5>> firstTimeOnlyActionFactory() {
-    return FirstTimeOnlyActions.factory();
+  static <R, D1, D2, D3, D4, D5> Function<Action5<R, D1, D2, D3, D4, D5>, Action5<R, D1, D2, D3, D4, D5>> firstTimeOnlyActionFactory5() {
+    return FirstTimeOnlyActions.factory5();
   }
 
-  static <V, D1, D2, D3, D4, D5> Function<Action5<V, D1, D2, D3, D4, D5>, Action5<V, D1, D2, D3, D4, D5>> cachedFirstTimeOnlyActionFactory() {
-    return CachedFirstTimeOnlyActions.factory();
+  static <R, D1, D2, D3, D4, D5> Function<Action5<R, D1, D2, D3, D4, D5>, Action5<R, D1, D2, D3, D4, D5>> cachedFirstTimeOnlyActionFactory5() {
+    return CachedFirstTimeOnlyActions.factory5();
   }
 
-  static <V, D1, D2, D3, D4, D5> Function<Action5<V, D1, D2, D3, D4, D5>, Action5<V, D1, D2, D3, D4, D5>> notFirstTimeOnlyActionFactory() {
-    return NotFirstTimeOnlyActions.factory();
+  static <R, D1, D2, D3, D4, D5> Function<Action5<R, D1, D2, D3, D4, D5>, Action5<R, D1, D2, D3, D4, D5>> notFirstTimeOnlyActionFactory5() {
+    return NotFirstTimeOnlyActions.factory5();
   }
 }

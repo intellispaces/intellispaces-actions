@@ -1,12 +1,13 @@
 package tech.intellispaces.actions.processor;
 
-import tech.intellispaces.actions.Action5;
+import tech.intellispaces.actions.AbstractAction1;
 import tech.intellispaces.actions.Action1;
+import tech.intellispaces.actions.Action5;
 import tech.intellispaces.actions.multi.MultiActions;
 
 import java.util.function.Function;
 
-abstract class AbstractProcessor1<D> implements Processor1<D> {
+abstract class AbstractProcessor1<D> extends AbstractAction1<D, D> implements Processor1<D> {
 
   @Override
   public Processor1<D> then(Action1<D, D> otherAction) {
@@ -14,16 +15,9 @@ abstract class AbstractProcessor1<D> implements Processor1<D> {
   }
 
   @Override
-  public <A extends Action5<_V, _D1, _D2, _D3, _D4, _D5>, _V, _D1, _D2, _D3, _D4, _D5> A wrapAction(
-      Function<Action5<D, D, Void, Void, Void, Void>, A> wrapperFactory
-  ) {
-    return wrapperFactory.apply(this);
-  }
-
-  @Override
   public Processor1<D> wrap(
       Function<Action5<D, D, Void, Void, Void, Void>, Action5<D, D, Void, Void, Void, Void>> wrapperFactory
   ) {
-    return this.wrapAction(wrapperFactory).wrapAction(Processor1Wrapper::new);
+    return this.wrapAction5(wrapperFactory).wrapAction5(Processor1Wrapper::new);
   }
 }

@@ -1,5 +1,7 @@
 package tech.intellispaces.actions;
 
+import java.util.function.Function;
+
 public interface Action0<R> extends
   Action,
   Action1<R, Void>,
@@ -10,8 +12,5 @@ public interface Action0<R> extends
    */
   R execute();
 
-  @Override
-  default R execute(Void data1, Void data2, Void data3, Void data4, Void data5) {
-    return execute();
-  }
+  <A extends Action0<_R>, _R> A wrapAction0(Function<Action0<R>, A> wrapperFactory);
 }

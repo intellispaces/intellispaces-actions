@@ -40,7 +40,7 @@ public class ActionsTest {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = Actions.executor(runnable).wrap(FirstTimeOnlyActions.factory());
+    Executor executor = Actions.executor(runnable).wrap(FirstTimeOnlyActions.factory5());
 
     // When
     executor.execute();
@@ -56,7 +56,7 @@ public class ActionsTest {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = Actions.executor(runnable).wrap(NotFirstTimeOnlyActions.factory());
+    Executor executor = Actions.executor(runnable).wrap(NotFirstTimeOnlyActions.factory5());
 
     // When
     executor.execute();

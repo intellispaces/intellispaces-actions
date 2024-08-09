@@ -2,15 +2,15 @@ package tech.intellispaces.actions.getter;
 
 import java.util.function.Supplier;
 
-class SupplierBasedGetter<V> extends AbstractGetter<V> implements Getter<V> {
-  private final Supplier<V> supplier;
+class SupplierBasedGetter<R> extends AbstractGetter<R> implements Getter<R> {
+  private final Supplier<R> supplier;
 
-  SupplierBasedGetter(Supplier<V> supplier) {
+  SupplierBasedGetter(Supplier<R> supplier) {
     this.supplier = supplier;
   }
 
   @Override
-  public V get() {
+  public R get() {
     return supplier.get();
   }
 }
