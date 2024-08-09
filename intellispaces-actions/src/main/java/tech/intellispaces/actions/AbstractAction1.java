@@ -27,6 +27,15 @@ public abstract class AbstractAction1<R, D> implements Action1<R, D> {
   }
 
   @Override
+  @SuppressWarnings("unchecked")
+  public R execute(Object... data) {
+    if (data == null || data.length != 1) {
+      throw UnexpectedViolationException.withMessage("Action1 expects one input data parameter");
+    }
+    return execute((D) data[0]);
+  }
+
+  @Override
   public <$R> Action0<$R> asAction0() {
     throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
         "Action1 can not be casted to Action0");

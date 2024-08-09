@@ -12,6 +12,15 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
   }
 
   @Override
+  @SuppressWarnings("unchecked")
+  public R execute(Object... data) {
+    if (data == null || data.length != 4) {
+      throw UnexpectedViolationException.withMessage("Action2 expects four input data parameters");
+    }
+    return execute((D1) data[0], (D2) data[1], (D3) data[2], (D4) data[3]);
+  }
+
+  @Override
   public <$R> Action0<$R> asAction0() {
     throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
         "Action4 can not be casted to Action0");

@@ -22,6 +22,15 @@ public abstract class AbstractAction2<R, D1, D2> implements Action2<R, D1, D2> {
   }
 
   @Override
+  @SuppressWarnings("unchecked")
+  public R execute(Object... data) {
+    if (data == null || data.length != 2) {
+      throw UnexpectedViolationException.withMessage("Action2 expects two input data parameters");
+    }
+    return execute((D1) data[0], (D2) data[1]);
+  }
+
+  @Override
   public <$R> Action0<$R> asAction0() {
     throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
         "Action2 can not be casted to Action0");

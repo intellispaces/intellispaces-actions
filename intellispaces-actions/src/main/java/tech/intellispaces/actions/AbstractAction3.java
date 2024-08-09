@@ -17,6 +17,15 @@ public abstract class AbstractAction3<R, D1, D2, D3> implements Action3<R, D1, D
   }
 
   @Override
+  @SuppressWarnings("unchecked")
+  public R execute(Object... data) {
+    if (data == null || data.length != 3) {
+      throw UnexpectedViolationException.withMessage("Action2 expects three input data parameters");
+    }
+    return execute((D1) data[0], (D2) data[1], (D3) data[2]);
+  }
+
+  @Override
   public <$R> Action0<$R> asAction0() {
     throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
         "Action3 can not be casted to Action0");

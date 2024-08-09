@@ -1,13 +1,15 @@
 package tech.intellispaces.actions;
 
 /**
- * Action.<p/>
+ * General action.<p/>
  *
  * Action is any activity that can be executed.<p/>
  *
  * The action is an object. Each action object has method named 'execute' to perform activity.<p/>
  */
 public interface Action {
+
+  Object execute(Object... data);
 
   <$R> Action0<$R> asAction0();
 

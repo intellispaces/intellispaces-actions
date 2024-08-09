@@ -12,5 +12,8 @@ public interface Action0<R> extends
    */
   R execute();
 
+  @Override
+  R execute(Object... data);
+
   <A extends Action0<_R>, _R> A wrapAction0(Function<Action0<R>, A> wrapperFactory);
 }

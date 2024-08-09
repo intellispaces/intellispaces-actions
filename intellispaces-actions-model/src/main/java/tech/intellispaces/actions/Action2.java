@@ -12,6 +12,9 @@ public interface Action2<R, D1, D2> extends
    */
   R execute(D1 data1, D2 data2);
 
+  @Override
+  R execute(Object... data);
+
   <A extends Action2<_R, _D1, _D2>, _R, _D1, _D2> A wrapAction2(
       Function<Action2<R, D1, D2>, A> wrapperFactory
   );
