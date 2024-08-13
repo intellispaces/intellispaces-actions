@@ -25,6 +25,10 @@ import java.util.function.Supplier;
  */
 public interface Actions {
 
+  static Action0<Void> get(Runnable runnable) {
+    return executor(runnable);
+  }
+
   static <R> Action0<R> get(Supplier<R> supplier) {
     return FunctionalActions.get(supplier);
   }
