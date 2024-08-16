@@ -12,7 +12,8 @@ public final class StringActions {
   }
 
   public static Processor1<StringBuilder> skippingFirstTimeCommaAppender() {
-    return new SeparatorAppender(COMMA_SEPARATOR).wrapAction1AsProcessor(SkippingInterceptors.skippingFirstTimeInterceptorFactory1());
+    return new SeparatorAppender(COMMA_SEPARATOR)
+        .wrapAction1AsProcessor(SkippingInterceptors.skippingFirstTimeInterceptorFactory1());
   }
 
   private static final String COMMA_SEPARATOR = ", ";

@@ -7,14 +7,14 @@ import tech.intellispaces.actions.Action;
  * Abstract general interceptor.
  */
 public abstract class AbstractWrapper extends AbstractAction implements Wrapper {
-  private final Action interceptedAction;
+  private final Action wrappedAction;
 
-  public AbstractWrapper(Action interceptedAction) {
-    this.interceptedAction = interceptedAction;
+  public AbstractWrapper(Action action) {
+    this.wrappedAction = action;
   }
 
   @Override
   public Action wrappedAction() {
-    return interceptedAction;
+    return wrappedAction;
   }
 }
