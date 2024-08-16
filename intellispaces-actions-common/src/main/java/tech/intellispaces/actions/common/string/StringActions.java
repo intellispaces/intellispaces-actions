@@ -7,11 +7,11 @@ public final class StringActions {
 
   private StringActions() {}
 
-  static Processor1<StringBuilder> commaAppender() {
+  public static Processor1<StringBuilder> commaAppender() {
     return new SeparatorAppender(COMMA_SEPARATOR);
   }
 
-  static Processor1<StringBuilder> skippingFirstTimeCommaAppender() {
+  public static Processor1<StringBuilder> skippingFirstTimeCommaAppender() {
     return new SeparatorAppender(COMMA_SEPARATOR).wrapAction1AsProcessor(SkippingInterceptors.skippingFirstTimeInterceptorFactory1());
   }
 
