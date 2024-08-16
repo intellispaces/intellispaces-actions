@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 import tech.intellispaces.actions.executor.Executor;
 import tech.intellispaces.actions.getter.Getter;
 import tech.intellispaces.actions.getter.ResettableGetter;
-import tech.intellispaces.actions.onetime.FirstTimeOnlyActions;
-import tech.intellispaces.actions.onetime.NotFirstTimeOnlyActions;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -33,38 +31,6 @@ public class ActionsTest {
 
     // Then
     assertThat(values).containsExactly(1, 2, 3);
-  }
-
-  @Test
-  public void testExecutor_whenRunnable_andFirstTimeOnly() {
-    // Given
-    List<Integer> values = new ArrayList<>();
-    Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = Actions.executor(runnable).wrap(FirstTimeOnlyActions.factory5());
-
-    // When
-    executor.execute();
-    executor.execute();
-    executor.execute();
-
-    // Then
-    assertThat(values).containsExactly(1);
-  }
-
-  @Test
-  public void testExecutor_whenRunnable_andNotFirstTimeOnly() {
-    // Given
-    List<Integer> values = new ArrayList<>();
-    Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = Actions.executor(runnable).wrap(NotFirstTimeOnlyActions.factory5());
-
-    // When
-    executor.execute();
-    executor.execute();
-    executor.execute();
-
-    // Then
-    assertThat(values).containsExactly(1, 2);
   }
 
   @Test

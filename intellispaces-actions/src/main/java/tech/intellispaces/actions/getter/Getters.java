@@ -1,6 +1,6 @@
 package tech.intellispaces.actions.getter;
 
-import tech.intellispaces.actions.onetime.CachedFirstTimeOnlyActions;
+import tech.intellispaces.actions.interceptor.onetime.OneTimeInterceptors;
 import tech.intellispaces.commons.function.QuadFunction;
 import tech.intellispaces.commons.function.TriFunction;
 
@@ -23,7 +23,7 @@ public interface Getters {
    */
   static <R> Getter<R> cachedLazy(Supplier<R> supplier) {
     return new SupplierBasedGetter<>(supplier)
-        .wrap(CachedFirstTimeOnlyActions.factory5());
+        .wrapAction0AsGetter(OneTimeInterceptors.cachedFirstTimeInterceptorFactory0());
   }
 
   /**

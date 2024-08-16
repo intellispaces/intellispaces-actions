@@ -5,6 +5,7 @@ import tech.intellispaces.actions.Action1;
 import tech.intellispaces.actions.Action2;
 
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -12,6 +13,10 @@ public interface FunctionalActions {
 
   static <R> Action0<R> get(Supplier<R> supplier) {
     return new FunctionalAction0<>(supplier);
+  }
+
+  static <D> Action1<Void, D> get(Consumer<D> consumer) {
+    return new ConsumerAction<>(consumer);
   }
 
   static <R, D> Action1<R, D> get(Function<D, R> function) {

@@ -1,10 +1,19 @@
 package tech.intellispaces.actions;
 
+import tech.intellispaces.actions.wrapper.Wrapper0;
+
 import java.util.function.Function;
 
+/**
+ * Case of the action without processed data.
+ *
+ * @param <R> action return type.
+ */
 public interface Action0<R> extends
-  Action,
   Action1<R, Void>,
+  Action2<R, Void, Void>,
+  Action3<R, Void, Void, Void>,
+  Action4<R, Void, Void, Void, Void>,
   Action5<R, Void, Void, Void, Void, Void>
 {
   /**
@@ -12,8 +21,5 @@ public interface Action0<R> extends
    */
   R execute();
 
-  @Override
-  R execute(Object... data);
-
-  <A extends Action0<_R>, _R> A wrapAction0(Function<Action0<R>, A> wrapperFactory);
+  <W extends Wrapper0<_R>, _R> W wrapAction0(Function<Action0<R>, W> wrapperFactory);
 }

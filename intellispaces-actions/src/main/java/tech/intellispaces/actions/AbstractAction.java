@@ -1,6 +1,9 @@
 package tech.intellispaces.actions;
 
+import tech.intellispaces.actions.wrapper.Wrapper;
 import tech.intellispaces.commons.exception.UnexpectedViolationException;
+
+import java.util.function.Function;
 
 /**
  * Abstract general action.
@@ -42,5 +45,10 @@ public abstract class AbstractAction implements Action {
   public <$R, $D1, $D2, $D3, $D4, $D5> Action5<$R, $D1, $D2, $D3, $D4, $D5> asAction5() {
     throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
         "General action can not be casted to Action5");
+  }
+
+  @Override
+  public <W extends Wrapper> W wrapAction(Function<Action, W> wrapperFactory) {
+    return wrapperFactory.apply(this);
   }
 }

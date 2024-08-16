@@ -1,5 +1,8 @@
 package tech.intellispaces.actions;
 
+import tech.intellispaces.actions.wrapper.Wrapper;
+import tech.intellispaces.actions.wrapper.Wrapper4;
+import tech.intellispaces.actions.wrapper.Wrapper5;
 import tech.intellispaces.commons.exception.UnexpectedViolationException;
 
 import java.util.function.Function;
@@ -57,15 +60,20 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
   }
 
   @Override
-  public <A extends Action4<_R, _D1, _D2, _D3, _D4>, _R, _D1, _D2, _D3, _D4> A wrapAction4(
-      Function<Action4<R, D1, D2, D3, D4>, A> wrapperFactory
+  public <W extends Wrapper> W wrapAction(Function<Action, W> wrapperFactory) {
+    return wrapperFactory.apply(this);
+  }
+
+  @Override
+  public <W extends Wrapper4<_R, _D1, _D2, _D3, _D4>, _R, _D1, _D2, _D3, _D4> W wrapAction4(
+      Function<Action4<R, D1, D2, D3, D4>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <A extends Action5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> A wrapAction5(
-      Function<Action5<R, D1, D2, D3, D4, Void>, A> wrapperFactory
+  public <W extends Wrapper5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> W wrapAction5(
+      Function<Action5<R, D1, D2, D3, D4, Void>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
   }

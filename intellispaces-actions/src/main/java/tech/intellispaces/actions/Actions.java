@@ -1,5 +1,12 @@
 package tech.intellispaces.actions;
 
+import tech.intellispaces.actions.delegate.Delegate0;
+import tech.intellispaces.actions.delegate.Delegate1;
+import tech.intellispaces.actions.delegate.Delegate2;
+import tech.intellispaces.actions.delegate.Delegate3;
+import tech.intellispaces.actions.delegate.Delegate4;
+import tech.intellispaces.actions.delegate.Delegate5;
+import tech.intellispaces.actions.delegate.Delegates;
 import tech.intellispaces.actions.executor.Executor;
 import tech.intellispaces.actions.executor.Executors;
 import tech.intellispaces.actions.functional.FunctionalActions;
@@ -7,9 +14,6 @@ import tech.intellispaces.actions.getter.Getter;
 import tech.intellispaces.actions.getter.Getters;
 import tech.intellispaces.actions.getter.ResettableGetter;
 import tech.intellispaces.actions.getter.ResettableGetters;
-import tech.intellispaces.actions.onetime.CachedFirstTimeOnlyActions;
-import tech.intellispaces.actions.onetime.FirstTimeOnlyActions;
-import tech.intellispaces.actions.onetime.NotFirstTimeOnlyActions;
 import tech.intellispaces.actions.processor.Processor1;
 import tech.intellispaces.actions.processor.Processors;
 import tech.intellispaces.commons.function.QuadFunction;
@@ -31,6 +35,10 @@ public interface Actions {
 
   static <R> Action0<R> get(Supplier<R> supplier) {
     return FunctionalActions.get(supplier);
+  }
+
+  static <R> Action1<Void, R> get(Consumer<R> consumer) {
+    return FunctionalActions.get(consumer);
   }
 
   static <R, D> Action1<R, D> get(Function<D, R> function) {
@@ -160,15 +168,39 @@ public interface Actions {
     return Processors.of(consumer);
   }
 
-  static <R, D1, D2, D3, D4, D5> Function<Action5<R, D1, D2, D3, D4, D5>, Action5<R, D1, D2, D3, D4, D5>> firstTimeOnlyActionFactory5() {
-    return FirstTimeOnlyActions.factory5();
+  static <R> Delegate0<R> delegate0(
+      Getter<Action0<R>> contractor
+  ) {
+    return Delegates.delegate0(contractor);
   }
 
-  static <R, D1, D2, D3, D4, D5> Function<Action5<R, D1, D2, D3, D4, D5>, Action5<R, D1, D2, D3, D4, D5>> cachedFirstTimeOnlyActionFactory5() {
-    return CachedFirstTimeOnlyActions.factory5();
+  static <R, D> Delegate1<R, D> delegate1(
+      Getter<Action1<R, D>> contractor
+  ) {
+    return Delegates.delegate1(contractor);
   }
 
-  static <R, D1, D2, D3, D4, D5> Function<Action5<R, D1, D2, D3, D4, D5>, Action5<R, D1, D2, D3, D4, D5>> notFirstTimeOnlyActionFactory5() {
-    return NotFirstTimeOnlyActions.factory5();
+  static <R, D1, D2> Delegate2<R, D1, D2> delegate2(
+      Getter<Action2<R, D1, D2>> contractor
+  ) {
+    return Delegates.delegate2(contractor);
+  }
+
+  static <R, D1, D2, D3> Delegate3<R, D1, D2, D3> delegate3(
+      Getter<Action3<R, D1, D2, D3>> contractor
+  ) {
+    return Delegates.delegate3(contractor);
+  }
+
+  static <R, D1, D2, D3, D4> Delegate4<R, D1, D2, D3, D4> delegate4(
+      Getter<Action4<R, D1, D2, D3, D4>> contractor
+  ) {
+    return Delegates.delegate4(contractor);
+  }
+
+  static <R, D1, D2, D3, D4, D5> Delegate5<R, D1, D2, D3, D4, D5> delegate5(
+      Getter<Action5<R, D1, D2, D3, D4, D5>> contractor
+  ) {
+    return Delegates.delegate5(contractor);
   }
 }

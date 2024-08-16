@@ -1,7 +1,8 @@
 package tech.intellispaces.actions.common.string;
 
+import org.assertj.core.api.ThrowableAssert;
 import org.junit.jupiter.api.Test;
-import tech.intellispaces.actions.executor.Executor;
+import tech.intellispaces.actions.processor.Processor1;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -12,21 +13,42 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 public class StringActionsTest {
 
   @Test
-  public void testCommaAppender_whenHull() {
-    assertThatThrownBy(() -> StringActions.commaAppender(null))
-        .isExactlyInstanceOf(NullPointerException.class);
+  public void testCommaAppender_whenNull() {
+    // Given
+    Processor1<StringBuilder> commaAppender = StringActions.commaAppender();
+
+    // When
+    ThrowableAssert.ThrowingCallable callable = () -> commaAppender.process(null);
+
+    // Then
+    assertThatThrownBy(callable).isExactlyInstanceOf(NullPointerException.class);
   }
 
   @Test
   public void testCommaAppender() {
     // Given
-    var sb = new StringBuilder();
-    Executor commaAppender = StringActions.commaAppender(sb);
+    Processor1<StringBuilder> commaAppender = StringActions.commaAppender();
 
     // When
-    commaAppender.execute();
-    commaAppender.execute();
-    commaAppender.execute();
+    var sb = new StringBuilder();
+    commaAppender.process(sb);
+    commaAppender.process(sb);
+    commaAppender.process(sb);
+
+    // Then
+    assertThat(sb.toString()).isEqualTo(", , , ");
+  }
+
+  @Test
+  public void testSkippingFirstTimeCommaAppender() {
+    // Given
+    Processor1<StringBuilder> commaAppender = StringActions.skippingFirstTimeCommaAppender();
+
+    // When
+    var sb = new StringBuilder();
+    commaAppender.process(sb);
+    commaAppender.process(sb);
+    commaAppender.process(sb);
 
     // Then
     assertThat(sb.toString()).isEqualTo(", , ");

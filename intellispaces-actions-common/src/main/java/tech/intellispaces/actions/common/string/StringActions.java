@@ -1,15 +1,19 @@
 package tech.intellispaces.actions.common.string;
 
-import tech.intellispaces.actions.Actions;
-import tech.intellispaces.actions.executor.Executor;
+import tech.intellispaces.actions.interceptor.skipping.SkippingInterceptors;
+import tech.intellispaces.actions.processor.Processor1;
 
-import java.util.Objects;
+public final class StringActions {
 
-public interface StringActions {
+  private StringActions() {}
 
-  static Executor commaAppender(StringBuilder sb) {
-    Objects.requireNonNull(sb);
-    return Actions.executor(() -> sb.append(", "))
-        .wrap(Actions.notFirstTimeOnlyActionFactory5());
+  static Processor1<StringBuilder> commaAppender() {
+    return new SeparatorAppender(COMMA_SEPARATOR);
   }
+
+  static Processor1<StringBuilder> skippingFirstTimeCommaAppender() {
+    return new SeparatorAppender(COMMA_SEPARATOR).wrapAction1AsProcessor(SkippingInterceptors.skippingFirstTimeInterceptorFactory1());
+  }
+
+  private static final String COMMA_SEPARATOR = ", ";
 }

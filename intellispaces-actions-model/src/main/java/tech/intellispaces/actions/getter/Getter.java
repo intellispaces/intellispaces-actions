@@ -2,14 +2,16 @@ package tech.intellispaces.actions.getter;
 
 import tech.intellispaces.actions.Action0;
 import tech.intellispaces.actions.Action5;
+import tech.intellispaces.actions.wrapper.Wrapper0;
+import tech.intellispaces.actions.wrapper.Wrapper5;
 
 import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * Getter action.
+ * Getter action.<p/>
  *
- * <p>Getter is action that returns a data.
+ * Getter is action that returns a data only.
  *
  * @param <R> result data type.
  */
@@ -45,7 +47,9 @@ public interface Getter<R> extends Action0<R>, Supplier<R> {
     return execute();
   }
 
-  Getter<R> wrap(
-      Function<Action5<R, Void, Void, Void, Void, Void>, Action5<R, Void, Void, Void, Void, Void>> wrapperFactory
+  Getter<R> wrapAction0AsGetter(Function<Action0<R>, Wrapper0<R>> wrapperFactory);
+
+  Getter<R> wrapAction5AsGetter(
+      Function<Action5<R, Void, Void, Void, Void, Void>, Wrapper5<R, Void, Void, Void, Void, Void>> wrapperFactory
   );
 }

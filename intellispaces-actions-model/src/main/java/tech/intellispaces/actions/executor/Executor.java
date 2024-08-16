@@ -2,6 +2,8 @@ package tech.intellispaces.actions.executor;
 
 import tech.intellispaces.actions.Action0;
 import tech.intellispaces.actions.Action5;
+import tech.intellispaces.actions.wrapper.Wrapper0;
+import tech.intellispaces.actions.wrapper.Wrapper5;
 
 import java.util.function.Function;
 
@@ -29,7 +31,9 @@ public interface Executor extends Action0<Void> {
 
   Executor then(Action0<Void> otherAction);
 
-  Executor wrap(
-      Function<Action5<Void, Void, Void, Void, Void, Void>, Action5<Void, Void, Void, Void, Void, Void>> wrapperFactory
+  Executor wrapAction0AsExecutor(Function<Action0<Void>, Wrapper0<Void>> wrapperFactory);
+
+  Executor wrapAction5AsExecutor(
+      Function<Action5<Void, Void, Void, Void, Void, Void>, Wrapper5<Void, Void, Void, Void, Void, Void>> wrapperFactory
   );
 }
