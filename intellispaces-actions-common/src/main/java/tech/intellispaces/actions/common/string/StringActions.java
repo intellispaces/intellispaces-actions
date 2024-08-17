@@ -19,12 +19,8 @@ public final class StringActions {
   }
 
   public static Runner commaAppender(StringBuilder sb1, StringBuilder sb2) {
-    Processor1<StringBuilder> commaAppender1 = commaAppender();
-    Processor1<StringBuilder> commaAppender2 = commaAppender();
-    return Actions.runner(() -> {
-      commaAppender1.process(sb1);
-      commaAppender2.process(sb2);
-    });
+    return commaAppender(sb1)
+        .then(commaAppender(sb2));
   }
 
   public static Processor1<StringBuilder> skippingFirstTimeCommaAppender() {
@@ -38,8 +34,8 @@ public final class StringActions {
   }
 
   public static Runner skippingFirstTimeCommaAppender(StringBuilder sb1, StringBuilder sb2) {
-    return commaAppender(sb1, sb2)
-        .wrapAction0AsRunner(SkippingInterceptors.skippingFirstTimeInterceptorFactory0());
+    return skippingFirstTimeCommaAppender(sb1)
+        .then(skippingFirstTimeCommaAppender(sb2));
   }
 
   private static final String COMMA_SEPARATOR = ", ";
