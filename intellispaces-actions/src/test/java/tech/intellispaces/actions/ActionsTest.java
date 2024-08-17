@@ -1,9 +1,9 @@
 package tech.intellispaces.actions;
 
 import org.junit.jupiter.api.Test;
-import tech.intellispaces.actions.executor.Executor;
 import tech.intellispaces.actions.getter.Getter;
 import tech.intellispaces.actions.getter.ResettableGetter;
+import tech.intellispaces.actions.runner.Runner;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -18,47 +18,47 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ActionsTest {
 
   @Test
-  public void testExecutor_whenRunnable() {
+  public void testRunner_whenRunnable() {
     // Given
     List<Integer> values = new ArrayList<>();
     Runnable runnable = () -> values.add(values.size() + 1);
-    Executor executor = Actions.executor(runnable);
+    Runner runner = Actions.runner(runnable);
 
     // When
-    executor.execute();
-    executor.execute();
-    executor.execute();
+    runner.execute();
+    runner.execute();
+    runner.execute();
 
     // Then
     assertThat(values).containsExactly(1, 2, 3);
   }
 
   @Test
-  public void testExecutor_whenConsumer() {
+  public void testRunner_whenConsumer() {
     // Given
     List<Integer> values = new ArrayList<>();
-    Executor executor = Actions.executor(values::add, 1);
+    Runner runner = Actions.runner(values::add, 1);
 
     // When
-    executor.execute();
-    executor.execute();
-    executor.execute();
+    runner.execute();
+    runner.execute();
+    runner.execute();
 
     // Then
     assertThat(values).containsExactly(1, 1, 1);
   }
 
   @Test
-  public void testJoinedExecutors() {
+  public void testJoinedRunners() {
     // Given
     List<Integer> values = new ArrayList<>();
-    Executor executor = Actions.executor(values::add, 1)
-        .then(Actions.executor(values::add, 2));
+    Runner runner = Actions.runner(values::add, 1)
+        .then(Actions.runner(values::add, 2));
 
     // When
-    executor.execute();
-    executor.execute();
-    executor.execute();
+    runner.execute();
+    runner.execute();
+    runner.execute();
 
     // Then
     assertThat(values).containsExactly(1, 2, 1, 2, 1, 2);

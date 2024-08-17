@@ -1,4 +1,4 @@
-package tech.intellispaces.actions.executor;
+package tech.intellispaces.actions.runner;
 
 import tech.intellispaces.actions.Action0;
 import tech.intellispaces.actions.Action5;
@@ -7,33 +7,45 @@ import tech.intellispaces.actions.wrapper.Wrapper5;
 
 import java.util.function.Function;
 
-public interface Executor extends Action0<Void> {
+public interface Runner extends Action0<Void> {
+
+  void run();
+
+  @Override
+  default Void execute() {
+    run();
+    return null;
+  }
 
   @Override
   default Void execute(Void data) {
-    return execute();
+    run();
+    return null;
   }
 
   @Override
   default Void execute(Void data1, Void data2) {
-    return execute();
+    run();
+    return null;
   }
 
   @Override
   default Void execute(Void data1, Void data2, Void data3) {
-    return execute();
+    run();
+    return null;
   }
 
   @Override
   default Void execute(Void data1, Void data2, Void data3, Void data4) {
-    return execute();
+    run();
+    return null;
   }
 
-  Executor then(Action0<Void> otherAction);
+  Runner then(Action0<Void> otherAction);
 
-  Executor wrapAction0AsExecutor(Function<Action0<Void>, Wrapper0<Void>> wrapperFactory);
+  Runner wrapAction0AsRunner(Function<Action0<Void>, Wrapper0<Void>> wrapperFactory);
 
-  Executor wrapAction5AsExecutor(
+  Runner wrapAction5AsRunner(
       Function<Action5<Void, Void, Void, Void, Void, Void>, Wrapper5<Void, Void, Void, Void, Void, Void>> wrapperFactory
   );
 }

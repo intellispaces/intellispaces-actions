@@ -7,8 +7,6 @@ import tech.intellispaces.actions.delegate.Delegate3;
 import tech.intellispaces.actions.delegate.Delegate4;
 import tech.intellispaces.actions.delegate.Delegate5;
 import tech.intellispaces.actions.delegate.Delegates;
-import tech.intellispaces.actions.executor.Executor;
-import tech.intellispaces.actions.executor.Executors;
 import tech.intellispaces.actions.functional.FunctionalActions;
 import tech.intellispaces.actions.getter.Getter;
 import tech.intellispaces.actions.getter.Getters;
@@ -16,6 +14,8 @@ import tech.intellispaces.actions.getter.ResettableGetter;
 import tech.intellispaces.actions.getter.ResettableGetters;
 import tech.intellispaces.actions.processor.Processor1;
 import tech.intellispaces.actions.processor.Processors;
+import tech.intellispaces.actions.runner.Runner;
+import tech.intellispaces.actions.runner.Runners;
 import tech.intellispaces.commons.function.QuadFunction;
 import tech.intellispaces.commons.function.TriFunction;
 
@@ -30,7 +30,7 @@ import java.util.function.Supplier;
 public interface Actions {
 
   static Action0<Void> get(Runnable runnable) {
-    return executor(runnable);
+    return runner(runnable);
   }
 
   static <R> Action0<R> get(Supplier<R> supplier) {
@@ -63,12 +63,12 @@ public interface Actions {
     return FunctionalActions.get(function);
   }
 
-  static Executor executor(Runnable runnable) {
-    return Executors.of(runnable);
+  static Runner runner(Runnable runnable) {
+    return Runners.of(runnable);
   }
 
-  static <D> Executor executor(Consumer<D> consumer, D value) {
-    return Executors.of(consumer, value);
+  static <D> Runner runner(Consumer<D> consumer, D value) {
+    return Runners.of(consumer, value);
   }
 
   static <R> Getter<R> getter(R value) {
