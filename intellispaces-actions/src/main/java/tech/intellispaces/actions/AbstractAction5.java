@@ -9,6 +9,11 @@ import java.util.function.Function;
 public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<R, D1, D2, D3, D4, D5> {
 
   @Override
+  public int actionOrder() {
+    return 5;
+  }
+
+  @Override
   @SuppressWarnings("unchecked")
   public R execute(Object... data) {
     if (data == null || data.length != 5) {
@@ -59,7 +64,14 @@ public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<
   }
 
   @Override
-  public <W extends Wrapper5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> W wrapAction5(
+  public <W extends Wrapper5<R, D1, D2, D3, D4, D5>> W wrapAction5(
+      Function<Action5<R, D1, D2, D3, D4, D5>, W> wrapperFactory
+  ) {
+    return wrapperFactory.apply(this);
+  }
+
+  @Override
+  public <W extends Wrapper5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> W convertAction5(
       Function<Action5<R, D1, D2, D3, D4, D5>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);

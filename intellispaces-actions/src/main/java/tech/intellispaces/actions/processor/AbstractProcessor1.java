@@ -23,6 +23,6 @@ public abstract class AbstractProcessor1<D> extends AbstractAction1<D, D> implem
 
   @Override
   public Processor1<D> wrapAction1AsProcessor(Function<Action1<D, D>, Wrapper1<D, D>> wrapperFactory) {
-    return this.wrapAction1(wrapperFactory).wrapAction1(Processor1BasedOnAction1::new);
+    return wrapperFactory.apply(this).wrapAction1(Processor1BasedOnAction1::new);
   }
 }

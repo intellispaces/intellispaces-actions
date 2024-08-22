@@ -3,8 +3,6 @@ package tech.intellispaces.actions.getter;
 class ResettableGetterImpl<R> extends AbstractGetter<R> implements ResettableGetter<R> {
   private R value;
 
-  ResettableGetterImpl() {}
-
   ResettableGetterImpl(R value) {
     this.value = value;
   }

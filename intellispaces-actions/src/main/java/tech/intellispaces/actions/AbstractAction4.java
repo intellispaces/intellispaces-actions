@@ -10,6 +10,11 @@ import java.util.function.Function;
 public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D1, D2, D3, D4> {
 
   @Override
+  public int actionOrder() {
+    return 4;
+  }
+
+  @Override
   public R execute(D1 data1, D2 data2, D3 data3, D4 data4, Void data5) {
     return execute(data1, data2, data3, data4);
   }
@@ -65,14 +70,28 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
   }
 
   @Override
-  public <W extends Wrapper4<_R, _D1, _D2, _D3, _D4>, _R, _D1, _D2, _D3, _D4> W wrapAction4(
+  public <W extends Wrapper4<R, D1, D2, D3, D4>> W wrapAction4(
       Function<Action4<R, D1, D2, D3, D4>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> W wrapAction5(
+  public <W extends Wrapper5<R, D1, D2, D3, D4, Void>> W wrapAction5(
+      Function<Action5<R, D1, D2, D3, D4, Void>, W> wrapperFactory
+  ) {
+    return wrapperFactory.apply(this);
+  }
+
+  @Override
+  public <W extends Wrapper4<_R, _D1, _D2, _D3, _D4>, _R, _D1, _D2, _D3, _D4> W convertAction4(
+      Function<Action4<R, D1, D2, D3, D4>, W> wrapperFactory
+  ) {
+    return wrapperFactory.apply(this);
+  }
+
+  @Override
+  public <W extends Wrapper5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> W convertAction5(
       Function<Action5<R, D1, D2, D3, D4, Void>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);

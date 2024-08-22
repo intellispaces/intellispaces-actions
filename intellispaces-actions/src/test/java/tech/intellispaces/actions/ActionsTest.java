@@ -66,7 +66,7 @@ public class ActionsTest {
 
   @Test
   public void testResettableGetter_whenNoInitValue() {
-    ResettableGetter<String> getter = Actions.resettableGetter();
+    ResettableGetter<String> getter = Actions.resettableGetter(String.class);
     assertThat(getter.get()).isNull();
 
     getter.set("value1");

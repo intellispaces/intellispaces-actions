@@ -17,4 +17,9 @@ public abstract class AbstractWrapper extends AbstractAction implements Wrapper 
   public Action wrappedAction() {
     return wrappedAction;
   }
+
+  @Override
+  public int actionOrder() {
+    return wrappedAction.actionOrder();
+  }
 }

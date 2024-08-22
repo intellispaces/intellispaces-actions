@@ -6,7 +6,6 @@ import tech.intellispaces.actions.Actions;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -19,7 +18,7 @@ public class SkippingInterceptorsTest {
   public void testSkippingFirstTimeInterceptor1() {
     // Given
     List<Integer> values = new ArrayList<>();
-    Action1<Void, Integer> skippingFirstTimeAction = Actions.get((Consumer<Integer>) values::add)
+    Action1<Void, Integer> skippingFirstTimeAction = Actions.get(values::add, Integer.class)
         .wrapAction1(SkippingInterceptors.skippingFirstTimeInterceptorFactory1());
 
     // When

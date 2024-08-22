@@ -21,5 +21,9 @@ public interface Action2<R, D1, D2> extends
    */
   R execute(D1 data1, D2 data2);
 
-  <W extends Wrapper2<_R, _D1, _D2>, _R, _D1, _D2> W wrapAction2(Function<Action2<R, D1, D2>, W> wrapperFactory);
+  <W extends Wrapper2<R, D1, D2>> W wrapAction2(Function<Action2<R, D1, D2>, W> wrapperFactory);
+
+  <W extends Wrapper2<_R, _D1, _D2>, _R, _D1, _D2> W convertAction2(
+      Function<Action2<R, D1, D2>, W> wrapperFactory
+  );
 }

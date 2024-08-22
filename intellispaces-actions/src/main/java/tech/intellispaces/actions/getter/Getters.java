@@ -31,7 +31,7 @@ public interface Getters {
    *
    * @param function calculating function.
    * @param arg function argument.
-   * @param <R> getter result value type.
+   * @param <R> getter result data type.
    * @param <D> type of the function argument.
    * @return getter action.
    */
@@ -51,7 +51,9 @@ public interface Getters {
    * @return getter action.
    */
   static <R, D1, D2> Getter<R> cachedLazy(
-      BiFunction<D1, D2, R> function, D1 arg1, D2 arg2
+      BiFunction<D1, D2, R> function,
+      D1 arg1,
+      D2 arg2
   ) {
     return cachedLazy(() -> function.apply(arg1, arg2));
   }
@@ -70,7 +72,10 @@ public interface Getters {
    * @return getter action.
    */
   static <R, D1, D2, D3> Getter<R> cachedLazy(
-      TriFunction<D1, D2, D3, R> function, D1 arg1, D2 arg2, D3 arg3
+      TriFunction<D1, D2, D3, R> function,
+      D1 arg1,
+      D2 arg2,
+      D3 arg3
   ) {
     return cachedLazy(() -> function.apply(arg1, arg2, arg3));
   }
@@ -91,7 +96,11 @@ public interface Getters {
    * @return getter action.
    */
   static <R, D1, D2, D3, D4> Getter<R> cachedLazy(
-      QuadFunction<D1, D2, D3, D4, R> function, D1 arg1, D2 arg2, D3 arg3, D4 arg4
+      QuadFunction<D1, D2, D3, D4, R> function,
+      D1 arg1,
+      D2 arg2,
+      D3 arg3,
+      D4 arg4
   ) {
     return cachedLazy(() -> function.apply(arg1, arg2, arg3, arg4));
   }

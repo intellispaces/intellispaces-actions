@@ -18,6 +18,8 @@ import tech.intellispaces.actions.runner.Runner;
 import tech.intellispaces.actions.runner.Runners;
 import tech.intellispaces.commons.function.QuadFunction;
 import tech.intellispaces.commons.function.TriFunction;
+import tech.intellispaces.commons.type.SimpleTypes;
+import tech.intellispaces.commons.type.Type;
 
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -33,12 +35,20 @@ public interface Actions {
     return runner(runnable);
   }
 
-  static <R> Action0<R> get(Supplier<R> supplier) {
-    return FunctionalActions.get(supplier);
-  }
-
   static <R> Action1<Void, R> get(Consumer<R> consumer) {
     return FunctionalActions.get(consumer);
+  }
+
+  static <D> Action1<Void, D> get(Consumer<D> consumer, Class<D> dataClass) {
+    return FunctionalActions.get(consumer);
+  }
+
+  static <D> Action1<Void, D> get(Consumer<D> consumer, Type<D> dataType) {
+    return FunctionalActions.get(consumer);
+  }
+
+  static <R> Action0<R> get(Supplier<R> supplier) {
+    return FunctionalActions.get(supplier);
   }
 
   static <R, D> Action1<R, D> get(Function<D, R> function) {
@@ -46,20 +56,6 @@ public interface Actions {
   }
 
   static <R, D1, D2> Action2<R, D1, D2> get(BiFunction<D1, D2, R> function) {
-    return FunctionalActions.get(function);
-  }
-
-  static <R> Action0<R> get(Supplier<R> supplier, Class<R> resultClass) {
-    return FunctionalActions.get(supplier);
-  }
-
-  static <R, D> Action1<R, D> get(Function<D, R> function, Class<R> resultClass, Class<D> dataClass) {
-    return FunctionalActions.get(function);
-  }
-
-  static <R, D1, D2> Action2<R, D1, D2> get(
-      BiFunction<D1, D2, R> function, Class<R> resultClass, Class<D1> dataClass1, Class<D2> dataClass2
-  ) {
     return FunctionalActions.get(function);
   }
 
@@ -75,8 +71,12 @@ public interface Actions {
     return Getters.of(value);
   }
 
-  static <R> ResettableGetter<R> resettableGetter() {
-    return ResettableGetters.get();
+  static <R> ResettableGetter<R> resettableGetter(Type<R> resultType) {
+    return ResettableGetters.get(resultType);
+  }
+
+  static <R> ResettableGetter<R> resettableGetter(Class<R> resultClass) {
+    return ResettableGetters.get(SimpleTypes.of(resultClass));
   }
 
   static <R> ResettableGetter<R> resettableGetter(R initValue) {
@@ -124,6 +124,7 @@ public interface Actions {
     return Getters.cachedLazy(function, arg1, arg2);
   }
 
+
   /**
    * Builds getter action on base given three values and calculating function.
    *
@@ -164,7 +165,7 @@ public interface Actions {
     return Getters.cachedLazy(function, arg1, arg2, arg3, arg4);
   }
 
-  static <R> Processor1<R> processor(Consumer<R> consumer) {
+  static <D> Processor1<D> processor(Consumer<D> consumer) {
     return Processors.of(consumer);
   }
 

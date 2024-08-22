@@ -11,6 +11,8 @@ import java.util.function.Function;
  */
 public interface Action {
 
+  int actionOrder();
+
   Object execute(Object... data);
 
   <R> Action0<R> asAction0();

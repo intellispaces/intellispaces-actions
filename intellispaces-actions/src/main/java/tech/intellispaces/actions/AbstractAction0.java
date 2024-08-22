@@ -14,6 +14,11 @@ import java.util.function.Function;
 public abstract class AbstractAction0<R> implements Action0<R> {
 
   @Override
+  public int actionOrder() {
+    return 0;
+  }
+
+  @Override
   public R execute(Void data) {
     return execute();
   }
@@ -88,38 +93,82 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public <W extends Wrapper0<_R>, _R> W wrapAction0(Function<Action0<R>, W> wrapperFactory) {
+  public <W extends Wrapper0<_R>, _R> W convertAction0(Function<Action0<R>, W> wrapperFactory) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper1<_R, _D>, _R, _D> W wrapAction1(Function<Action1<R, Void>, W> wrapperFactory) {
+  public <W extends Wrapper0<R>> W wrapAction0(
+      Function<Action0<R>, W> wrapperFactory
+  ) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper2<_R, _D1, _D2>, _R, _D1, _D2> W wrapAction2(
+  public <W extends Wrapper1<R, Void>> W wrapAction1(
+      Function<Action1<R, Void>, W> wrapperFactory
+  ) {
+    return wrapperFactory.apply(this);
+  }
+
+  @Override
+  public <W extends Wrapper2<R, Void, Void>> W wrapAction2(
       Function<Action2<R, Void, Void>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper3<_R, _D1, _D2, _D3>, _R, _D1, _D2, _D3> W wrapAction3(
+  public <W extends Wrapper3<R, Void, Void, Void>> W wrapAction3(
       Function<Action3<R, Void, Void, Void>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper4<_R, _D1, _D2, _D3, _D4>, _R, _D1, _D2, _D3, _D4> W wrapAction4(
+  public <W extends Wrapper4<R, Void, Void, Void, Void>> W wrapAction4(
       Function<Action4<R, Void, Void, Void, Void>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> W wrapAction5(
+  public <W extends Wrapper5<R, Void, Void, Void, Void, Void>> W wrapAction5(
+      Function<Action5<R, Void, Void, Void, Void, Void>, W> wrapperFactory
+  ) {
+    return wrapperFactory.apply(this);
+  }
+
+  @Override
+  public <W extends Wrapper1<_R, _D>, _R, _D> W convertAction1(
+      Function<Action1<R, Void>, W> wrapperFactory
+  ) {
+    return wrapperFactory.apply(this);
+  }
+
+  @Override
+  public <W extends Wrapper2<_R, _D1, _D2>, _R, _D1, _D2> W convertAction2(
+      Function<Action2<R, Void, Void>, W> wrapperFactory
+  ) {
+    return wrapperFactory.apply(this);
+  }
+
+  @Override
+  public <W extends Wrapper3<_R, _D1, _D2, _D3>, _R, _D1, _D2, _D3> W convertAction3(
+      Function<Action3<R, Void, Void, Void>, W> wrapperFactory
+  ) {
+    return wrapperFactory.apply(this);
+  }
+
+  @Override
+  public <W extends Wrapper4<_R, _D1, _D2, _D3, _D4>, _R, _D1, _D2, _D3, _D4> W convertAction4(
+      Function<Action4<R, Void, Void, Void, Void>, W> wrapperFactory
+  ) {
+    return wrapperFactory.apply(this);
+  }
+
+  @Override
+  public <W extends Wrapper5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> W convertAction5(
       Function<Action5<R, Void, Void, Void, Void, Void>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
