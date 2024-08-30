@@ -15,15 +15,20 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
   }
 
   @Override
+  public R execute() {
+    throw UnexpectedViolationException.withMessage("Action4 expects four input data parameters");
+  }
+
+  @Override
   public R execute(D1 data1, D2 data2, D3 data3, D4 data4, Void data5) {
     return execute(data1, data2, data3, data4);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object... data) {
+  public R execute(Object[] data) {
     if (data == null || data.length != 4) {
-      throw UnexpectedViolationException.withMessage("Action2 expects four input data parameters");
+      throw UnexpectedViolationException.withMessage("Action4 expects four input data parameters");
     }
     return execute((D1) data[0], (D2) data[1], (D3) data[2], (D4) data[3]);
   }

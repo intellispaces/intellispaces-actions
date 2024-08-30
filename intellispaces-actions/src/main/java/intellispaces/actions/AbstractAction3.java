@@ -16,6 +16,11 @@ public abstract class AbstractAction3<R, D1, D2, D3> implements Action3<R, D1, D
   }
 
   @Override
+  public R execute() {
+    throw UnexpectedViolationException.withMessage("Action3 expects three input data parameters");
+  }
+
+  @Override
   public R execute(D1 data1, D2 data2, D3 data3, Void data4) {
     return execute(data1, data2, data3);
   }
@@ -27,9 +32,9 @@ public abstract class AbstractAction3<R, D1, D2, D3> implements Action3<R, D1, D
 
   @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object... data) {
+  public R execute(Object[] data) {
     if (data == null || data.length != 3) {
-      throw UnexpectedViolationException.withMessage("Action2 expects three input data parameters");
+      throw UnexpectedViolationException.withMessage("Action3 expects three input data parameters");
     }
     return execute((D1) data[0], (D2) data[1], (D3) data[2]);
   }

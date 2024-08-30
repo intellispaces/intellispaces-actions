@@ -17,6 +17,11 @@ public abstract class AbstractAction2<R, D1, D2> implements Action2<R, D1, D2> {
   }
 
   @Override
+  public R execute() {
+    throw UnexpectedViolationException.withMessage("Action2 expects two input data parameters");
+  }
+
+  @Override
   public R execute(D1 data1, D2 data2, Void data3) {
     return execute(data1, data2);
   }
@@ -33,7 +38,7 @@ public abstract class AbstractAction2<R, D1, D2> implements Action2<R, D1, D2> {
 
   @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object... data) {
+  public R execute(Object[] data) {
     if (data == null || data.length != 2) {
       throw UnexpectedViolationException.withMessage("Action2 expects two input data parameters");
     }

@@ -14,10 +14,15 @@ public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<
   }
 
   @Override
+  public R execute() {
+    throw UnexpectedViolationException.withMessage("Action5 expects five input data parameters");
+  }
+
+  @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object... data) {
+  public R execute(Object[] data) {
     if (data == null || data.length != 5) {
-      throw UnexpectedViolationException.withMessage("Action2 expects five input data parameters");
+      throw UnexpectedViolationException.withMessage("Action5 expects five input data parameters");
     }
     return execute((D1) data[0], (D2) data[1], (D3) data[2], (D4) data[3], (D5) data[4]);
   }

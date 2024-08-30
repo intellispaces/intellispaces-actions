@@ -12,7 +12,7 @@ class Processor1BasedOnAction<D> extends AbstractProcessor1<D> implements Wrappe
 
   @Override
   public void process(D data) {
-    wrappedAction.execute(data);
+    wrappedAction.execute(new Object[] { data });
   }
 
   @Override

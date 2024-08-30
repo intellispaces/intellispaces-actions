@@ -11,6 +11,11 @@ import java.util.function.Function;
 public abstract class AbstractAction implements Action {
 
   @Override
+  public Object execute() {
+    return execute(null);
+  }
+
+  @Override
   @SuppressWarnings("unchecked")
   public Action0<?> asAction0() {
     throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +

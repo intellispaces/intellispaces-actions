@@ -11,7 +11,7 @@ class SkippingFirstTimeInterceptor extends AbstractWrapper {
   }
 
   @Override
-  public Object execute(Object... data) {
+  public Object execute(Object[] data) {
     Object result = null;
     if (!first) {
       result = wrappedAction().execute(data);

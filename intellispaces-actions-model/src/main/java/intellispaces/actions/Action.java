@@ -13,7 +13,9 @@ public interface Action {
 
   int actionOrder();
 
-  Object execute(Object... data);
+  Object execute();
+
+  Object execute(Object[] data);
 
   <R> Action0<R> asAction0();
 

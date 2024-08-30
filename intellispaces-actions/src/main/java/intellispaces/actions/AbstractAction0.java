@@ -44,7 +44,7 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public R execute(Object... data) {
+  public R execute(Object[] data) {
     if (data != null && data.length > 0) {
       throw UnexpectedViolationException.withMessage("Action0 does not expect any input data");
     }

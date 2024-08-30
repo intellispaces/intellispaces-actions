@@ -18,6 +18,11 @@ public abstract class AbstractAction1<R, D> implements Action1<R, D> {
   }
 
   @Override
+  public R execute() {
+    throw UnexpectedViolationException.withMessage("Action1 expects one input data parameter");
+  }
+
+  @Override
   public R execute(D data1, Void data2) {
     return execute(data1);
   }
@@ -39,7 +44,7 @@ public abstract class AbstractAction1<R, D> implements Action1<R, D> {
 
   @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object... data) {
+  public R execute(Object[] data) {
     if (data == null || data.length != 1) {
       throw UnexpectedViolationException.withMessage("Action1 expects one input data parameter");
     }
