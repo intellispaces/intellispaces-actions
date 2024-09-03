@@ -9,14 +9,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 /**
- * Tests for class {@link StringActions}.
+ * Tests for class {@link TextActions}.
  */
-public class StringActionsTest {
+public class TextActionsTest {
 
   @Test
   public void testCommaAppender_whenProcessor() {
     // Given
-    Processor1<StringBuilder> commaAppender = StringActions.commaAppender();
+    Processor1<StringBuilder> commaAppender = TextActions.commaAppender();
 
     // When
     var sb = new StringBuilder();
@@ -32,7 +32,7 @@ public class StringActionsTest {
   public void testCommaAppender_whenRunner_andOneStringBuilders() {
     // Given
     var sb = new StringBuilder();
-    Runner commaAppender = StringActions.commaAppender(sb);
+    Runner commaAppender = TextActions.commaAppender(sb);
 
     // When
     commaAppender.run();
@@ -48,7 +48,7 @@ public class StringActionsTest {
     // Given
     var sb1 = new StringBuilder();
     var sb2 = new StringBuilder();
-    Runner commaAppender = StringActions.commaAppender(sb1, sb2);
+    Runner commaAppender = TextActions.commaAppender(sb1, sb2);
 
     // When
     commaAppender.run();
@@ -63,7 +63,7 @@ public class StringActionsTest {
   @Test
   public void testSkippingFirstTimeCommaAppender_whenProcessor() {
     // Given
-    Processor1<StringBuilder> commaAppender = StringActions.skippingFirstTimeCommaAppender();
+    Processor1<StringBuilder> commaAppender = TextActions.skippingFirstTimeCommaAppender();
 
     // When
     var sb = new StringBuilder();
@@ -79,7 +79,7 @@ public class StringActionsTest {
   public void testSkippingFirstTimeCommaAppender_whenRunner_andOneStringBuilders() {
     // Given
     var sb = new StringBuilder();
-    Runner commaAppender = StringActions.skippingFirstTimeCommaAppender(sb);
+    Runner commaAppender = TextActions.skippingFirstTimeCommaAppender(sb);
 
     // When
     commaAppender.run();
@@ -95,7 +95,7 @@ public class StringActionsTest {
     // Given
     var sb1 = new StringBuilder();
     var sb2 = new StringBuilder();
-    Runner commaAppender = StringActions.skippingFirstTimeCommaAppender(sb1, sb2);
+    Runner commaAppender = TextActions.skippingFirstTimeCommaAppender(sb1, sb2);
 
     // When
     commaAppender.run();
@@ -110,7 +110,7 @@ public class StringActionsTest {
   @Test
   public void testCommaAppender_whenProcessor_andStringBuilderIsNull() {
     // Given
-    Processor1<StringBuilder> commaAppender = StringActions.commaAppender();
+    Processor1<StringBuilder> commaAppender = TextActions.commaAppender();
 
     // When
     ThrowableAssert.ThrowingCallable callable = () -> commaAppender.process(null);

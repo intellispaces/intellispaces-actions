@@ -5,9 +5,9 @@ import intellispaces.common.action.interceptor.skipping.SkippingInterceptors;
 import intellispaces.common.action.processor.Processor1;
 import intellispaces.common.action.runner.Runner;
 
-public final class StringActions {
+public final class TextActions {
 
-  private StringActions() {}
+  private TextActions() {}
 
   public static Processor1<StringBuilder> commaAppender() {
     return new SeparatorAppender(COMMA_SEPARATOR);
