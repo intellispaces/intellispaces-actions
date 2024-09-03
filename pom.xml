@@ -7,19 +7,19 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>intellispaces-actions-parent</artifactId>
+    <artifactId>intellispaces-common-actions-parent</artifactId>
     <packaging>pom</packaging>
 
 	<modules>
-        <module>intellispaces-actions-model</module>
-	    <module>intellispaces-actions</module>
-        <module>intellispaces-actions-common</module>
+        <module>intellispaces-common-actions-model</module>
+	    <module>intellispaces-common-actions</module>
+        <module>intellispaces-common-util-actions</module>
 	</modules>
 
     <dependencies>
         <dependency>
             <groupId>intellispaces</groupId>
-            <artifactId>intellispaces-commons</artifactId>
+            <artifactId>intellispaces-common-utils</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
@@ -29,7 +29,7 @@
             <!-- Intellispaces -->
             <dependency>
                 <groupId>intellispaces</groupId>
-                <artifactId>intellispaces-actions-model</artifactId>
+                <artifactId>intellispaces-common-actions-model</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
