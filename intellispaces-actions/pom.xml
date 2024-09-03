@@ -2,12 +2,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>intellispaces</groupId>
-        <artifactId>intellispaces-common-actions-parent</artifactId>
+        <groupId>intellispaces-commons</groupId>
+        <artifactId>intellispaces-common-actions</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>intellispaces-common-actions</artifactId>
+    <artifactId>intellispaces-actions</artifactId>
     <packaging>jar</packaging>
 	
     <build>
@@ -30,8 +30,8 @@
     <dependencies>
         <!-- Intellispaces -->
         <dependency>
-            <groupId>intellispaces</groupId>
-            <artifactId>intellispaces-common-actions-model</artifactId>
+            <groupId>intellispaces-commons</groupId>
+            <artifactId>intellispaces-actions-model</artifactId>
         </dependency>
 
         <!-- Logging -->
