@@ -80,6 +80,16 @@ public interface Actions {
     return ofBiFunction(function, resultClass, dataClass1, dataClass2);
   }
 
+  static <R, D1, D2, D3> Action3<R, D1, D2, D3> of(TriFunction<D1, D2, D3, R> function) {
+    return ofTriFunction(function);
+  }
+
+  static <R, D1, D2, D3> Action3<R, D1, D2, D3> of(
+    TriFunction<D1, D2, D3, R> function, Class<R> resultClass, Class<D1> dataClass1, Class<D2> dataClass2, Class<D3> dataClass3
+  ) {
+    return ofTriFunction(function, resultClass, dataClass1, dataClass2, dataClass3);
+  }
+
   static <R> Action0<R> ofSupplier(Supplier<R> supplier) {
     return FunctionalActions.ofSupplier(supplier);
   }
@@ -124,6 +134,16 @@ public interface Actions {
     BiFunction<D1, D2, R> function, Class<R> resultClass, Class<D1> dataClass1, Class<D2> dataClass2
   ) {
     return FunctionalActions.ofBiFunction(function);
+  }
+
+  static <R, D1, D2, D3> Action3<R, D1, D2, D3> ofTriFunction(TriFunction<D1, D2, D3, R> function) {
+    return FunctionalActions.ofTriFunction(function);
+  }
+
+  static <R, D1, D2, D3> Action3<R, D1, D2, D3> ofTriFunction(
+    TriFunction<D1, D2, D3, R> function, Class<R> resultClass, Class<D1> dataClass1, Class<D2> dataClass2, Class<D3> dataClass3
+  ) {
+    return FunctionalActions.ofTriFunction(function);
   }
 
   static Runner runner(Runnable runnable) {

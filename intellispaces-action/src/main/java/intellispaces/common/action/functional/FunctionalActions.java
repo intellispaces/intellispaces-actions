@@ -3,6 +3,8 @@ package intellispaces.common.action.functional;
 import intellispaces.common.action.Action2;
 import intellispaces.common.action.Action0;
 import intellispaces.common.action.Action1;
+import intellispaces.common.action.Action3;
+import intellispaces.common.base.function.TriFunction;
 
 import java.util.function.*;
 
@@ -26,5 +28,9 @@ public interface FunctionalActions {
 
   static <R, D1, D2> Action2<R, D1, D2> ofBiFunction(BiFunction<D1, D2, R> function) {
     return new FunctionalAction2<>(function);
+  }
+
+  static <R, D1, D2, D3> Action3<R, D1, D2, D3> ofTriFunction(TriFunction<D1, D2, D3, R> function) {
+    return new FunctionalAction3<>(function);
   }
 }
