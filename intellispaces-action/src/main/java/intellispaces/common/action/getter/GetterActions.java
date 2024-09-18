@@ -8,7 +8,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-public interface Getters {
+public interface GetterActions {
 
   static <R> Getter<R> of(R value) {
     return new ResettableGetterImpl<>(value);

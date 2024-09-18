@@ -1,8 +1,8 @@
 package intellispaces.common.action.interceptor.skipping;
 
-import org.junit.jupiter.api.Test;
 import intellispaces.common.action.Action1;
 import intellispaces.common.action.Actions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;

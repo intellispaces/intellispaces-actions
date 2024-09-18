@@ -1,14 +1,14 @@
 package intellispaces.common.action.delegate;
 
+import intellispaces.common.action.Action0;
+import intellispaces.common.action.Action1;
 import intellispaces.common.action.Action2;
 import intellispaces.common.action.Action3;
 import intellispaces.common.action.Action4;
-import intellispaces.common.action.Action0;
-import intellispaces.common.action.Action1;
 import intellispaces.common.action.Action5;
 import intellispaces.common.action.getter.Getter;
 
-public interface Delegates {
+public interface DelegateActions {
 
   static <R> Delegate0<R> delegate0(Getter<Action0<R>> contractor) {
     return new Delegate0Impl<>(contractor);

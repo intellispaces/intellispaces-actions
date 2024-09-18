@@ -1,9 +1,9 @@
 package intellispaces.common.action.processor;
 
 import intellispaces.common.action.Action;
+import intellispaces.common.action.Action1;
 import intellispaces.common.action.wrapper.Wrapper;
 import intellispaces.common.action.wrapper.Wrapper1;
-import intellispaces.common.action.Action1;
 
 import java.util.function.Consumer;
 import java.util.function.Function;

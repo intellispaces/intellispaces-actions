@@ -1,8 +1,8 @@
 package intellispaces.common.action.interceptor.onetime;
 
-import org.junit.jupiter.api.Test;
 import intellispaces.common.action.Actions;
 import intellispaces.common.action.runner.Runner;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;

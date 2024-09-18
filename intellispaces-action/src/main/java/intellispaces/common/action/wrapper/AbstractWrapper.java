@@ -1,7 +1,7 @@
 package intellispaces.common.action.wrapper;
 
-import intellispaces.common.action.Action;
 import intellispaces.common.action.AbstractAction;
+import intellispaces.common.action.Action;
 
 /**
  * Abstract general interceptor.

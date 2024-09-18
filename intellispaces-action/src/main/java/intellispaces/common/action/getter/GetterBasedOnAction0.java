@@ -1,7 +1,7 @@
 package intellispaces.common.action.getter;
 
-import intellispaces.common.action.wrapper.Wrapper0;
 import intellispaces.common.action.Action0;
+import intellispaces.common.action.wrapper.Wrapper0;
 
 class GetterBasedOnAction0<R> extends AbstractGetter<R> implements Wrapper0<R> {
   private final Action0<R> wrappedAction;

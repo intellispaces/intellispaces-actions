@@ -2,7 +2,7 @@ package intellispaces.common.action.runner;
 
 import java.util.function.Consumer;
 
-public interface Runners {
+public interface RunnerActions {
 
   static Runner of(Runnable runnable) {
     return new RunnableBasedRunner(runnable);

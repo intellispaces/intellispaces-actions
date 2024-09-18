@@ -1,10 +1,10 @@
 package intellispaces.common.action.runner;
 
-import intellispaces.common.action.wrapper.Wrapper0;
 import intellispaces.common.action.AbstractAction0;
 import intellispaces.common.action.Action0;
 import intellispaces.common.action.Action5;
 import intellispaces.common.action.multiaction.MultiActions;
+import intellispaces.common.action.wrapper.Wrapper0;
 import intellispaces.common.action.wrapper.Wrapper5;
 
 import java.util.function.Function;

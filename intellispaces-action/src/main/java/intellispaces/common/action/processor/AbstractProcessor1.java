@@ -1,11 +1,11 @@
 package intellispaces.common.action.processor;
 
-import intellispaces.common.action.wrapper.Wrapper;
-import intellispaces.common.action.wrapper.Wrapper1;
 import intellispaces.common.action.AbstractAction1;
 import intellispaces.common.action.Action;
 import intellispaces.common.action.Action1;
 import intellispaces.common.action.multiaction.MultiActions;
+import intellispaces.common.action.wrapper.Wrapper;
+import intellispaces.common.action.wrapper.Wrapper1;
 
 import java.util.function.Function;
 
