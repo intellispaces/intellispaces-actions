@@ -21,6 +21,7 @@ import intellispaces.common.base.function.TriFunction;
 import intellispaces.common.base.type.SimpleTypes;
 import intellispaces.common.base.type.Type;
 
+import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -31,53 +32,98 @@ import java.util.function.Supplier;
  */
 public interface Actions {
 
-  static Action0<Void> get(Runnable runnable) {
+  static Action0<Void> of(Runnable runnable) {
     return runner(runnable);
   }
 
-  static <R> Action1<Void, R> get(Consumer<R> consumer) {
-    return FunctionalActions.get(consumer);
+  static <R> Action1<Void, R> of(Consumer<R> consumer) {
+    return ofConsumer(consumer);
   }
 
-  static <D> Action1<Void, D> get(Consumer<D> consumer, Class<D> dataClass) {
-    return FunctionalActions.get(consumer);
+  static <D> Action1<Void, D> of(Consumer<D> consumer, Class<D> dataClass) {
+    return ofConsumer(consumer, dataClass);
   }
 
-  static <D> Action1<Void, D> get(Consumer<D> consumer, Type<D> dataType) {
-    return FunctionalActions.get(consumer);
-  }
-
-  static <R> Action0<R> get(Supplier<R> supplier) {
-    return FunctionalActions.get(supplier);
-  }
-
-  static <R> Action0<R> get(Supplier<R> supplier, Class<R> resultClass) {
-    return FunctionalActions.get(supplier);
-  }
-
-  static <R, D> Action1<R, D> get(Function<D, R> function) {
-    return FunctionalActions.get(function);
-  }
-
-  static <R, D> Action1<R, D> get(
-      Function<D, R> function,
-      Class<R> resultClass,
-      Class<D> dataClass
+  static <D1, D2> Action2<Void, D1, D2> of(
+    BiConsumer<D1, D2> consumer, Class<D1> dataClass1, Class<D2> dataClass2
   ) {
-    return FunctionalActions.get(function);
+    return ofBiConsumer(consumer, dataClass1, dataClass2);
   }
 
-  static <R, D1, D2> Action2<R, D1, D2> get(BiFunction<D1, D2, R> function) {
-    return FunctionalActions.get(function);
+  static <D> Action1<Void, D> of(Consumer<D> consumer, Type<D> dataType) {
+    return ofConsumer(consumer, dataType);
   }
 
-  static <R, D1, D2> Action2<R, D1, D2> get(
-      BiFunction<D1, D2, R> function,
-      Class<R> resultClass,
-      Class<D1> dataClass1,
-      Class<D2> dataClass2
+  static <R> Action0<R> of(Supplier<R> supplier) {
+    return ofSupplier(supplier);
+  }
+
+  static <R> Action0<R> of(Supplier<R> supplier, Class<R> resultClass) {
+    return ofSupplier(supplier, resultClass);
+  }
+
+  static <R, D> Action1<R, D> of(Function<D, R> function) {
+    return ofFunction(function);
+  }
+
+  static <R, D> Action1<R, D> of(Function<D, R> function, Class<R> resultClass, Class<D> dataClass) {
+    return ofFunction(function, resultClass, dataClass);
+  }
+
+  static <R, D1, D2> Action2<R, D1, D2> of(BiFunction<D1, D2, R> function) {
+    return ofBiFunction(function);
+  }
+
+  static <R, D1, D2> Action2<R, D1, D2> of(
+    BiFunction<D1, D2, R> function, Class<R> resultClass, Class<D1> dataClass1, Class<D2> dataClass2
   ) {
-    return FunctionalActions.get(function);
+    return ofBiFunction(function, resultClass, dataClass1, dataClass2);
+  }
+
+  static <R> Action0<R> ofSupplier(Supplier<R> supplier) {
+    return FunctionalActions.ofSupplier(supplier);
+  }
+
+  static <R> Action0<R> ofSupplier(Supplier<R> supplier, Class<R> resultClass) {
+    return FunctionalActions.ofSupplier(supplier);
+  }
+
+  static <R> Action1<Void, R> ofConsumer(Consumer<R> consumer) {
+    return FunctionalActions.ofConsumer(consumer);
+  }
+
+  static <D> Action1<Void, D> ofConsumer(Consumer<D> consumer, Class<D> dataClass) {
+    return FunctionalActions.ofConsumer(consumer);
+  }
+
+  static <D1, D2> Action2<Void, D1, D2> ofBiConsumer(
+    BiConsumer<D1, D2> consumer, Class<D1> dataClass1, Class<D2> dataClass2
+  ) {
+    return FunctionalActions.ofBiConsumer(consumer);
+  }
+
+  static <D> Action1<Void, D> ofConsumer(Consumer<D> consumer, Type<D> dataType) {
+    return FunctionalActions.ofConsumer(consumer);
+  }
+
+  static <R, D> Action1<R, D> ofFunction(Function<D, R> function) {
+    return FunctionalActions.ofFunction(function);
+  }
+
+  static <R, D> Action1<R, D> ofFunction(
+    Function<D, R> function, Class<R> resultClass, Class<D> dataClass
+  ) {
+    return FunctionalActions.ofFunction(function);
+  }
+
+  static <R, D1, D2> Action2<R, D1, D2> ofBiFunction(BiFunction<D1, D2, R> function) {
+    return FunctionalActions.ofBiFunction(function);
+  }
+
+  static <R, D1, D2> Action2<R, D1, D2> ofBiFunction(
+    BiFunction<D1, D2, R> function, Class<R> resultClass, Class<D1> dataClass1, Class<D2> dataClass2
+  ) {
+    return FunctionalActions.ofBiFunction(function);
   }
 
   static Runner runner(Runnable runnable) {

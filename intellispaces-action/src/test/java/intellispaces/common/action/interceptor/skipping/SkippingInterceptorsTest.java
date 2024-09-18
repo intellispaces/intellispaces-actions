@@ -18,7 +18,7 @@ public class SkippingInterceptorsTest {
   public void testSkippingFirstTimeInterceptor1() {
     // Given
     List<Integer> values = new ArrayList<>();
-    Action1<Void, Integer> skippingFirstTimeAction = Actions.get(values::add, Integer.class)
+    Action1<Void, Integer> skippingFirstTimeAction = Actions.of(values::add, Integer.class)
         .wrapAction1(SkippingInterceptors.skippingFirstTimeInterceptorFactory1());
 
     // When
