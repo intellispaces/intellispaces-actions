@@ -2,8 +2,8 @@ package intellispaces.common.action.functional;
 
 import intellispaces.common.action.Action1;
 import intellispaces.common.action.Action2;
-import intellispaces.common.base.type.SimpleTypes;
 import intellispaces.common.base.type.Type;
+import intellispaces.common.base.type.Types;
 
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
@@ -19,7 +19,7 @@ public interface ConsumerActions {
   }
 
   static <D> Action1<Void, D> of(Consumer<D> consumer, Class<D> dataClass) {
-    return ofConsumer(consumer, SimpleTypes.of(dataClass));
+    return ofConsumer(consumer, Types.of(dataClass));
   }
 
   static <D1, D2> Action2<Void, D1, D2> of(BiConsumer<D1, D2> consumer) {
@@ -29,7 +29,7 @@ public interface ConsumerActions {
   static <D1, D2> Action2<Void, D1, D2> of(
     BiConsumer<D1, D2> consumer, Class<D1> dataClass1, Class<D2> dataClass2
   ) {
-    return ofBiConsumer(consumer, SimpleTypes.of(dataClass1), SimpleTypes.of(dataClass2));
+    return ofBiConsumer(consumer, Types.of(dataClass1), Types.of(dataClass2));
   }
 
   static <D1, D2> Action2<Void, D1, D2> of(

@@ -20,8 +20,8 @@ import intellispaces.common.action.runner.Runner;
 import intellispaces.common.action.runner.RunnerActions;
 import intellispaces.common.base.function.QuadFunction;
 import intellispaces.common.base.function.TriFunction;
-import intellispaces.common.base.type.SimpleTypes;
 import intellispaces.common.base.type.Type;
+import intellispaces.common.base.type.Types;
 
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
@@ -109,7 +109,7 @@ public interface Actions {
   }
 
   static <R> ResettableGetter<R> resettableGetter(Class<R> resultClass) {
-    return ResettableGetterActions.get(SimpleTypes.of(resultClass));
+    return ResettableGetterActions.get(Types.of(resultClass));
   }
 
   static <R> ResettableGetter<R> resettableGetter(R initValue) {
