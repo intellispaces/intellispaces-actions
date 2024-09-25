@@ -16,8 +16,7 @@ public abstract class AbstractAction implements Action {
   }
 
   @Override
-  @SuppressWarnings("unchecked")
-  public Action0<?> asAction0() {
+  public <$R> Action0<$R> asAction0() {
     throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
         "General action can not be casted to Action1");
   }
