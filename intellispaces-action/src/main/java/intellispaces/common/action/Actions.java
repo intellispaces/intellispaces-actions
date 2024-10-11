@@ -7,9 +7,7 @@ import intellispaces.common.action.delegate.Delegate3;
 import intellispaces.common.action.delegate.Delegate4;
 import intellispaces.common.action.delegate.Delegate5;
 import intellispaces.common.action.delegate.DelegateActions;
-import intellispaces.common.action.functional.ConsumerActions;
 import intellispaces.common.action.functional.FunctionActions;
-import intellispaces.common.action.functional.SupplierActions;
 import intellispaces.common.action.getter.Getter;
 import intellispaces.common.action.getter.GetterActions;
 import intellispaces.common.action.getter.ResettableGetter;
@@ -20,13 +18,37 @@ import intellispaces.common.action.runner.Runner;
 import intellispaces.common.action.runner.RunnerActions;
 import intellispaces.common.base.function.QuadFunction;
 import intellispaces.common.base.function.TriFunction;
+import intellispaces.common.base.function.primitive.ObjectAndDoubleAndLongToDoubleFunction;
+import intellispaces.common.base.function.primitive.ObjectAndDoubleAndLongToLongFunction;
+import intellispaces.common.base.function.primitive.ObjectAndDoubleToDoubleFunction;
+import intellispaces.common.base.function.primitive.ObjectAndDoubleToLongFunction;
+import intellispaces.common.base.function.primitive.ObjectAndLongAndDoubleToDoubleFunction;
+import intellispaces.common.base.function.primitive.ObjectAndLongAndDoubleToLongFunction;
+import intellispaces.common.base.function.primitive.ObjectAndLongToDoubleFunction;
+import intellispaces.common.base.function.primitive.ObjectAndLongToLongFunction;
+import intellispaces.common.base.function.primitive.ObjectAndTwoDoublesToDoubleFunction;
+import intellispaces.common.base.function.primitive.ObjectAndTwoDoublesToLongFunction;
+import intellispaces.common.base.function.primitive.ObjectAndTwoLongsToDoubleFunction;
+import intellispaces.common.base.function.primitive.ObjectAndTwoLongsToLongFunction;
+import intellispaces.common.base.function.primitive.ObjectToDoubleFunction;
+import intellispaces.common.base.function.primitive.ThreeObjectsToDoubleFunction;
+import intellispaces.common.base.function.primitive.ThreeObjectsToLongFunction;
+import intellispaces.common.base.function.primitive.TwoObjectsAndDoubleToDoubleFunction;
+import intellispaces.common.base.function.primitive.TwoObjectsAndDoubleToLongFunction;
+import intellispaces.common.base.function.primitive.TwoObjectsAndLongToDoubleFunction;
+import intellispaces.common.base.function.primitive.TwoObjectsAndLongToLongFunction;
+import intellispaces.common.base.function.primitive.TwoObjectsToDoubleFunction;
+import intellispaces.common.base.function.primitive.TwoObjectsToLongFunction;
 import intellispaces.common.base.type.Type;
 import intellispaces.common.base.type.Types;
 
 import java.util.function.BiConsumer;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
+import java.util.function.DoubleSupplier;
 import java.util.function.Function;
+import java.util.function.IntSupplier;
+import java.util.function.LongSupplier;
 import java.util.function.Supplier;
 
 /**
@@ -34,85 +56,292 @@ import java.util.function.Supplier;
  */
 public interface Actions {
 
-  static Action0<Void> of(Runnable runnable) {
+  static Action0<Void> of(
+      Runnable runnable
+  ) {
     return runner(runnable);
   }
 
-  static <R> Action1<Void, R> of(Consumer<R> consumer) {
-    return ConsumerActions.of(consumer);
+  static <R> Action1<Void, R> of(
+      Consumer<R> consumer
+  ) {
+    return FunctionActions.ofConsumer(consumer);
   }
 
-  static <D> Action1<Void, D> of(Consumer<D> consumer, Type<D> dataType) {
-    return ConsumerActions.of(consumer, dataType);
+  static <D> Action1<Void, D> of(
+      Consumer<D> consumer, Type<D> dataType
+  ) {
+    return FunctionActions.ofConsumer(consumer, dataType);
   }
 
-  static <D> Action1<Void, D> of(Consumer<D> consumer, Class<D> dataClass) {
-    return ConsumerActions.of(consumer, dataClass);
+  static <D> Action1<Void, D> of(
+      Consumer<D> consumer,
+      Class<D> dataClass
+  ) {
+    return FunctionActions.ofConsumer(consumer, dataClass);
   }
 
   static <D1, D2> Action2<Void, D1, D2> of(
-    BiConsumer<D1, D2> consumer, Class<D1> dataClass1, Class<D2> dataClass2
+    BiConsumer<D1, D2> consumer,
+    Class<D1> dataClass1,
+    Class<D2> dataClass2
   ) {
-    return ConsumerActions.of(consumer, dataClass1, dataClass2);
+    return FunctionActions.ofBiConsumer(consumer, dataClass1, dataClass2);
   }
 
-  static <R> Action0<R> of(Supplier<R> supplier) {
-    return SupplierActions.of(supplier);
+  static Action0<Integer> of(
+      IntSupplier supplier
+  ) {
+    return FunctionActions.ofIntSupplier(supplier);
   }
 
-  static <R> Action0<R> of(Supplier<R> supplier, Class<R> resultClass) {
-    return SupplierActions.of(supplier, resultClass);
+  static Action0<Long> of(
+      LongSupplier supplier
+  ) {
+    return FunctionActions.ofLongSupplier(supplier);
   }
 
-  static <R, D> Action1<R, D> of(Function<D, R> function) {
-    return FunctionActions.of(function);
+  static Action0<Double> of(
+      DoubleSupplier supplier
+  ) {
+    return FunctionActions.ofDoubleSupplier(supplier);
   }
 
-  static <R, D> Action1<R, D> of(Function<D, R> function, Class<R> resultClass, Class<D> dataClass) {
-    return FunctionActions.of(function, resultClass, dataClass);
+  static <R> Action0<R> of(
+      Supplier<R> supplier
+  ) {
+    return FunctionActions.ofSupplier(supplier);
   }
 
-  static <R, D1, D2> Action2<R, D1, D2> of(BiFunction<D1, D2, R> function) {
-    return FunctionActions.of(function);
+  static <R> Action0<R> of(
+      Supplier<R> supplier,
+      Class<R> resultClass
+  ) {
+    return FunctionActions.ofSupplier(supplier, resultClass);
+  }
+
+  static <R, D> Action1<R, D> of(
+      Function<D, R> function
+  ) {
+    return FunctionActions.ofFunction(function);
+  }
+
+  static <R, D> Action1<R, D> of(
+      Function<D, R> function,
+      Class<R> resultClass,
+      Class<D> dataClass
+  ) {
+    return FunctionActions.ofFunction(function, resultClass, dataClass);
   }
 
   static <R, D1, D2> Action2<R, D1, D2> of(
-    BiFunction<D1, D2, R> function, Class<R> resultClass, Class<D1> dataClass1, Class<D2> dataClass2
+      BiFunction<D1, D2, R> function
   ) {
-    return FunctionActions.of(function, resultClass, dataClass1, dataClass2);
+    return FunctionActions.ofBiFunction(function);
   }
 
-  static <R, D1, D2, D3> Action3<R, D1, D2, D3> of(TriFunction<D1, D2, D3, R> function) {
-    return FunctionActions.of(function);
+  static <R, D1, D2> Action2<R, D1, D2> of(
+    BiFunction<D1, D2, R> function,
+    Class<R> resultClass,
+    Class<D1> dataClass1,
+    Class<D2> dataClass2
+  ) {
+    return FunctionActions.ofBiFunction(function, resultClass, dataClass1, dataClass2);
   }
 
   static <R, D1, D2, D3> Action3<R, D1, D2, D3> of(
-    TriFunction<D1, D2, D3, R> function, Class<R> resultClass, Class<D1> dataClass1, Class<D2> dataClass2, Class<D3> dataClass3
+      TriFunction<D1, D2, D3, R> function
   ) {
-    return FunctionActions.of(function, resultClass, dataClass1, dataClass2, dataClass3);
+    return FunctionActions.ofTriFunction(function);
   }
 
-  static Runner runner(Runnable runnable) {
+  static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> of(
+      QuadFunction<D1, D2, D3, D4, R> function
+  ) {
+    return FunctionActions.ofQuadFunction(function);
+  }
+
+  static <R, D1, D2, D3> Action3<R, D1, D2, D3> of(
+    TriFunction<D1, D2, D3, R> function,
+    Class<R> resultClass,
+    Class<D1> dataClass1,
+    Class<D2> dataClass2,
+    Class<D3> dataClass3
+  ) {
+    return FunctionActions.ofTriFunction(function, resultClass, dataClass1, dataClass2, dataClass3);
+  }
+
+  static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> of(
+      QuadFunction<D1, D2, D3, D4, R> function,
+      Class<R> resultClass,
+      Class<D1> dataClass1,
+      Class<D2> dataClass2,
+      Class<D3> dataClass3,
+      Class<D4> dataClass4
+  ) {
+    return FunctionActions.ofQuadFunction(function, resultClass, dataClass1, dataClass2, dataClass3, dataClass4);
+  }
+
+  static <D> Action1<Double, D> of(
+      ObjectToDoubleFunction<D> function
+  ) {
+    return FunctionActions.ofObjectToDoubleFunction(function);
+  }
+
+  static <D1, D2> Action2<Long, D1, D2> of(
+      TwoObjectsToLongFunction<D1, D2> function
+  ) {
+    return FunctionActions.ofTwoObjectsToLongFunction(function);
+  }
+
+  static <D> Action2<Long, D, Long> of(
+      ObjectAndLongToLongFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndLongToLongFunction(function);
+  }
+
+  static <D> Action2<Long, D, Double> of(
+      ObjectAndDoubleToLongFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndDoubleToLongFunction(function);
+  }
+
+  static <D1, D2> Action2<Double, D1, D2> of(
+      TwoObjectsToDoubleFunction<D1, D2> function
+  ) {
+    return FunctionActions.ofTwoObjectsToDoubleFunction(function);
+  }
+
+  static <D> Action2<Double, D, Long> of(
+      ObjectAndLongToDoubleFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndLongToDoubleFunction(function);
+  }
+
+  static <D> Action2<Double, D, Double> of(
+      ObjectAndDoubleToDoubleFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndDoubleToDoubleFunction(function);
+  }
+
+  static <D1, D2, D3> Action3<Long, D1, D2, D3> of(
+      ThreeObjectsToLongFunction<D1, D2, D3> function
+  ) {
+    return FunctionActions.ofThreeObjectsToLongFunction(function);
+  }
+
+  static <D1, D2> Action3<Long, D1, D2, Long> of(
+      TwoObjectsAndLongToLongFunction<D1, D2> function
+  ) {
+    return FunctionActions.ofTwoObjectsAndLongToLongFunction(function);
+  }
+
+  static <D1, D2> Action3<Long, D1, D2, Double> of(
+      TwoObjectsAndDoubleToLongFunction<D1, D2> function
+  ) {
+    return FunctionActions.ofTwoObjectsAndDoubleToLongFunction(function);
+  }
+
+  static <D> Action3<Long, D, Long, Long> of(
+      ObjectAndTwoLongsToLongFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndTwoLongsToLongFunction(function);
+  }
+
+  static <D> Action3<Long, D, Long, Double> of(
+      ObjectAndLongAndDoubleToLongFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndLongAndDoubleToLongFunction(function);
+  }
+
+  static <D> Action3<Long, D, Double, Long> of(
+      ObjectAndDoubleAndLongToLongFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndDoubleAndLongToLongFunction(function);
+  }
+
+  static <D> Action3<Long, D, Double, Double> of(
+      ObjectAndTwoDoublesToLongFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndTwoDoublesToLongFunction(function);
+  }
+
+  static <D1, D2, D3> Action3<Double, D1, D2, D3> of(
+      ThreeObjectsToDoubleFunction<D1, D2, D3> function
+  ) {
+    return FunctionActions.ofThreeObjectsToDoubleFunction(function);
+  }
+
+  static <D1, D2> Action3<Double, D1, D2, Long> of(
+      TwoObjectsAndLongToDoubleFunction<D1, D2> function
+  ) {
+    return FunctionActions.ofTwoObjectsAndLongToDoubleFunction(function);
+  }
+
+  static <D1, D2> Action3<Double, D1, D2, Double> of(
+      TwoObjectsAndDoubleToDoubleFunction<D1, D2> function
+  ) {
+    return FunctionActions.ofTwoObjectsAndDoubleToDoubleFunction(function);
+  }
+
+  static <D> Action3<Double, D, Long, Long> of(
+      ObjectAndTwoLongsToDoubleFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndTwoLongsToDoubleFunction(function);
+  }
+
+  static <D> Action3<Double, D, Long, Double> of(
+      ObjectAndLongAndDoubleToDoubleFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndLongAndDoubleToDoubleFunction(function);
+  }
+
+  static <D> Action3<Double, D, Double, Long> of(
+      ObjectAndDoubleAndLongToDoubleFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndDoubleAndLongToDoubleFunction(function);
+  }
+
+  static <D> Action3<Double, D, Double, Double> of(
+      ObjectAndTwoDoublesToDoubleFunction<D> function
+  ) {
+    return FunctionActions.ofObjectAndTwoDoublesToDoubleFunction(function);
+  }
+
+  static Runner runner(
+      Runnable runnable
+  ) {
     return RunnerActions.of(runnable);
   }
 
-  static <D> Runner runner(Consumer<D> consumer, D value) {
+  static <D> Runner runner(
+      Consumer<D> consumer,
+      D value
+  ) {
     return RunnerActions.of(consumer, value);
   }
 
-  static <R> Getter<R> getter(R value) {
+  static <R> Getter<R> getter(
+      R value
+  ) {
     return GetterActions.of(value);
   }
 
-  static <R> ResettableGetter<R> resettableGetter(Type<R> resultType) {
+  static <R> ResettableGetter<R> resettableGetter(
+      Type<R> resultType
+  ) {
     return ResettableGetterActions.get(resultType);
   }
 
-  static <R> ResettableGetter<R> resettableGetter(Class<R> resultClass) {
+  static <R> ResettableGetter<R> resettableGetter(
+      Class<R> resultClass
+  ) {
     return ResettableGetterActions.get(Types.of(resultClass));
   }
 
-  static <R> ResettableGetter<R> resettableGetter(R initValue) {
+  static <R> ResettableGetter<R> resettableGetter(
+      R initValue
+  ) {
     return ResettableGetterActions.get(initValue);
   }
 
@@ -123,7 +352,9 @@ public interface Actions {
    * @param <R> getter result value type.
    * @return getter action.
    */
-  static <R> Getter<R> cachedLazyGetter(Supplier<R> supplier) {
+  static <R> Getter<R> cachedLazyGetter(
+      Supplier<R> supplier
+  ) {
     return GetterActions.cachedLazy(supplier);
   }
 
@@ -136,7 +367,10 @@ public interface Actions {
    * @param <D> type of the function argument.
    * @return getter action.
    */
-  static <R, D> Getter<R> cachedLazyGetter(Function<D, R> function, D arg) {
+  static <R, D> Getter<R> cachedLazyGetter(
+      Function<D, R> function,
+      D arg
+  ) {
     return GetterActions.cachedLazy(function, arg);
   }
 
@@ -152,7 +386,9 @@ public interface Actions {
    * @return getter action.
    */
   static <R, D1, D2> Getter<R> cachedLazyGetter(
-      BiFunction<D1, D2, R> function, D1 arg1, D2 arg2
+      BiFunction<D1, D2, R> function,
+      D1 arg1,
+      D2 arg2
   ) {
     return GetterActions.cachedLazy(function, arg1, arg2);
   }
@@ -172,7 +408,10 @@ public interface Actions {
    * @return getter action.
    */
   static <R, D1, D2, D3> Getter<R> cachedLazyGetter(
-      TriFunction<D1, D2, D3, R> function, D1 arg1, D2 arg2, D3 arg3
+      TriFunction<D1, D2, D3, R> function,
+      D1 arg1,
+      D2 arg2,
+      D3 arg3
   ) {
     return GetterActions.cachedLazy(function, arg1, arg2, arg3);
   }
@@ -193,12 +432,18 @@ public interface Actions {
    * @return getter action.
    */
   static <R, D1, D2, D3, D4> Getter<R> cachedLazyGetter(
-      QuadFunction<D1, D2, D3, D4, R> function, D1 arg1, D2 arg2, D3 arg3, D4 arg4
+      QuadFunction<D1, D2, D3, D4, R> function,
+      D1 arg1,
+      D2 arg2,
+      D3 arg3,
+      D4 arg4
   ) {
     return GetterActions.cachedLazy(function, arg1, arg2, arg3, arg4);
   }
 
-  static <D> Processor1<D> processor(Consumer<D> consumer) {
+  static <D> Processor1<D> processor(
+      Consumer<D> consumer
+  ) {
     return Processors.of(consumer);
   }
 
