@@ -13,4 +13,14 @@ class SupplierBasedGetter<R> extends AbstractGetter<R> implements Getter<R> {
   public R get() {
     return supplier.get();
   }
+
+  @Override
+  public long getAsLong() {
+    return (Long) supplier.get();
+  }
+
+  @Override
+  public double getAsDouble() {
+    return (Double) supplier.get();
+  }
 }

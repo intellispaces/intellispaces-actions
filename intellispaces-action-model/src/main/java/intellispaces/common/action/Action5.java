@@ -18,6 +18,130 @@ public interface Action5<R, D1, D2, D3, D4, D5> extends Action {
 
   R execute(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5);
 
+  long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5);
+
+  long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, long data5);
+
+  long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, double data5);
+
+  long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4, long data5);
+
+  long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4, double data5);
+
+  long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4, long data5);
+
+  long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4, double data5);
+
+  long executeReturnLong(D1 data1, D2 data2, long data3, long data4, long data5);
+
+  long executeReturnLong(D1 data1, D2 data2, long data3, long data4, double data5);
+
+  long executeReturnLong(D1 data1, D2 data2, long data3, double data4, long data5);
+
+  long executeReturnLong(D1 data1, D2 data2, long data3, double data4, double data5);
+
+  long executeReturnLong(D1 data1, D2 data2, double data3, long data4, long data5);
+
+  long executeReturnLong(D1 data1, D2 data2, double data3, long data4, double data5);
+
+  long executeReturnLong(D1 data1, D2 data2, double data3, double data4, long data5);
+
+  long executeReturnLong(D1 data1, D2 data2, double data3, double data4, double data5);
+
+  long executeReturnLong(D1 data1, long data2, long data3, long data4, long data5);
+
+  long executeReturnLong(D1 data1, long data2, long data3, long data4, double data5);
+
+  long executeReturnLong(D1 data1, long data2, long data3, double data4, long data5);
+
+  long executeReturnLong(D1 data1, long data2, long data3, double data4, double data5);
+
+  long executeReturnLong(D1 data1, long data2, double data3, long data4, long data5);
+
+  long executeReturnLong(D1 data1, long data2, double data3, long data4, double data5);
+
+  long executeReturnLong(D1 data1, long data2, double data3, double data4, long data5);
+
+  long executeReturnLong(D1 data1, long data2, double data3, double data4, double data5);
+
+  long executeReturnLong(D1 data1, double data2, long data3, long data4, long data5);
+
+  long executeReturnLong(D1 data1, double data2, long data3, long data4, double data5);
+
+  long executeReturnLong(D1 data1, double data2, long data3, double data4, long data5);
+
+  long executeReturnLong(D1 data1, double data2, long data3, double data4, double data5);
+
+  long executeReturnLong(D1 data1, double data2, double data3, long data4, long data5);
+
+  long executeReturnLong(D1 data1, double data2, double data3, long data4, double data5);
+
+  long executeReturnLong(D1 data1, double data2, double data3, double data4, long data5);
+
+  long executeReturnLong(D1 data1, double data2, double data3, double data4, double data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, long data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, double data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4, long data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4, double data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, long data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, double data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, long data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, double data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, long data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, double data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, long data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, double data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, long data5);
+
+  double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, double data5);
+
+  double executeReturnDouble(D1 data1, long data2, long data3, long data4, long data5);
+
+  double executeReturnDouble(D1 data1, long data2, long data3, long data4, double data5);
+
+  double executeReturnDouble(D1 data1, long data2, long data3, double data4, long data5);
+
+  double executeReturnDouble(D1 data1, long data2, long data3, double data4, double data5);
+
+  double executeReturnDouble(D1 data1, long data2, double data3, long data4, long data5);
+
+  double executeReturnDouble(D1 data1, long data2, double data3, long data4, double data5);
+
+  double executeReturnDouble(D1 data1, long data2, double data3, double data4, long data5);
+
+  double executeReturnDouble(D1 data1, long data2, double data3, double data4, double data5);
+
+  double executeReturnDouble(D1 data1, double data2, long data3, long data4, long data5);
+
+  double executeReturnDouble(D1 data1, double data2, long data3, long data4, double data5);
+
+  double executeReturnDouble(D1 data1, double data2, long data3, double data4, long data5);
+
+  double executeReturnDouble(D1 data1, double data2, long data3, double data4, double data5);
+
+  double executeReturnDouble(D1 data1, double data2, double data3, long data4, long data5);
+
+  double executeReturnDouble(D1 data1, double data2, double data3, long data4, double data5);
+
+  double executeReturnDouble(D1 data1, double data2, double data3, double data4, long data5);
+
+  double executeReturnDouble(D1 data1, double data2, double data3, double data4, double data5);
+
   <W extends Wrapper5<R, D1, D2, D3, D4, D5>> W wrapAction5(Function<Action5<R, D1, D2, D3, D4, D5>, W> wrapperFactory);
 
   <W extends Wrapper5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> W convertAction5(

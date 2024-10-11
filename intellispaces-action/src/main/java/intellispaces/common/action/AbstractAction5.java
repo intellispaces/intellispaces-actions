@@ -3,6 +3,7 @@ package intellispaces.common.action;
 import intellispaces.common.action.wrapper.Wrapper;
 import intellispaces.common.action.wrapper.Wrapper5;
 import intellispaces.common.base.exception.UnexpectedViolationException;
+import intellispaces.common.base.type.TypeFunctions;
 
 import java.util.function.Function;
 
@@ -25,6 +26,376 @@ public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<
       throw UnexpectedViolationException.withMessage("Action5 expects five input data parameters");
     }
     return execute((D1) data[0], (D2) data[1], (D3) data[2], (D4) data[3], (D5) data[4]);
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, data4, data5));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, data4, (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, data4, (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, long data2, long data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, long data2, long data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, long data2, long data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, long data2, long data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, long data2, double data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, long data2, double data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, long data2, double data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, long data2, double data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, double data2, long data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, double data2, long data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, double data2, long data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, double data2, long data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, double data2, double data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, double data2, double data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, double data2, double data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, double data2, double data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, data4, data5));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, data4, (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, data4, (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, long data5) {
+    return (double) execute(data1, data2, (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, long data2, long data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, long data2, long data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, long data2, long data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, long data2, long data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, long data2, double data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, long data2, double data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, long data2, double data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, long data2, double data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, double data2, long data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, double data2, long data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, double data2, long data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, double data2, long data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, double data2, double data3, long data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, double data2, double data3, long data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, double data2, double data3, double data4, long data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, double data2, double data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override

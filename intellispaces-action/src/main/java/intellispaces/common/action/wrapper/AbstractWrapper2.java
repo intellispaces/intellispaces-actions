@@ -14,4 +14,34 @@ public abstract class AbstractWrapper2<R, D1, D2> extends AbstractAction2<R, D1,
   public Action2<R, D1, D2> wrappedAction() {
     return wrappedAction;
   }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2) {
+    return wrappedAction.executeReturnLong(data1, data2);
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2) {
+    return wrappedAction.executeReturnLong(data1, data2);
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2) {
+    return wrappedAction.executeReturnLong(data1, data2);
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2) {
+    return wrappedAction.executeReturnDouble(data1, data2);
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2) {
+    return wrappedAction.executeReturnDouble(data1, data2);
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2) {
+    return wrappedAction.executeReturnDouble(data1, data2);
+  }
 }

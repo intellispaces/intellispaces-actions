@@ -22,6 +22,10 @@ public interface Getter<R> extends Action0<R>, Supplier<R> {
     return get();
   }
 
+  long getAsLong();
+
+  double getAsDouble();
+
   @Override
   default R execute(Void data1, Void data2, Void data3, Void data4, Void data5) {
     return execute();

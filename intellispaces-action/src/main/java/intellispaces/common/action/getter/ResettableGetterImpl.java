@@ -13,6 +13,16 @@ class ResettableGetterImpl<R> extends AbstractGetter<R> implements ResettableGet
   }
 
   @Override
+  public long getAsLong() {
+    return (Long) value;
+  }
+
+  @Override
+  public double getAsDouble() {
+    return (Double) value;
+  }
+
+  @Override
   public void set(R value) {
     this.value = value;
   }

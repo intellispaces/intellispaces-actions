@@ -14,4 +14,14 @@ public abstract class AbstractWrapper1<R, D> extends AbstractAction1<R, D> imple
   public Action1<R, D> wrappedAction() {
     return wrappedAction;
   }
+
+  @Override
+  public long executeReturnLong(D data) {
+    return wrappedAction.executeReturnLong(data);
+  }
+
+  @Override
+  public double executeReturnDouble(D data) {
+    return wrappedAction.executeReturnDouble(data);
+  }
 }

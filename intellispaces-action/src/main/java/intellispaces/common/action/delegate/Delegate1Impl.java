@@ -17,6 +17,15 @@ class Delegate1Impl<R, D> extends AbstractAction1<R, D> implements Delegate1<R, 
   }
 
   @Override
+  public long executeReturnLong(D data) {
+    return contractor.get().executeReturnLong(data);
+  }
+
+  @Override
+  public double executeReturnDouble(D data) {
+    return contractor.get().executeReturnDouble(data);
+  }
+  @Override
   public Getter<Action1<R, D>> contractor() {
     return contractor;
   }

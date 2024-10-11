@@ -17,6 +17,36 @@ class Delegate2Impl<R, D1, D2> extends AbstractAction2<R, D1, D2> implements Del
   }
 
   @Override
+  public long executeReturnLong(D1 data1, D2 data2) {
+    return contractor.get().executeReturnLong(data1, data2);
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2) {
+    return contractor.get().executeReturnLong(data1, data2);
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2) {
+    return contractor.get().executeReturnLong(data1, data2);
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2) {
+    return contractor.get().executeReturnDouble(data1, data2);
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2) {
+    return contractor.get().executeReturnDouble(data1, data2);
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2) {
+    return contractor.get().executeReturnDouble(data1, data2);
+  }
+
+  @Override
   public Getter<Action2<R, D1, D2>> contractor() {
     return contractor;
   }

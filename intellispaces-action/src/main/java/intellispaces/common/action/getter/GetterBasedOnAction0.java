@@ -12,7 +12,17 @@ class GetterBasedOnAction0<R> extends AbstractGetter<R> implements Wrapper0<R> {
 
   @Override
   public R get() {
-    return wrappedAction.execute(null, null, null, null, null);
+    return wrappedAction.execute();
+  }
+
+  @Override
+  public long getAsLong() {
+    return wrappedAction.executeReturnLong();
+  }
+
+  @Override
+  public double getAsDouble() {
+    return wrappedAction.executeReturnDouble();
   }
 
   @Override

@@ -21,6 +21,10 @@ public interface Action1<R, D> extends
    */
   R execute(D data);
 
+  long executeReturnLong(D data);
+
+  double executeReturnDouble(D data);
+
   <W extends Wrapper1<R, D>> W wrapAction1(Function<Action1<R, D>, W> wrapperFactory);
 
   <W extends Wrapper1<_R, _D>, _R, _D> W convertAction1(Function<Action1<R, D>, W> wrapperFactory);

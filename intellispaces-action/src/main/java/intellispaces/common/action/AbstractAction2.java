@@ -6,6 +6,7 @@ import intellispaces.common.action.wrapper.Wrapper3;
 import intellispaces.common.action.wrapper.Wrapper4;
 import intellispaces.common.action.wrapper.Wrapper5;
 import intellispaces.common.base.exception.UnexpectedViolationException;
+import intellispaces.common.base.type.TypeFunctions;
 
 import java.util.function.Function;
 
@@ -43,6 +44,570 @@ public abstract class AbstractAction2<R, D1, D2> implements Action2<R, D1, D2> {
       throw UnexpectedViolationException.withMessage("Action2 expects two input data parameters");
     }
     return execute((D1) data[0], (D2) data[1]);
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2) {
+    return TypeFunctions.convertObjectToLong(execute(data1, data2));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, long data2) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public long executeReturnLong(D1 data1, double data2) {
+    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2)));
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, long data2) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2)));
+  }
+
+  @Override
+  @SuppressWarnings("unchecked")
+  public double executeReturnDouble(D1 data1, double data2) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2)));
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3) {
+    return executeReturnLong(data1, data2);
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3) {
+    return executeReturnDouble(data1, data2);
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3, Void data4) {
+    return executeReturnLong(data1, data2);
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3, Void data4) {
+    return executeReturnDouble(data1, data2);
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3, Void data4, Void data5) {
+    return executeReturnLong(data1, data2);
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3, Void data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3, Void data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, Void data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3, Void data4, Void data5) {
+    return executeReturnDouble(data1, data2);
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3, Void data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3, Void data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, Void data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, long data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, double data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, long data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, double data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, long data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, double data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, long data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, double data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, long data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, double data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, long data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, double data3) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, long data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, long data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, double data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, double data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, long data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, long data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, double data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, double data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, long data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, long data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, double data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, double data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, long data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, long data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, double data3, long data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, double data3, double data4) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, long data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, long data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, long data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, long data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, double data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, double data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, double data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, long data2, double data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, long data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, long data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, long data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, long data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, double data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, double data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, double data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public long executeReturnLong(D1 data1, double data2, double data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, long data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, long data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, long data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, long data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, double data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, double data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, double data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, long data2, double data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, long data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, long data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, long data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, long data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, double data3, long data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, double data3, long data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, double data3, double data4, long data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, double data2, double data3, double data4, double data5) {
+    throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
