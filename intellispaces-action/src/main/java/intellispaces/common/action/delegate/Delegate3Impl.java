@@ -20,38 +20,38 @@ class Delegate3Impl<R, D1, D2, D3>
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3) {
-    return contractor.get().executeReturnLong(data1, data2, data3);
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3) {
+    return contractor.get().executeReturnInt(data1, data2, data3);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, long data3) {
-    return contractor.get().executeReturnLong(data1, data2, data3);
+  public int executeReturnInt(D1 data1, D2 data2, int data3) {
+    return contractor.get().executeReturnInt(data1, data2, data3);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, double data3) {
-    return contractor.get().executeReturnLong(data1, data2, data3);
+  public int executeReturnInt(D1 data1, D2 data2, double data3) {
+    return contractor.get().executeReturnInt(data1, data2, data3);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, long data3) {
-    return contractor.get().executeReturnLong(data1, data2, data3);
+  public int executeReturnInt(D1 data1, int data2, int data3) {
+    return contractor.get().executeReturnInt(data1, data2, data3);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, double data3) {
-    return contractor.get().executeReturnLong(data1, data2, data3);
+  public int executeReturnInt(D1 data1, int data2, double data3) {
+    return contractor.get().executeReturnInt(data1, data2, data3);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, long data3) {
-    return contractor.get().executeReturnLong(data1, data2, data3);
+  public int executeReturnInt(D1 data1, double data2, int data3) {
+    return contractor.get().executeReturnInt(data1, data2, data3);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, double data3) {
-    return contractor.get().executeReturnLong(data1, data2, data3);
+  public int executeReturnInt(D1 data1, double data2, double data3) {
+    return contractor.get().executeReturnInt(data1, data2, data3);
   }
 
   @Override
@@ -60,7 +60,7 @@ class Delegate3Impl<R, D1, D2, D3>
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, long data3) {
+  public double executeReturnDouble(D1 data1, D2 data2, int data3) {
     return contractor.get().executeReturnDouble(data1, data2, data3);
   }
 
@@ -70,17 +70,17 @@ class Delegate3Impl<R, D1, D2, D3>
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, long data3) {
+  public double executeReturnDouble(D1 data1, int data2, int data3) {
     return contractor.get().executeReturnDouble(data1, data2, data3);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, double data3) {
+  public double executeReturnDouble(D1 data1, int data2, double data3) {
     return contractor.get().executeReturnDouble(data1, data2, data3);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, long data3) {
+  public double executeReturnDouble(D1 data1, double data2, int data3) {
     return contractor.get().executeReturnDouble(data1, data2, data3);
   }
 

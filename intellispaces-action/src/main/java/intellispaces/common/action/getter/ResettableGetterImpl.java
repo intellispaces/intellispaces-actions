@@ -13,8 +13,8 @@ class ResettableGetterImpl<R> extends AbstractGetter<R> implements ResettableGet
   }
 
   @Override
-  public long getAsLong() {
-    return (Long) value;
+  public int getAsInt() {
+    return (Integer) value;
   }
 
   @Override

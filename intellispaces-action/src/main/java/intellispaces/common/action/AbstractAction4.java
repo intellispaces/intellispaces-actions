@@ -35,92 +35,92 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, data4));
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, data4));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, (D4) Long.valueOf(data4)));
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, int data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, (D4) Double.valueOf(data4)));
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, double data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, (D4) Double.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Long.valueOf(data4)));
+  public int executeReturnInt(D1 data1, D2 data2, int data3, int data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Double.valueOf(data4)));
+  public int executeReturnInt(D1 data1, D2 data2, int data3, double data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Long.valueOf(data4)));
+  public int executeReturnInt(D1 data1, D2 data2, double data3, int data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4)));
+  public int executeReturnInt(D1 data1, D2 data2, double data3, double data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, long data3, long data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4)));
+  public int executeReturnInt(D1 data1, int data2, int data3, int data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, long data3, double data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4)));
+  public int executeReturnInt(D1 data1, int data2, int data3, double data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, double data3, long data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4)));
+  public int executeReturnInt(D1 data1, int data2, double data3, int data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, double data3, double data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4)));
+  public int executeReturnInt(D1 data1, int data2, double data3, double data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, long data3, long data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4)));
+  public int executeReturnInt(D1 data1, double data2, int data3, int data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, long data3, double data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4)));
+  public int executeReturnInt(D1 data1, double data2, int data3, double data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, double data3, long data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4)));
+  public int executeReturnInt(D1 data1, double data2, double data3, int data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, double data3, double data4) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4)));
+  public int executeReturnInt(D1 data1, double data2, double data3, double data4) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4)));
   }
 
   @Override
@@ -130,8 +130,8 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Long.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, int data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Integer.valueOf(data4)));
   }
 
   @Override
@@ -142,20 +142,20 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Long.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, int data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Double.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, double data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Long.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, int data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
@@ -166,44 +166,44 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, long data3, long data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, int data2, int data3, int data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, long data3, double data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, int data2, int data3, double data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, double data3, long data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, int data2, double data3, int data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, double data3, double data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, int data2, double data3, double data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, double data2, long data3, long data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3)Long.valueOf(data3), (D4) Long.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, double data2, int data3, int data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3)Integer.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, double data2, long data3, double data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, double data2, int data3, double data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, double data2, double data3, long data4) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4)));
+  public double executeReturnDouble(D1 data1, double data2, double data3, int data4) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4)));
   }
 
   @Override
@@ -213,157 +213,157 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, Void data5) {
-    return executeReturnLong(data1, data2, data3, data4);
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, Void data5) {
+    return executeReturnInt(data1, data2, data3, data4);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, long data5) {
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, double data5) {
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4, long data5) {
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4, double data5) {
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4, long data5) {
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4, double data5) {
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4, long data5) {
+  public int executeReturnInt(D1 data1, D2 data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4, double data5) {
+  public int executeReturnInt(D1 data1, D2 data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4, long data5) {
+  public int executeReturnInt(D1 data1, D2 data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4, double data5) {
+  public int executeReturnInt(D1 data1, D2 data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4, long data5) {
+  public int executeReturnInt(D1 data1, D2 data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4, double data5) {
+  public int executeReturnInt(D1 data1, D2 data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4, long data5) {
+  public int executeReturnInt(D1 data1, D2 data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4, double data5) {
+  public int executeReturnInt(D1 data1, D2 data2, double data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, long data3, long data4, long data5) {
+  public int executeReturnInt(D1 data1, int data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, long data3, long data4, double data5) {
+  public int executeReturnInt(D1 data1, int data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, long data3, double data4, long data5) {
+  public int executeReturnInt(D1 data1, int data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, long data3, double data4, double data5) {
+  public int executeReturnInt(D1 data1, int data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, double data3, long data4, long data5) {
+  public int executeReturnInt(D1 data1, int data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, double data3, long data4, double data5) {
+  public int executeReturnInt(D1 data1, int data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, double data3, double data4, long data5) {
+  public int executeReturnInt(D1 data1, int data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, double data3, double data4, double data5) {
+  public int executeReturnInt(D1 data1, int data2, double data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, long data3, long data4, long data5) {
+  public int executeReturnInt(D1 data1, double data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, long data3, long data4, double data5) {
+  public int executeReturnInt(D1 data1, double data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, long data3, double data4, long data5) {
+  public int executeReturnInt(D1 data1, double data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, long data3, double data4, double data5) {
+  public int executeReturnInt(D1 data1, double data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, double data3, long data4, long data5) {
+  public int executeReturnInt(D1 data1, double data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, double data3, long data4, double data5) {
+  public int executeReturnInt(D1 data1, double data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, double data3, double data4, long data5) {
+  public int executeReturnInt(D1 data1, double data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, double data3, double data4, double data5) {
+  public int executeReturnInt(D1 data1, double data2, double data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -373,7 +373,7 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -383,17 +383,17 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -403,37 +403,37 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, double data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -443,77 +443,77 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, long data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, int data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, long data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, int data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, long data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, int data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, long data3, double data4, double data5) {
+  public double executeReturnDouble(D1 data1, int data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, double data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, int data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, double data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, int data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, double data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, int data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, double data3, double data4, double data5) {
+  public double executeReturnDouble(D1 data1, int data2, double data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, long data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, double data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, long data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, double data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, long data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, double data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, long data3, double data4, double data5) {
+  public double executeReturnDouble(D1 data1, double data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, double data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, double data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, double data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, double data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, double data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, double data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 

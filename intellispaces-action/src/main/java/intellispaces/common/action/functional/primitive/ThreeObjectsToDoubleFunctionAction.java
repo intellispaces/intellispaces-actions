@@ -21,7 +21,7 @@ public class ThreeObjectsToDoubleFunctionAction<D1, D2, D3>
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3) {
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 

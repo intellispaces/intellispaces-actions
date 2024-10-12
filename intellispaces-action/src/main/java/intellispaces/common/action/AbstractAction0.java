@@ -53,8 +53,8 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public long executeReturnLong() {
-    return TypeFunctions.convertObjectToLong(execute());
+  public int executeReturnInt() {
+    return TypeFunctions.convertObjectToInt(execute());
   }
 
   @Override
@@ -63,8 +63,8 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public long executeReturnLong(Void data) {
-    return executeReturnLong();
+  public int executeReturnInt(Void data) {
+    return executeReturnInt();
   }
 
   @Override
@@ -73,17 +73,17 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2) {
-    return executeReturnLong();
+  public int executeReturnInt(Void data1, Void data2) {
+    return executeReturnInt();
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2) {
+  public int executeReturnInt(Void data1, int data2) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2) {
+  public int executeReturnInt(Void data1, double data2) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -93,7 +93,7 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2) {
+  public double executeReturnDouble(Void data1, int data2) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -103,37 +103,37 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3) {
-    return executeReturnLong();
+  public int executeReturnInt(Void data1, Void data2, Void data3) {
+    return executeReturnInt();
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, long data3) {
+  public int executeReturnInt(Void data1, Void data2, int data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, double data3) {
+  public int executeReturnInt(Void data1, Void data2, double data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, long data3) {
+  public int executeReturnInt(Void data1, int data2, int data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, double data3) {
+  public int executeReturnInt(Void data1, int data2, double data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, long data3) {
+  public int executeReturnInt(Void data1, double data2, int data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, double data3) {
+  public int executeReturnInt(Void data1, double data2, double data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -143,7 +143,7 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, long data3) {
+  public double executeReturnDouble(Void data1, Void data2, int data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -153,17 +153,17 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, long data3) {
+  public double executeReturnDouble(Void data1, int data2, int data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, double data3) {
+  public double executeReturnDouble(Void data1, int data2, double data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, long data3) {
+  public double executeReturnDouble(Void data1, double data2, int data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -173,77 +173,77 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3, Void data4) {
-    return executeReturnLong();
+  public int executeReturnInt(Void data1, Void data2, Void data3, Void data4) {
+    return executeReturnInt();
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3, long data4) {
+  public int executeReturnInt(Void data1, Void data2, Void data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3, double data4) {
+  public int executeReturnInt(Void data1, Void data2, Void data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, long data3, long data4) {
+  public int executeReturnInt(Void data1, Void data2, int data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, long data3, double data4) {
+  public int executeReturnInt(Void data1, Void data2, int data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, double data3, long data4) {
+  public int executeReturnInt(Void data1, Void data2, double data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, double data3, double data4) {
+  public int executeReturnInt(Void data1, Void data2, double data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, long data3, long data4) {
+  public int executeReturnInt(Void data1, int data2, int data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, long data3, double data4) {
+  public int executeReturnInt(Void data1, int data2, int data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, double data3, long data4) {
+  public int executeReturnInt(Void data1, int data2, double data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, double data3, double data4) {
+  public int executeReturnInt(Void data1, int data2, double data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, long data3, long data4) {
+  public int executeReturnInt(Void data1, double data2, int data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, long data3, double data4) {
+  public int executeReturnInt(Void data1, double data2, int data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, double data3, long data4) {
+  public int executeReturnInt(Void data1, double data2, double data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, double data3, double data4) {
+  public int executeReturnInt(Void data1, double data2, double data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -253,7 +253,7 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, Void data3, long data4) {
+  public double executeReturnDouble(Void data1, Void data2, Void data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -263,17 +263,17 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, long data3, long data4) {
+  public double executeReturnDouble(Void data1, Void data2, int data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, long data3, double data4) {
+  public double executeReturnDouble(Void data1, Void data2, int data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, double data3, long data4) {
+  public double executeReturnDouble(Void data1, Void data2, double data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -283,37 +283,37 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, long data3, long data4) {
+  public double executeReturnDouble(Void data1, int data2, int data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, long data3, double data4) {
+  public double executeReturnDouble(Void data1, int data2, int data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, double data3, long data4) {
+  public double executeReturnDouble(Void data1, int data2, double data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, double data3, double data4) {
+  public double executeReturnDouble(Void data1, int data2, double data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, long data3, long data4) {
+  public double executeReturnDouble(Void data1, double data2, int data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, long data3, double data4) {
+  public double executeReturnDouble(Void data1, double data2, int data3, double data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, double data3, long data4) {
+  public double executeReturnDouble(Void data1, double data2, double data3, int data4) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -323,157 +323,157 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3, Void data4, Void data5) {
-    return executeReturnLong();
+  public int executeReturnInt(Void data1, Void data2, Void data3, Void data4, Void data5) {
+    return executeReturnInt();
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3, Void data4, long data5) {
+  public int executeReturnInt(Void data1, Void data2, Void data3, Void data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3, Void data4, double data5) {
+  public int executeReturnInt(Void data1, Void data2, Void data3, Void data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3, long data4, long data5) {
+  public int executeReturnInt(Void data1, Void data2, Void data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3, long data4, double data5) {
+  public int executeReturnInt(Void data1, Void data2, Void data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3, double data4, long data5) {
+  public int executeReturnInt(Void data1, Void data2, Void data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, Void data3, double data4, double data5) {
+  public int executeReturnInt(Void data1, Void data2, Void data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, long data3, long data4, long data5) {
+  public int executeReturnInt(Void data1, Void data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, long data3, long data4, double data5) {
+  public int executeReturnInt(Void data1, Void data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, long data3, double data4, long data5) {
+  public int executeReturnInt(Void data1, Void data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, long data3, double data4, double data5) {
+  public int executeReturnInt(Void data1, Void data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, double data3, long data4, long data5) {
+  public int executeReturnInt(Void data1, Void data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, double data3, long data4, double data5) {
+  public int executeReturnInt(Void data1, Void data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, double data3, double data4, long data5) {
+  public int executeReturnInt(Void data1, Void data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, Void data2, double data3, double data4, double data5) {
+  public int executeReturnInt(Void data1, Void data2, double data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, long data3, long data4, long data5) {
+  public int executeReturnInt(Void data1, int data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, long data3, long data4, double data5) {
+  public int executeReturnInt(Void data1, int data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, long data3, double data4, long data5) {
+  public int executeReturnInt(Void data1, int data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, long data3, double data4, double data5) {
+  public int executeReturnInt(Void data1, int data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, double data3, long data4, long data5) {
+  public int executeReturnInt(Void data1, int data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, double data3, long data4, double data5) {
+  public int executeReturnInt(Void data1, int data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, double data3, double data4, long data5) {
+  public int executeReturnInt(Void data1, int data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, long data2, double data3, double data4, double data5) {
+  public int executeReturnInt(Void data1, int data2, double data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, long data3, long data4, long data5) {
+  public int executeReturnInt(Void data1, double data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, long data3, long data4, double data5) {
+  public int executeReturnInt(Void data1, double data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, long data3, double data4, long data5) {
+  public int executeReturnInt(Void data1, double data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, long data3, double data4, double data5) {
+  public int executeReturnInt(Void data1, double data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, double data3, long data4, long data5) {
+  public int executeReturnInt(Void data1, double data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, double data3, long data4, double data5) {
+  public int executeReturnInt(Void data1, double data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, double data3, double data4, long data5) {
+  public int executeReturnInt(Void data1, double data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public long executeReturnLong(Void data1, double data2, double data3, double data4, double data5) {
+  public int executeReturnInt(Void data1, double data2, double data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -483,7 +483,7 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, Void data3, Void data4, long data5) {
+  public double executeReturnDouble(Void data1, Void data2, Void data3, Void data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -493,17 +493,17 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, Void data3, long data4, long data5) {
+  public double executeReturnDouble(Void data1, Void data2, Void data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, Void data3, long data4, double data5) {
+  public double executeReturnDouble(Void data1, Void data2, Void data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, Void data3, double data4, long data5) {
+  public double executeReturnDouble(Void data1, Void data2, Void data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -513,37 +513,37 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, long data3, long data4, long data5) {
+  public double executeReturnDouble(Void data1, Void data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, long data3, long data4, double data5) {
+  public double executeReturnDouble(Void data1, Void data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, long data3, double data4, long data5) {
+  public double executeReturnDouble(Void data1, Void data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, long data3, double data4, double data5) {
+  public double executeReturnDouble(Void data1, Void data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, double data3, long data4, long data5) {
+  public double executeReturnDouble(Void data1, Void data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, double data3, long data4, double data5) {
+  public double executeReturnDouble(Void data1, Void data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, Void data2, double data3, double data4, long data5) {
+  public double executeReturnDouble(Void data1, Void data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
@@ -553,77 +553,77 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, long data3, long data4, long data5) {
+  public double executeReturnDouble(Void data1, int data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, long data3, long data4, double data5) {
+  public double executeReturnDouble(Void data1, int data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, long data3, double data4, long data5) {
+  public double executeReturnDouble(Void data1, int data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, long data3, double data4, double data5) {
+  public double executeReturnDouble(Void data1, int data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, double data3, long data4, long data5) {
+  public double executeReturnDouble(Void data1, int data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, double data3, long data4, double data5) {
+  public double executeReturnDouble(Void data1, int data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, double data3, double data4, long data5) {
+  public double executeReturnDouble(Void data1, int data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, long data2, double data3, double data4, double data5) {
+  public double executeReturnDouble(Void data1, int data2, double data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, long data3, long data4, long data5) {
+  public double executeReturnDouble(Void data1, double data2, int data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, long data3, long data4, double data5) {
+  public double executeReturnDouble(Void data1, double data2, int data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, long data3, double data4, long data5) {
+  public double executeReturnDouble(Void data1, double data2, int data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, long data3, double data4, double data5) {
+  public double executeReturnDouble(Void data1, double data2, int data3, double data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, double data3, long data4, long data5) {
+  public double executeReturnDouble(Void data1, double data2, double data3, int data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, double data3, long data4, double data5) {
+  public double executeReturnDouble(Void data1, double data2, double data3, int data4, double data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 
   @Override
-  public double executeReturnDouble(Void data1, double data2, double data3, double data4, long data5) {
+  public double executeReturnDouble(Void data1, double data2, double data3, double data4, int data5) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 

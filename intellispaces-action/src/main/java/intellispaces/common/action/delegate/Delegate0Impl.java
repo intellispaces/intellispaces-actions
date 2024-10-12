@@ -17,8 +17,8 @@ class Delegate0Impl<R> extends AbstractAction0<R> implements Delegate0<R> {
   }
 
   @Override
-  public long executeReturnLong() {
-    return contractor.get().executeReturnLong();
+  public int executeReturnInt() {
+    return contractor.get().executeReturnInt();
   }
 
   @Override

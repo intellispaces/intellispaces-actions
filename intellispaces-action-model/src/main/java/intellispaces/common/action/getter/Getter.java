@@ -22,7 +22,7 @@ public interface Getter<R> extends Action0<R>, Supplier<R> {
     return get();
   }
 
-  long getAsLong();
+  int getAsInt();
 
   double getAsDouble();
 

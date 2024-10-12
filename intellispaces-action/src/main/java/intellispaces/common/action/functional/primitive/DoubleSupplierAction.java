@@ -19,7 +19,7 @@ public class DoubleSupplierAction extends AbstractAction0<Double> implements Act
   }
 
   @Override
-  public long executeReturnLong() {
+  public int executeReturnInt() {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 

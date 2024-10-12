@@ -2,22 +2,22 @@ package intellispaces.common.action.functional.primitive;
 
 import intellispaces.common.action.AbstractAction1;
 import intellispaces.common.action.Action1;
-import intellispaces.common.base.function.primitive.ObjectToLongFunction;
+import intellispaces.common.base.function.primitive.ObjectToIntFunction;
 
-public class ObjectToLongFunctionAction<D> extends AbstractAction1<Long, D> implements Action1<Long, D> {
-  private final ObjectToLongFunction<D> function;
+public class ObjectToIntFunctionAction<D> extends AbstractAction1<Integer, D> implements Action1<Integer, D> {
+  private final ObjectToIntFunction<D> function;
 
-  public ObjectToLongFunctionAction(ObjectToLongFunction<D> function) {
+  public ObjectToIntFunctionAction(ObjectToIntFunction<D> function) {
     this.function = function;
   }
 
   @Override
-  public Long execute(D data) {
+  public Integer execute(D data) {
     return function.apply(data);
   }
 
   @Override
-  public long executeReturnLong(D data) {
+  public int executeReturnInt(D data) {
     return function.apply(data);
   }
 

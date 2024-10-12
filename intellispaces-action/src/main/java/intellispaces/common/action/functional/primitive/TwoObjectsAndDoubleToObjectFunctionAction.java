@@ -21,7 +21,7 @@ public class TwoObjectsAndDoubleToObjectFunctionAction<R, D1, D2>
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, double data3) {
+  public int executeReturnInt(D1 data1, D2 data2, double data3) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 

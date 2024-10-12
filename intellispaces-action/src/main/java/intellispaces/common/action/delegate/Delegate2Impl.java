@@ -17,18 +17,18 @@ class Delegate2Impl<R, D1, D2> extends AbstractAction2<R, D1, D2> implements Del
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2) {
-    return contractor.get().executeReturnLong(data1, data2);
+  public int executeReturnInt(D1 data1, D2 data2) {
+    return contractor.get().executeReturnInt(data1, data2);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2) {
-    return contractor.get().executeReturnLong(data1, data2);
+  public int executeReturnInt(D1 data1, int data2) {
+    return contractor.get().executeReturnInt(data1, data2);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2) {
-    return contractor.get().executeReturnLong(data1, data2);
+  public int executeReturnInt(D1 data1, double data2) {
+    return contractor.get().executeReturnInt(data1, data2);
   }
 
   @Override
@@ -37,7 +37,7 @@ class Delegate2Impl<R, D1, D2> extends AbstractAction2<R, D1, D2> implements Del
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2) {
+  public double executeReturnDouble(D1 data1, int data2) {
     return contractor.get().executeReturnDouble(data1, data2);
   }
 

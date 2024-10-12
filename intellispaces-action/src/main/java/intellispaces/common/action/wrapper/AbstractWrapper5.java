@@ -19,158 +19,158 @@ public abstract class AbstractWrapper5<R, D1, D2, D3, D4, D5>
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, int data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, int data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, double data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, double data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, int data3, int data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, int data3, int data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, int data3, double data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, int data3, double data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, double data3, int data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, double data3, int data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, double data3, double data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, D2 data2, double data3, double data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, long data3, long data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, int data2, int data3, int data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, long data3, long data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, int data2, int data3, int data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, long data3, double data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, int data2, int data3, double data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, long data3, double data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, int data2, int data3, double data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, double data3, long data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, int data2, double data3, int data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, double data3, long data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, int data2, double data3, int data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, double data3, double data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, int data2, double data3, double data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, long data2, double data3, double data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, int data2, double data3, double data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, long data3, long data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, double data2, int data3, int data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, long data3, long data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, double data2, int data3, int data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, long data3, double data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, double data2, int data3, double data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, long data3, double data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, double data2, int data3, double data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, double data3, long data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, double data2, double data3, int data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, double data3, long data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, double data2, double data3, int data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, double data3, double data4, long data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, double data2, double data3, double data4, int data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public long executeReturnLong(D1 data1, double data2, double data3, double data4, double data5) {
-    return wrappedAction.executeReturnLong(data1, data2, data3, data4, data5);
+  public int executeReturnInt(D1 data1, double data2, double data3, double data4, double data5) {
+    return wrappedAction.executeReturnInt(data1, data2, data3, data4, data5);
   }
 
   @Override
@@ -179,7 +179,7 @@ public abstract class AbstractWrapper5<R, D1, D2, D3, D4, D5>
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
@@ -189,17 +189,17 @@ public abstract class AbstractWrapper5<R, D1, D2, D3, D4, D5>
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, int data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, int data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
@@ -209,37 +209,37 @@ public abstract class AbstractWrapper5<R, D1, D2, D3, D4, D5>
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, int data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, int data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, double data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, double data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, double data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, int data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, int data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
@@ -249,77 +249,77 @@ public abstract class AbstractWrapper5<R, D1, D2, D3, D4, D5>
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, long data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, int data2, int data3, int data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, long data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, int data2, int data3, int data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, long data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, int data2, int data3, double data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, long data3, double data4, double data5) {
+  public double executeReturnDouble(D1 data1, int data2, int data3, double data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, double data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, int data2, double data3, int data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, double data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, int data2, double data3, int data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, double data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, int data2, double data3, double data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, long data2, double data3, double data4, double data5) {
+  public double executeReturnDouble(D1 data1, int data2, double data3, double data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, long data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, double data2, int data3, int data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, long data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, double data2, int data3, int data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, long data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, double data2, int data3, double data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, long data3, double data4, double data5) {
+  public double executeReturnDouble(D1 data1, double data2, int data3, double data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, double data3, long data4, long data5) {
+  public double executeReturnDouble(D1 data1, double data2, double data3, int data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, double data3, long data4, double data5) {
+  public double executeReturnDouble(D1 data1, double data2, double data3, int data4, double data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 
   @Override
-  public double executeReturnDouble(D1 data1, double data2, double data3, double data4, long data5) {
+  public double executeReturnDouble(D1 data1, double data2, double data3, double data4, int data5) {
     return wrappedAction.executeReturnDouble(data1, data2, data3, data4, data5);
   }
 

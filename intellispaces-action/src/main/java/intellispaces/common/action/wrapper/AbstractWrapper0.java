@@ -16,8 +16,8 @@ public abstract class AbstractWrapper0<R> extends AbstractAction0<R> implements 
   }
 
   @Override
-  public long executeReturnLong() {
-    return wrappedAction.executeReturnLong();
+  public int executeReturnInt() {
+    return wrappedAction.executeReturnInt();
   }
 
   @Override

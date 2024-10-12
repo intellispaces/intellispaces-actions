@@ -21,7 +21,7 @@ public interface Action0<R> extends
    */
   R execute();
 
-  long executeReturnLong();
+  int executeReturnInt();
 
   double executeReturnDouble();
 

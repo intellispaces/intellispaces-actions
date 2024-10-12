@@ -21,15 +21,15 @@ public interface Action2<R, D1, D2> extends
    */
   R execute(D1 data1, D2 data2);
 
-  long executeReturnLong(D1 data1, D2 data2);
+  int executeReturnInt(D1 data1, D2 data2);
 
-  long executeReturnLong(D1 data1, long data2);
+  int executeReturnInt(D1 data1, int data2);
 
-  long executeReturnLong(D1 data1, double data2);
+  int executeReturnInt(D1 data1, double data2);
 
   double executeReturnDouble(D1 data1, D2 data2);
 
-  double executeReturnDouble(D1 data1, long data2);
+  double executeReturnDouble(D1 data1, int data2);
 
   double executeReturnDouble(D1 data1, double data2);
 

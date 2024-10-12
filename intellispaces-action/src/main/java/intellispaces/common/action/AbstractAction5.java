@@ -29,188 +29,188 @@ public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<
   }
 
   @Override
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, data4, data5));
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, data4, data5));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, data4, (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, data4, (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, D4 data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, data4, (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, data4, (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, D3 data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, data3, (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, int data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, long data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, int data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, int data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, long data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, int data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, double data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, double data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, double data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, double data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, D2 data2, double data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, D2 data2, double data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, long data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, int data2, int data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, long data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, int data2, int data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, long data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, int data2, int data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, long data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, int data2, int data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, double data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, int data2, double data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, double data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, int data2, double data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, double data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, int data2, double data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, long data2, double data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, int data2, double data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, long data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, double data2, int data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, long data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, double data2, int data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, long data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, double data2, int data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, long data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, double data2, int data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, double data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, double data2, double data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, double data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, double data2, double data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, double data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public int executeReturnInt(D1 data1, double data2, double data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public long executeReturnLong(D1 data1, double data2, double data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToLong(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public int executeReturnInt(D1 data1, double data2, double data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToInt(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
@@ -220,8 +220,8 @@ public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, data4, (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, data4, (D5) Integer.valueOf(data5)));
   }
 
   @Override
@@ -232,20 +232,20 @@ public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, data3, (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
@@ -256,44 +256,44 @@ public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, long data5) {
-    return (double) execute(data1, data2, (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5));
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, double data4, int data5) {
+    return (double) execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, long data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, D2 data2, int data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, double data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, data2, (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
@@ -304,92 +304,92 @@ public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, long data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, int data2, int data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, long data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, int data2, int data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, long data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, int data2, int data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, long data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, int data2, int data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, double data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, int data2, double data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, double data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, int data2, double data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, double data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, int data2, double data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, long data2, double data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Long.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, int data2, double data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Integer.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, double data2, long data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, double data2, int data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, double data2, long data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, double data2, int data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, double data2, long data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, double data2, int data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, double data2, long data3, double data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Long.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, double data2, int data3, double data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Integer.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, double data2, double data3, long data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, double data2, double data3, int data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, double data2, double data3, long data4, double data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Long.valueOf(data4), (D5) Double.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, double data2, double data3, int data4, double data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Integer.valueOf(data4), (D5) Double.valueOf(data5)));
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(D1 data1, double data2, double data3, double data4, long data5) {
-    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Long.valueOf(data5)));
+  public double executeReturnDouble(D1 data1, double data2, double data3, double data4, int data5) {
+    return TypeFunctions.convertObjectToDouble(execute(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Integer.valueOf(data5)));
   }
 
   @Override

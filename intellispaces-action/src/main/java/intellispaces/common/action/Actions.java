@@ -18,27 +18,25 @@ import intellispaces.common.action.runner.Runner;
 import intellispaces.common.action.runner.RunnerActions;
 import intellispaces.common.base.function.QuadFunction;
 import intellispaces.common.base.function.TriFunction;
-import intellispaces.common.base.function.primitive.ObjectAndDoubleAndLongToDoubleFunction;
-import intellispaces.common.base.function.primitive.ObjectAndDoubleAndLongToLongFunction;
 import intellispaces.common.base.function.primitive.ObjectAndDoubleToDoubleFunction;
-import intellispaces.common.base.function.primitive.ObjectAndDoubleToLongFunction;
-import intellispaces.common.base.function.primitive.ObjectAndLongAndDoubleToDoubleFunction;
-import intellispaces.common.base.function.primitive.ObjectAndLongAndDoubleToLongFunction;
-import intellispaces.common.base.function.primitive.ObjectAndLongToDoubleFunction;
-import intellispaces.common.base.function.primitive.ObjectAndLongToLongFunction;
+import intellispaces.common.base.function.primitive.ObjectAndDoubleToIntFunction;
+import intellispaces.common.base.function.primitive.ObjectAndIntAndDoubleToDoubleFunction;
+import intellispaces.common.base.function.primitive.ObjectAndIntAndDoubleToIntFunction;
+import intellispaces.common.base.function.primitive.ObjectAndIntToDoubleFunction;
+import intellispaces.common.base.function.primitive.ObjectAndIntToIntFunction;
 import intellispaces.common.base.function.primitive.ObjectAndTwoDoublesToDoubleFunction;
-import intellispaces.common.base.function.primitive.ObjectAndTwoDoublesToLongFunction;
-import intellispaces.common.base.function.primitive.ObjectAndTwoLongsToDoubleFunction;
-import intellispaces.common.base.function.primitive.ObjectAndTwoLongsToLongFunction;
+import intellispaces.common.base.function.primitive.ObjectAndTwoDoublesToIntFunction;
+import intellispaces.common.base.function.primitive.ObjectAndTwoIntsToDoubleFunction;
+import intellispaces.common.base.function.primitive.ObjectAndTwoIntsToIntFunction;
 import intellispaces.common.base.function.primitive.ObjectToDoubleFunction;
 import intellispaces.common.base.function.primitive.ThreeObjectsToDoubleFunction;
-import intellispaces.common.base.function.primitive.ThreeObjectsToLongFunction;
+import intellispaces.common.base.function.primitive.ThreeObjectsToIntFunction;
 import intellispaces.common.base.function.primitive.TwoObjectsAndDoubleToDoubleFunction;
-import intellispaces.common.base.function.primitive.TwoObjectsAndDoubleToLongFunction;
-import intellispaces.common.base.function.primitive.TwoObjectsAndLongToDoubleFunction;
-import intellispaces.common.base.function.primitive.TwoObjectsAndLongToLongFunction;
+import intellispaces.common.base.function.primitive.TwoObjectsAndDoubleToIntFunction;
+import intellispaces.common.base.function.primitive.TwoObjectsAndIntToDoubleFunction;
+import intellispaces.common.base.function.primitive.TwoObjectsAndIntToIntFunction;
 import intellispaces.common.base.function.primitive.TwoObjectsToDoubleFunction;
-import intellispaces.common.base.function.primitive.TwoObjectsToLongFunction;
+import intellispaces.common.base.function.primitive.TwoObjectsToIntFunction;
 import intellispaces.common.base.type.Type;
 import intellispaces.common.base.type.Types;
 
@@ -48,7 +46,6 @@ import java.util.function.Consumer;
 import java.util.function.DoubleSupplier;
 import java.util.function.Function;
 import java.util.function.IntSupplier;
-import java.util.function.LongSupplier;
 import java.util.function.Supplier;
 
 /**
@@ -93,12 +90,6 @@ public interface Actions {
       IntSupplier supplier
   ) {
     return FunctionActions.ofIntSupplier(supplier);
-  }
-
-  static Action0<Long> of(
-      LongSupplier supplier
-  ) {
-    return FunctionActions.ofLongSupplier(supplier);
   }
 
   static Action0<Double> of(
@@ -188,22 +179,22 @@ public interface Actions {
     return FunctionActions.ofObjectToDoubleFunction(function);
   }
 
-  static <D1, D2> Action2<Long, D1, D2> of(
-      TwoObjectsToLongFunction<D1, D2> function
+  static <D1, D2> Action2<Integer, D1, D2> of(
+      TwoObjectsToIntFunction<D1, D2> function
   ) {
-    return FunctionActions.ofTwoObjectsToLongFunction(function);
+    return FunctionActions.ofTwoObjectsToIntFunction(function);
   }
 
-  static <D> Action2<Long, D, Long> of(
-      ObjectAndLongToLongFunction<D> function
+  static <D> Action2<Integer, D, Integer> of(
+      ObjectAndIntToIntFunction<D> function
   ) {
-    return FunctionActions.ofObjectAndLongToLongFunction(function);
+    return FunctionActions.ofObjectAndIntToIntFunction(function);
   }
 
-  static <D> Action2<Long, D, Double> of(
-      ObjectAndDoubleToLongFunction<D> function
+  static <D> Action2<Integer, D, Double> of(
+      ObjectAndDoubleToIntFunction<D> function
   ) {
-    return FunctionActions.ofObjectAndDoubleToLongFunction(function);
+    return FunctionActions.ofObjectAndDoubleToIntFunction(function);
   }
 
   static <D1, D2> Action2<Double, D1, D2> of(
@@ -212,10 +203,10 @@ public interface Actions {
     return FunctionActions.ofTwoObjectsToDoubleFunction(function);
   }
 
-  static <D> Action2<Double, D, Long> of(
-      ObjectAndLongToDoubleFunction<D> function
+  static <D> Action2<Double, D, Integer> of(
+      ObjectAndIntToDoubleFunction<D> function
   ) {
-    return FunctionActions.ofObjectAndLongToDoubleFunction(function);
+    return FunctionActions.ofObjectAndIntToDoubleFunction(function);
   }
 
   static <D> Action2<Double, D, Double> of(
@@ -224,46 +215,40 @@ public interface Actions {
     return FunctionActions.ofObjectAndDoubleToDoubleFunction(function);
   }
 
-  static <D1, D2, D3> Action3<Long, D1, D2, D3> of(
-      ThreeObjectsToLongFunction<D1, D2, D3> function
+  static <D1, D2, D3> Action3<Integer, D1, D2, D3> of(
+      ThreeObjectsToIntFunction<D1, D2, D3> function
   ) {
-    return FunctionActions.ofThreeObjectsToLongFunction(function);
+    return FunctionActions.ofThreeObjectsToIntFunction(function);
   }
 
-  static <D1, D2> Action3<Long, D1, D2, Long> of(
-      TwoObjectsAndLongToLongFunction<D1, D2> function
+  static <D1, D2> Action3<Integer, D1, D2, Integer> of(
+      TwoObjectsAndIntToIntFunction<D1, D2> function
   ) {
-    return FunctionActions.ofTwoObjectsAndLongToLongFunction(function);
+    return FunctionActions.ofTwoObjectsAndIntToIntFunction(function);
   }
 
-  static <D1, D2> Action3<Long, D1, D2, Double> of(
-      TwoObjectsAndDoubleToLongFunction<D1, D2> function
+  static <D1, D2> Action3<Integer, D1, D2, Double> of(
+      TwoObjectsAndDoubleToIntFunction<D1, D2> function
   ) {
-    return FunctionActions.ofTwoObjectsAndDoubleToLongFunction(function);
+    return FunctionActions.ofTwoObjectsAndDoubleToIntFunction(function);
   }
 
-  static <D> Action3<Long, D, Long, Long> of(
-      ObjectAndTwoLongsToLongFunction<D> function
+  static <D> Action3<Integer, D, Integer, Integer> of(
+      ObjectAndTwoIntsToIntFunction<D> function
   ) {
-    return FunctionActions.ofObjectAndTwoLongsToLongFunction(function);
+    return FunctionActions.ofObjectAndTwoIntsToIntFunction(function);
   }
 
-  static <D> Action3<Long, D, Long, Double> of(
-      ObjectAndLongAndDoubleToLongFunction<D> function
+  static <D> Action3<Integer, D, Integer, Double> of(
+      ObjectAndIntAndDoubleToIntFunction<D> function
   ) {
-    return FunctionActions.ofObjectAndLongAndDoubleToLongFunction(function);
+    return FunctionActions.ofObjectAndIntAndDoubleToIntFunction(function);
   }
 
-  static <D> Action3<Long, D, Double, Long> of(
-      ObjectAndDoubleAndLongToLongFunction<D> function
+  static <D> Action3<Integer, D, Double, Double> of(
+      ObjectAndTwoDoublesToIntFunction<D> function
   ) {
-    return FunctionActions.ofObjectAndDoubleAndLongToLongFunction(function);
-  }
-
-  static <D> Action3<Long, D, Double, Double> of(
-      ObjectAndTwoDoublesToLongFunction<D> function
-  ) {
-    return FunctionActions.ofObjectAndTwoDoublesToLongFunction(function);
+    return FunctionActions.ofObjectAndTwoDoublesToIntFunction(function);
   }
 
   static <D1, D2, D3> Action3<Double, D1, D2, D3> of(
@@ -272,10 +257,10 @@ public interface Actions {
     return FunctionActions.ofThreeObjectsToDoubleFunction(function);
   }
 
-  static <D1, D2> Action3<Double, D1, D2, Long> of(
-      TwoObjectsAndLongToDoubleFunction<D1, D2> function
+  static <D1, D2> Action3<Double, D1, D2, Integer> of(
+      TwoObjectsAndIntToDoubleFunction<D1, D2> function
   ) {
-    return FunctionActions.ofTwoObjectsAndLongToDoubleFunction(function);
+    return FunctionActions.ofTwoObjectsAndIntToDoubleFunction(function);
   }
 
   static <D1, D2> Action3<Double, D1, D2, Double> of(
@@ -284,22 +269,16 @@ public interface Actions {
     return FunctionActions.ofTwoObjectsAndDoubleToDoubleFunction(function);
   }
 
-  static <D> Action3<Double, D, Long, Long> of(
-      ObjectAndTwoLongsToDoubleFunction<D> function
+  static <D> Action3<Double, D, Integer, Integer> of(
+      ObjectAndTwoIntsToDoubleFunction<D> function
   ) {
-    return FunctionActions.ofObjectAndTwoLongsToDoubleFunction(function);
+    return FunctionActions.ofObjectAndTwoIntsToDoubleFunction(function);
   }
 
-  static <D> Action3<Double, D, Long, Double> of(
-      ObjectAndLongAndDoubleToDoubleFunction<D> function
+  static <D> Action3<Double, D, Integer, Double> of(
+      ObjectAndIntAndDoubleToDoubleFunction<D> function
   ) {
-    return FunctionActions.ofObjectAndLongAndDoubleToDoubleFunction(function);
-  }
-
-  static <D> Action3<Double, D, Double, Long> of(
-      ObjectAndDoubleAndLongToDoubleFunction<D> function
-  ) {
-    return FunctionActions.ofObjectAndDoubleAndLongToDoubleFunction(function);
+    return FunctionActions.ofObjectAndIntAndDoubleToDoubleFunction(function);
   }
 
   static <D> Action3<Double, D, Double, Double> of(

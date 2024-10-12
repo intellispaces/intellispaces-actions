@@ -16,8 +16,8 @@ class GetterBasedOnAction0<R> extends AbstractGetter<R> implements Wrapper0<R> {
   }
 
   @Override
-  public long getAsLong() {
-    return wrappedAction.executeReturnLong();
+  public int getAsInt() {
+    return wrappedAction.executeReturnInt();
   }
 
   @Override

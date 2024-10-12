@@ -21,7 +21,7 @@ public interface Action1<R, D> extends
    */
   R execute(D data);
 
-  long executeReturnLong(D data);
+  int executeReturnInt(D data);
 
   double executeReturnDouble(D data);
 

@@ -18,7 +18,7 @@ public class ObjectToDoubleFunctionAction<D> extends AbstractAction1<Double, D> 
   }
 
   @Override
-  public long executeReturnLong(D data) {
+  public int executeReturnInt(D data) {
     throw UnexpectedViolationException.withMessage("Unsupported operation");
   }
 

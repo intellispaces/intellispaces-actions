@@ -18,7 +18,7 @@ public class IntSupplierAction extends AbstractAction0<Integer> implements Actio
   }
 
   @Override
-  public long executeReturnLong() {
+  public int executeReturnInt() {
     return supplier.getAsInt();
   }
 
