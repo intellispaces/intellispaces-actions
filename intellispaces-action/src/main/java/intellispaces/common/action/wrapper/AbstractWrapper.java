@@ -7,6 +7,7 @@ import intellispaces.common.action.AbstractAction2;
 import intellispaces.common.action.AbstractAction3;
 import intellispaces.common.action.AbstractAction4;
 import intellispaces.common.action.AbstractAction5;
+import intellispaces.common.action.AbstractAction6;
 import intellispaces.common.action.Action;
 import intellispaces.common.action.Action0;
 import intellispaces.common.action.Action1;
@@ -14,6 +15,7 @@ import intellispaces.common.action.Action2;
 import intellispaces.common.action.Action3;
 import intellispaces.common.action.Action4;
 import intellispaces.common.action.Action5;
+import intellispaces.common.action.Action6;
 
 /**
  * Abstract general interceptor.
@@ -83,6 +85,14 @@ public abstract class AbstractWrapper extends AbstractAction implements Wrapper 
     return super.asAction5();
   }
 
+  @Override
+  public <$R, $D1, $D2, $D3, $D4, $D5, $D6> Action6<$R, $D1, $D2, $D3, $D4, $D5, $D6> asAction6() {
+    if (wrappedAction.actionOrder() == 6) {
+      return new SurrogateAction6<>();
+    }
+    return super.asAction6();
+  }
+
   private final class SurrogateAction0<$R> extends AbstractAction0<$R> {
     @Override
     @SuppressWarnings("unchecked")
@@ -128,6 +138,14 @@ public abstract class AbstractWrapper extends AbstractAction implements Wrapper 
     @SuppressWarnings("unchecked")
     public $R execute($D1 data1, $D2 data2, $D3 data3, $D4 data4, $D5 data5) {
       return ($R) AbstractWrapper.this.execute(new Object[] { data1 ,data2, data3, data4, data5 });
+    }
+  }
+
+  private final class SurrogateAction6<$R, $D1, $D2, $D3, $D4, $D5, $D6> extends AbstractAction6<$R, $D1, $D2, $D3, $D4, $D5, $D6> {
+    @Override
+    @SuppressWarnings("unchecked")
+    public $R execute($D1 data1, $D2 data2, $D3 data3, $D4 data4, $D5 data5, $D6 data6) {
+      return ($R) AbstractWrapper.this.execute(new Object[] { data1 ,data2, data3, data4, data5, data6 });
     }
   }
 }

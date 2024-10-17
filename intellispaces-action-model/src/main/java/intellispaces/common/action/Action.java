@@ -29,5 +29,7 @@ public interface Action {
 
   <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> asAction5();
 
+  <R, D1, D2, D3, D4, D5, D6> Action6<R, D1, D2, D3, D4, D5, D6> asAction6();
+
   <W extends Wrapper> W wrapAction(Function<Action, W> wrapperFactory);
 }

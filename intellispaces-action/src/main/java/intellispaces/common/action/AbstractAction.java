@@ -52,6 +52,12 @@ public abstract class AbstractAction implements Action {
   }
 
   @Override
+  public <$R, $D1, $D2, $D3, $D4, $D5, $D6> Action6<$R, $D1, $D2, $D3, $D4, $D5, $D6> asAction6() {
+    throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
+        "General action can not be casted to Action6");
+  }
+
+  @Override
   public <W extends Wrapper> W wrapAction(Function<Action, W> wrapperFactory) {
     return wrapperFactory.apply(this);
   }

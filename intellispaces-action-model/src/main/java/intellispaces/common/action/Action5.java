@@ -8,13 +8,13 @@ import java.util.function.Function;
  * Case of the action with five processed data.
  *
  * @param <R> action return type.
- * @param <D1> action first processed data type.
- * @param <D2> action second processed data type.
- * @param <D3> action third processed data type.
- * @param <D4> action four processed data type.
- * @param <D5> action five processed data type.
+ * @param <D1> first processed data type.
+ * @param <D2> second processed data type.
+ * @param <D3> third processed data type.
+ * @param <D4> fourth processed data type.
+ * @param <D5> fifth processed data type.
  */
-public interface Action5<R, D1, D2, D3, D4, D5> extends Action {
+public interface Action5<R, D1, D2, D3, D4, D5> extends Action6<R, D1, D2, D3, D4, D5, Void> {
 
   R execute(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5);
 
@@ -28,23 +28,13 @@ public interface Action5<R, D1, D2, D3, D4, D5> extends Action {
 
   int executeReturnInt(D1 data1, D2 data2, D3 data3, int data4, double data5);
 
-  int executeReturnInt(D1 data1, D2 data2, D3 data3, double data4, int data5);
-
   int executeReturnInt(D1 data1, D2 data2, D3 data3, double data4, double data5);
 
   int executeReturnInt(D1 data1, D2 data2, int data3, int data4, int data5);
 
   int executeReturnInt(D1 data1, D2 data2, int data3, int data4, double data5);
 
-  int executeReturnInt(D1 data1, D2 data2, int data3, double data4, int data5);
-
   int executeReturnInt(D1 data1, D2 data2, int data3, double data4, double data5);
-
-  int executeReturnInt(D1 data1, D2 data2, double data3, int data4, int data5);
-
-  int executeReturnInt(D1 data1, D2 data2, double data3, int data4, double data5);
-
-  int executeReturnInt(D1 data1, D2 data2, double data3, double data4, int data5);
 
   int executeReturnInt(D1 data1, D2 data2, double data3, double data4, double data5);
 
@@ -52,31 +42,9 @@ public interface Action5<R, D1, D2, D3, D4, D5> extends Action {
 
   int executeReturnInt(D1 data1, int data2, int data3, int data4, double data5);
 
-  int executeReturnInt(D1 data1, int data2, int data3, double data4, int data5);
-
   int executeReturnInt(D1 data1, int data2, int data3, double data4, double data5);
 
-  int executeReturnInt(D1 data1, int data2, double data3, int data4, int data5);
-
-  int executeReturnInt(D1 data1, int data2, double data3, int data4, double data5);
-
-  int executeReturnInt(D1 data1, int data2, double data3, double data4, int data5);
-
   int executeReturnInt(D1 data1, int data2, double data3, double data4, double data5);
-
-  int executeReturnInt(D1 data1, double data2, int data3, int data4, int data5);
-
-  int executeReturnInt(D1 data1, double data2, int data3, int data4, double data5);
-
-  int executeReturnInt(D1 data1, double data2, int data3, double data4, int data5);
-
-  int executeReturnInt(D1 data1, double data2, int data3, double data4, double data5);
-
-  int executeReturnInt(D1 data1, double data2, double data3, int data4, int data5);
-
-  int executeReturnInt(D1 data1, double data2, double data3, int data4, double data5);
-
-  int executeReturnInt(D1 data1, double data2, double data3, double data4, int data5);
 
   int executeReturnInt(D1 data1, double data2, double data3, double data4, double data5);
 
@@ -90,23 +58,13 @@ public interface Action5<R, D1, D2, D3, D4, D5> extends Action {
 
   double executeReturnDouble(D1 data1, D2 data2, D3 data3, int data4, double data5);
 
-  double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, int data5);
-
   double executeReturnDouble(D1 data1, D2 data2, D3 data3, double data4, double data5);
 
   double executeReturnDouble(D1 data1, D2 data2, int data3, int data4, int data5);
 
   double executeReturnDouble(D1 data1, D2 data2, int data3, int data4, double data5);
 
-  double executeReturnDouble(D1 data1, D2 data2, int data3, double data4, int data5);
-
   double executeReturnDouble(D1 data1, D2 data2, int data3, double data4, double data5);
-
-  double executeReturnDouble(D1 data1, D2 data2, double data3, int data4, int data5);
-
-  double executeReturnDouble(D1 data1, D2 data2, double data3, int data4, double data5);
-
-  double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, int data5);
 
   double executeReturnDouble(D1 data1, D2 data2, double data3, double data4, double data5);
 
@@ -114,31 +72,9 @@ public interface Action5<R, D1, D2, D3, D4, D5> extends Action {
 
   double executeReturnDouble(D1 data1, int data2, int data3, int data4, double data5);
 
-  double executeReturnDouble(D1 data1, int data2, int data3, double data4, int data5);
-
   double executeReturnDouble(D1 data1, int data2, int data3, double data4, double data5);
 
-  double executeReturnDouble(D1 data1, int data2, double data3, int data4, int data5);
-
-  double executeReturnDouble(D1 data1, int data2, double data3, int data4, double data5);
-
-  double executeReturnDouble(D1 data1, int data2, double data3, double data4, int data5);
-
   double executeReturnDouble(D1 data1, int data2, double data3, double data4, double data5);
-
-  double executeReturnDouble(D1 data1, double data2, int data3, int data4, int data5);
-
-  double executeReturnDouble(D1 data1, double data2, int data3, int data4, double data5);
-
-  double executeReturnDouble(D1 data1, double data2, int data3, double data4, int data5);
-
-  double executeReturnDouble(D1 data1, double data2, int data3, double data4, double data5);
-
-  double executeReturnDouble(D1 data1, double data2, double data3, int data4, int data5);
-
-  double executeReturnDouble(D1 data1, double data2, double data3, int data4, double data5);
-
-  double executeReturnDouble(D1 data1, double data2, double data3, double data4, int data5);
 
   double executeReturnDouble(D1 data1, double data2, double data3, double data4, double data5);
 

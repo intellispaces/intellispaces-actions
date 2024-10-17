@@ -8,7 +8,7 @@ import java.util.function.Function;
  * Case of the action with one processed data.
  *
  * @param <R> action return type.
- * @param <D> action processed data type.
+ * @param <D> processed data type.
  */
 public interface Action1<R, D> extends
   Action2<R, D, Void>,

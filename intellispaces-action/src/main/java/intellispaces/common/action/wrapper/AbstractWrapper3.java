@@ -44,11 +44,6 @@ public abstract class AbstractWrapper3<R, D1, D2, D3>
   }
 
   @Override
-  public int executeReturnInt(D1 data1, double data2, int data3) {
-    return wrappedAction.executeReturnInt(data1, data2, data3);
-  }
-
-  @Override
   public int executeReturnInt(D1 data1, double data2, double data3) {
     return wrappedAction.executeReturnInt(data1, data2, data3);
   }
@@ -75,11 +70,6 @@ public abstract class AbstractWrapper3<R, D1, D2, D3>
 
   @Override
   public double executeReturnDouble(D1 data1, int data2, double data3) {
-    return wrappedAction.executeReturnDouble(data1, data2, data3);
-  }
-
-  @Override
-  public double executeReturnDouble(D1 data1, double data2, int data3) {
     return wrappedAction.executeReturnDouble(data1, data2, data3);
   }
 
