@@ -5,6 +5,7 @@ import intellispaces.common.action.Action1;
 import intellispaces.common.action.Action2;
 import intellispaces.common.action.Action3;
 import intellispaces.common.action.Action4;
+import intellispaces.common.action.Action5;
 import intellispaces.common.action.functional.primitive.DoubleSupplierAction;
 import intellispaces.common.action.functional.primitive.IntSupplierAction;
 import intellispaces.common.action.functional.primitive.ObjectAndDoubleToDoubleFunctionAction;
@@ -35,6 +36,7 @@ import intellispaces.common.action.functional.primitive.TwoObjectsToIntFunctionA
 import intellispaces.common.action.functional.primitive.ObjectToDoubleFunctionAction;
 import intellispaces.common.action.functional.primitive.ObjectToIntFunctionAction;
 import intellispaces.common.base.function.QuadFunction;
+import intellispaces.common.base.function.QuinFunction;
 import intellispaces.common.base.function.TriFunction;
 import intellispaces.common.base.function.primitive.ObjectAndDoubleToDoubleFunction;
 import intellispaces.common.base.function.primitive.ObjectAndDoubleToIntFunction;
@@ -239,7 +241,12 @@ public interface FunctionActions {
       Class<D4> dataClass4
   ) {
     return ofQuadFunction(
-        function, Types.of(resultClass), Types.of(dataClass1), Types.of(dataClass2), Types.of(dataClass3), Types.of(dataClass4)
+        function,
+        Types.of(resultClass),
+        Types.of(dataClass1),
+        Types.of(dataClass2),
+        Types.of(dataClass3),
+        Types.of(dataClass4)
     );
   }
 
@@ -252,6 +259,44 @@ public interface FunctionActions {
       Type<D4> dataType4
   ) {
     return new FunctionalAction4<>(function);
+  }
+
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuinFunction(
+      QuinFunction<D1, D2, D3, D4, D5, R> function
+  ) {
+    return ofQuinFunction(function, (Type<R>) null, null, null, null, null, null);
+  }
+
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuinFunction(
+      QuinFunction<D1, D2, D3, D4, D5, R> function,
+      Class<R> resultClass,
+      Class<D1> dataClass1,
+      Class<D2> dataClass2,
+      Class<D3> dataClass3,
+      Class<D4> dataClass4,
+      Class<D5> dataClass5
+  ) {
+    return ofQuinFunction(
+        function,
+        Types.of(resultClass),
+        Types.of(dataClass1),
+        Types.of(dataClass2),
+        Types.of(dataClass3),
+        Types.of(dataClass4),
+        Types.of(dataClass5)
+    );
+  }
+
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuinFunction(
+      QuinFunction<D1, D2, D3, D4, D5, R> function,
+      Type<R> resultType,
+      Type<D1> dataType1,
+      Type<D2> dataType2,
+      Type<D3> dataType3,
+      Type<D4> dataType4,
+      Type<D5> dataType5
+  ) {
+    return new FunctionalAction5<>(function);
   }
 
   static <D> Action1<Integer, D> ofObjectToIntFunction(

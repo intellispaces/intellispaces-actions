@@ -7,7 +7,7 @@ import java.util.function.Function;
 /**
  * Action.<p/>
  *
- * Action is a lightweight object that implements repeatedly repeating the same manipulation performed on different data<p/>
+ * Action is a lightweight object that implements repeatedly repeating the same manipulation performed on different data.<p/>
  */
 public interface Action {
 
