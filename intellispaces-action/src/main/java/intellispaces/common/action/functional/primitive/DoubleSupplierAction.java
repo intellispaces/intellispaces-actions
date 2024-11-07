@@ -2,7 +2,7 @@ package intellispaces.common.action.functional.primitive;
 
 import intellispaces.common.action.AbstractAction0;
 import intellispaces.common.action.Action0;
-import intellispaces.common.base.exception.UnexpectedViolationException;
+import intellispaces.common.base.exception.UnexpectedExceptions;
 
 import java.util.function.DoubleSupplier;
 
@@ -20,7 +20,7 @@ public class DoubleSupplierAction extends AbstractAction0<Double> implements Act
 
   @Override
   public int executeReturnInt() {
-    throw UnexpectedViolationException.withMessage("Unsupported operation");
+    throw UnexpectedExceptions.withMessage("Unsupported operation");
   }
 
   @Override

@@ -2,7 +2,7 @@ package intellispaces.common.action.functional.primitive;
 
 import intellispaces.common.action.AbstractAction1;
 import intellispaces.common.action.Action1;
-import intellispaces.common.base.exception.UnexpectedViolationException;
+import intellispaces.common.base.exception.UnexpectedExceptions;
 import intellispaces.common.base.function.primitive.ObjectToDoubleFunction;
 
 public class ObjectToDoubleFunctionAction<D> extends AbstractAction1<Double, D> implements Action1<Double, D> {
@@ -19,7 +19,7 @@ public class ObjectToDoubleFunctionAction<D> extends AbstractAction1<Double, D> 
 
   @Override
   public int executeReturnInt(D data) {
-    throw UnexpectedViolationException.withMessage("Unsupported operation");
+    throw UnexpectedExceptions.withMessage("Unsupported operation");
   }
 
   @Override

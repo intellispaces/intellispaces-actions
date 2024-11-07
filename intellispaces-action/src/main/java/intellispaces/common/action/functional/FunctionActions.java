@@ -23,6 +23,8 @@ import intellispaces.common.action.functional.primitive.ObjectAndTwoDoublesToObj
 import intellispaces.common.action.functional.primitive.ObjectAndTwoIntsToDoubleFunctionAction;
 import intellispaces.common.action.functional.primitive.ObjectAndTwoIntsToIntFunctionAction;
 import intellispaces.common.action.functional.primitive.ObjectAndTwoIntsToObjectFunctionAction;
+import intellispaces.common.action.functional.primitive.ObjectToDoubleFunctionAction;
+import intellispaces.common.action.functional.primitive.ObjectToIntFunctionAction;
 import intellispaces.common.action.functional.primitive.ThreeObjectsToDoubleFunctionAction;
 import intellispaces.common.action.functional.primitive.ThreeObjectsToIntFunctionAction;
 import intellispaces.common.action.functional.primitive.TwoObjectsAndDoubleToDoubleFunctionAction;
@@ -33,8 +35,6 @@ import intellispaces.common.action.functional.primitive.TwoObjectsAndIntToIntFun
 import intellispaces.common.action.functional.primitive.TwoObjectsAndIntToObjectFunctionAction;
 import intellispaces.common.action.functional.primitive.TwoObjectsToDoubleFunctionAction;
 import intellispaces.common.action.functional.primitive.TwoObjectsToIntFunctionAction;
-import intellispaces.common.action.functional.primitive.ObjectToDoubleFunctionAction;
-import intellispaces.common.action.functional.primitive.ObjectToIntFunctionAction;
 import intellispaces.common.base.function.QuadFunction;
 import intellispaces.common.base.function.QuinFunction;
 import intellispaces.common.base.function.TriFunction;
@@ -88,7 +88,7 @@ public interface FunctionActions {
       Supplier<R> supplier,
       Class<R> resultClass
   ) {
-    return ofSupplier(supplier, Types.of(resultClass));
+    return ofSupplier(supplier, Types.get(resultClass));
   }
 
   static <R> Action0<R> ofSupplier(
@@ -120,7 +120,7 @@ public interface FunctionActions {
       Consumer<D> consumer,
       Class<D> dataClass
   ) {
-    return ofConsumer(consumer, Types.of(dataClass));
+    return ofConsumer(consumer, Types.get(dataClass));
   }
 
   static <D> Action1<Void, D> ofConsumer(
@@ -141,7 +141,7 @@ public interface FunctionActions {
       Class<D1> dataClass1,
       Class<D2> dataClass2
   ) {
-    return ofBiConsumer(consumer, Types.of(dataClass1), Types.of(dataClass2));
+    return ofBiConsumer(consumer, Types.get(dataClass1), Types.get(dataClass2));
   }
 
   static <D1, D2> Action2<Void, D1, D2> ofBiConsumer(
@@ -163,7 +163,7 @@ public interface FunctionActions {
       Class<R> resultClass,
       Class<D> dataClass
   ) {
-    return ofFunction(function, Types.of(resultClass), Types.of(dataClass));
+    return ofFunction(function, Types.get(resultClass), Types.get(dataClass));
   }
 
   static <R, D> Action1<R, D> ofFunction(
@@ -186,7 +186,7 @@ public interface FunctionActions {
     Class<D1> dataClass1,
     Class<D2> dataClass2
   ) {
-    return ofBiFunction(function, Types.of(resultClass), Types.of(dataClass1), Types.of(dataClass2));
+    return ofBiFunction(function, Types.get(resultClass), Types.get(dataClass1), Types.get(dataClass2));
   }
 
   static <R, D1, D2> Action2<R, D1, D2> ofBiFunction(
@@ -212,7 +212,7 @@ public interface FunctionActions {
     Class<D3> dataClass3
   ) {
     return ofTriFunction(
-        function, Types.of(resultClass), Types.of(dataClass1), Types.of(dataClass2), Types.of(dataClass3)
+        function, Types.get(resultClass), Types.get(dataClass1), Types.get(dataClass2), Types.get(dataClass3)
     );
   }
 
@@ -242,11 +242,11 @@ public interface FunctionActions {
   ) {
     return ofQuadFunction(
         function,
-        Types.of(resultClass),
-        Types.of(dataClass1),
-        Types.of(dataClass2),
-        Types.of(dataClass3),
-        Types.of(dataClass4)
+        Types.get(resultClass),
+        Types.get(dataClass1),
+        Types.get(dataClass2),
+        Types.get(dataClass3),
+        Types.get(dataClass4)
     );
   }
 
@@ -278,12 +278,12 @@ public interface FunctionActions {
   ) {
     return ofQuinFunction(
         function,
-        Types.of(resultClass),
-        Types.of(dataClass1),
-        Types.of(dataClass2),
-        Types.of(dataClass3),
-        Types.of(dataClass4),
-        Types.of(dataClass5)
+        Types.get(resultClass),
+        Types.get(dataClass1),
+        Types.get(dataClass2),
+        Types.get(dataClass3),
+        Types.get(dataClass4),
+        Types.get(dataClass5)
     );
   }
 

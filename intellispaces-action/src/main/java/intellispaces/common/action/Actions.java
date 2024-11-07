@@ -315,7 +315,7 @@ public interface Actions {
   static <R> ResettableGetter<R> resettableGetter(
       Class<R> resultClass
   ) {
-    return ResettableGetterActions.get(Types.of(resultClass));
+    return ResettableGetterActions.get(Types.get(resultClass));
   }
 
   static <R> ResettableGetter<R> resettableGetter(

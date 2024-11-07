@@ -2,8 +2,8 @@ package intellispaces.common.action;
 
 import intellispaces.common.action.wrapper.Wrapper;
 import intellispaces.common.action.wrapper.Wrapper6;
-import intellispaces.common.base.exception.UnexpectedViolationException;
-import intellispaces.common.base.type.TypeFunctions;
+import intellispaces.common.base.exception.UnexpectedExceptions;
+import intellispaces.common.base.object.ObjectFunctions;
 
 import java.util.function.Function;
 
@@ -16,14 +16,14 @@ public abstract class AbstractAction6<R, D1, D2, D3, D4, D5, D6> implements Acti
 
   @Override
   public R execute() {
-    throw UnexpectedViolationException.withMessage("Action6 expects six input data parameters");
+    throw UnexpectedExceptions.withMessage("Action6 expects six input data parameters");
   }
 
   @Override
   @SuppressWarnings("unchecked")
   public R execute(Object[] data) {
     if (data == null || data.length != 6) {
-      throw UnexpectedViolationException.withMessage("Action5 expects six input data parameters");
+      throw UnexpectedExceptions.withMessage("Action5 expects six input data parameters");
     }
     return execute((D1) data[0], (D2) data[1], (D3) data[2], (D4) data[3], (D5) data[4], (D6) data[5]);
   }
@@ -150,7 +150,7 @@ public abstract class AbstractAction6<R, D1, D2, D3, D4, D5, D6> implements Acti
 
   @Override
   public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5, D6 data6) {
-    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, data4, data5, data6));
+    return ObjectFunctions.convertToInt(execute(data1, data2, data3, data4, data5, data6));
   }
 
   @Override
@@ -275,7 +275,7 @@ public abstract class AbstractAction6<R, D1, D2, D3, D4, D5, D6> implements Acti
 
   @Override
   public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5, D6 data6) {
-    return TypeFunctions.convertObjectToInt(execute(data1, data2, data3, data4, data5, data6));
+    return ObjectFunctions.convertToInt(execute(data1, data2, data3, data4, data5, data6));
   }
 
   @Override
@@ -400,37 +400,37 @@ public abstract class AbstractAction6<R, D1, D2, D3, D4, D5, D6> implements Acti
 
   @Override
   public <$R> Action0<$R> asAction0() {
-    throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
+    throw UnexpectedExceptions.withMessage("Attempt to cast incompatible types of actions. " +
         "Action5 can not be casted to Action0");
   }
 
   @Override
   public <$R, $D> Action1<$R, $D> asAction1() {
-    throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
+    throw UnexpectedExceptions.withMessage("Attempt to cast incompatible types of actions. " +
         "Action5 can not be casted to Action1");
   }
 
   @Override
   public <$R, $D1, $D2> Action2<$R, $D1, $D2> asAction2() {
-    throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
+    throw UnexpectedExceptions.withMessage("Attempt to cast incompatible types of actions. " +
         "Action5 can not be casted to Action2");
   }
 
   @Override
   public <$R, $D1, $D2, $D3> Action3<$R, $D1, $D2, $D3> asAction3() {
-    throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
+    throw UnexpectedExceptions.withMessage("Attempt to cast incompatible types of actions. " +
         "Action5 can not be casted to Action3");
   }
 
   @Override
   public <$R, $D1, $D2, $D3, $D4> Action4<$R, $D1, $D2, $D3, $D4> asAction4() {
-    throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
+    throw UnexpectedExceptions.withMessage("Attempt to cast incompatible types of actions. " +
         "Action5 can not be casted to Action4");
   }
 
   @Override
   public <$R, $D1, $D2, $D3, $D4, $D5> Action5<$R, $D1, $D2, $D3, $D4, $D5> asAction5() {
-    throw UnexpectedViolationException.withMessage("Attempt to cast incompatible types of actions. " +
+    throw UnexpectedExceptions.withMessage("Attempt to cast incompatible types of actions. " +
         "Action6 can not be casted to Action5");
   }
 

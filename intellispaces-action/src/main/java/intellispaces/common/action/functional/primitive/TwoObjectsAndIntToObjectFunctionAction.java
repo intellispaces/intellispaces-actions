@@ -2,7 +2,7 @@ package intellispaces.common.action.functional.primitive;
 
 import intellispaces.common.action.AbstractAction3;
 import intellispaces.common.action.Action3;
-import intellispaces.common.base.exception.UnexpectedViolationException;
+import intellispaces.common.base.exception.UnexpectedExceptions;
 import intellispaces.common.base.function.primitive.TwoObjectsAndIntToObjectFunction;
 
 public class TwoObjectsAndIntToObjectFunctionAction<R, D1, D2>
@@ -22,11 +22,11 @@ public class TwoObjectsAndIntToObjectFunctionAction<R, D1, D2>
 
   @Override
   public int executeReturnInt(D1 data1, D2 data2, int data3) {
-    throw UnexpectedViolationException.withMessage("Unsupported operation");
+    throw UnexpectedExceptions.withMessage("Unsupported operation");
   }
 
   @Override
   public double executeReturnDouble(D1 data1, D2 data2, int data3) {
-    throw UnexpectedViolationException.withMessage("Unsupported operation");
+    throw UnexpectedExceptions.withMessage("Unsupported operation");
   }
 }
