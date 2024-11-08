@@ -1,13 +1,13 @@
 package intellispaces.common.action.interceptor.skipping;
 
 import intellispaces.common.action.Action;
-import intellispaces.common.action.wrapper.AbstractWrapper;
+import intellispaces.common.action.wrapper.AbstractWrapperAction;
 
-class SkippingFirstTimeInterceptor extends AbstractWrapper {
+class SkippingFirstTimeInterceptor extends AbstractWrapperAction {
   private boolean first = true;
 
-  SkippingFirstTimeInterceptor(Action action) {
-    super(action);
+  SkippingFirstTimeInterceptor(Action interceptedAction) {
+    super(interceptedAction);
   }
 
   @Override

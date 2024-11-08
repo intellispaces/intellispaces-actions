@@ -1,6 +1,6 @@
 package intellispaces.common.action;
 
-import intellispaces.common.action.wrapper.Wrapper6;
+import intellispaces.common.action.wrapper.WrapperAction6;
 
 import java.util.function.Function;
 
@@ -143,11 +143,7 @@ public interface Action6<R, D1, D2, D3, D4, D5, D6> extends Action {
 
   double executeReturnDouble(D1 data1, double data2, double data3, double data4, double data5, double data6);
 
-  <W extends Wrapper6<R, D1, D2, D3, D4, D5, D6>> W wrapAction6(
-      Function<Action6<R, D1, D2, D3, D4, D5, D6>, W> wrapperFactory
-  );
-
-  <W extends Wrapper6<_R, _D1, _D2, _D3, _D4, _D5, _D6>, _R, _D1, _D2, _D3, _D4, _D5, _D6> W convertAction6(
+  <W extends WrapperAction6<_R, _D1, _D2, _D3, _D4, _D5, _D6>, _R, _D1, _D2, _D3, _D4, _D5, _D6> W wrapAction6(
       Function<Action6<R, D1, D2, D3, D4, D5, D6>, W> wrapperFactory
   );
 }

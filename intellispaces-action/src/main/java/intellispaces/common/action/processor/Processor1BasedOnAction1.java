@@ -1,9 +1,9 @@
 package intellispaces.common.action.processor;
 
 import intellispaces.common.action.Action1;
-import intellispaces.common.action.wrapper.Wrapper1;
+import intellispaces.common.action.wrapper.WrapperAction1;
 
-class Processor1BasedOnAction1<D> extends AbstractProcessor1<D> implements Wrapper1<D, D> {
+class Processor1BasedOnAction1<D> extends AbstractProcessor1<D> implements WrapperAction1<D, D> {
   private final Action1<D, D> wrappedAction;
 
   Processor1BasedOnAction1(Action1<D, D> action) {

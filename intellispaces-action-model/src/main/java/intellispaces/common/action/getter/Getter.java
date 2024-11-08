@@ -2,8 +2,8 @@ package intellispaces.common.action.getter;
 
 import intellispaces.common.action.Action0;
 import intellispaces.common.action.Action5;
-import intellispaces.common.action.wrapper.Wrapper0;
-import intellispaces.common.action.wrapper.Wrapper5;
+import intellispaces.common.action.wrapper.WrapperAction0;
+import intellispaces.common.action.wrapper.WrapperAction5;
 
 import java.util.function.Function;
 import java.util.function.Supplier;
@@ -51,9 +51,9 @@ public interface Getter<R> extends Action0<R>, Supplier<R> {
     return execute();
   }
 
-  Getter<R> wrapAction0AsGetter(Function<Action0<R>, Wrapper0<R>> wrapperFactory);
+  Getter<R> wrapAction0AsGetter(Function<Action0<R>, WrapperAction0<R>> wrapperFactory);
 
   Getter<R> wrapAction5AsGetter(
-      Function<Action5<R, Void, Void, Void, Void, Void>, Wrapper5<R, Void, Void, Void, Void, Void>> wrapperFactory
+      Function<Action5<R, Void, Void, Void, Void, Void>, WrapperAction5<R, Void, Void, Void, Void, Void>> wrapperFactory
   );
 }

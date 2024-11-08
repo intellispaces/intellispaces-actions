@@ -1,7 +1,7 @@
 package intellispaces.common.action;
 
-import intellispaces.common.action.wrapper.Wrapper;
-import intellispaces.common.action.wrapper.Wrapper6;
+import intellispaces.common.action.wrapper.WrapperAction;
+import intellispaces.common.action.wrapper.WrapperAction6;
 import intellispaces.common.base.exception.UnexpectedExceptions;
 import intellispaces.common.base.object.ObjectFunctions;
 
@@ -441,19 +441,12 @@ public abstract class AbstractAction6<R, D1, D2, D3, D4, D5, D6> implements Acti
   }
 
   @Override
-  public <W extends Wrapper> W wrapAction(Function<Action, W> wrapperFactory) {
+  public <W extends WrapperAction> W wrapAction(Function<Action, W> wrapperFactory) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper6<R, D1, D2, D3, D4, D5, D6>> W wrapAction6(
-      Function<Action6<R, D1, D2, D3, D4, D5, D6>, W> wrapperFactory
-  ) {
-    return wrapperFactory.apply(this);
-  }
-
-  @Override
-  public <W extends Wrapper6<_R, _D1, _D2, _D3, _D4, _D5, _D6>, _R, _D1, _D2, _D3, _D4, _D5, _D6> W convertAction6(
+  public <W extends WrapperAction6<_R, _D1, _D2, _D3, _D4, _D5, _D6>, _R, _D1, _D2, _D3, _D4, _D5, _D6> W wrapAction6(
       Function<Action6<R, D1, D2, D3, D4, D5, D6>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);

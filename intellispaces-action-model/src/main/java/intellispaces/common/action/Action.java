@@ -1,6 +1,6 @@
 package intellispaces.common.action;
 
-import intellispaces.common.action.wrapper.Wrapper;
+import intellispaces.common.action.wrapper.WrapperAction;
 
 import java.util.function.Function;
 
@@ -31,5 +31,5 @@ public interface Action {
 
   <R, D1, D2, D3, D4, D5, D6> Action6<R, D1, D2, D3, D4, D5, D6> asAction6();
 
-  <W extends Wrapper> W wrapAction(Function<Action, W> wrapperFactory);
+  <W extends WrapperAction> W wrapAction(Function<Action, W> wrapperFactory);
 }

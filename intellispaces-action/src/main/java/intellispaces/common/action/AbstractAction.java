@@ -1,6 +1,6 @@
 package intellispaces.common.action;
 
-import intellispaces.common.action.wrapper.Wrapper;
+import intellispaces.common.action.wrapper.WrapperAction;
 import intellispaces.common.base.exception.UnexpectedExceptions;
 
 import java.util.function.Function;
@@ -58,7 +58,7 @@ public abstract class AbstractAction implements Action {
   }
 
   @Override
-  public <W extends Wrapper> W wrapAction(Function<Action, W> wrapperFactory) {
+  public <W extends WrapperAction> W wrapAction(Function<Action, W> wrapperFactory) {
     return wrapperFactory.apply(this);
   }
 }

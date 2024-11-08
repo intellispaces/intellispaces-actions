@@ -18,13 +18,13 @@ import intellispaces.common.action.Action5;
 import intellispaces.common.action.Action6;
 
 /**
- * Abstract general interceptor.
+ * Abstract wrapper action.
  */
-public abstract class AbstractWrapper extends AbstractAction implements Wrapper {
+public abstract class AbstractWrapperAction extends AbstractAction implements WrapperAction {
   private final Action wrappedAction;
 
-  public AbstractWrapper(Action action) {
-    this.wrappedAction = action;
+  public AbstractWrapperAction(Action wrappedAction) {
+    this.wrappedAction = wrappedAction;
   }
 
   @Override
@@ -97,7 +97,7 @@ public abstract class AbstractWrapper extends AbstractAction implements Wrapper 
     @Override
     @SuppressWarnings("unchecked")
     public $R execute() {
-      return ($R) AbstractWrapper.this.execute(new Object[] {});
+      return ($R) AbstractWrapperAction.this.execute(new Object[] {});
     }
   }
 
@@ -105,7 +105,7 @@ public abstract class AbstractWrapper extends AbstractAction implements Wrapper 
     @Override
     @SuppressWarnings("unchecked")
     public $R execute($D data) {
-      return ($R) AbstractWrapper.this.execute(new Object[] { data });
+      return ($R) AbstractWrapperAction.this.execute(new Object[] { data });
     }
   }
 
@@ -113,7 +113,7 @@ public abstract class AbstractWrapper extends AbstractAction implements Wrapper 
     @Override
     @SuppressWarnings("unchecked")
     public $R execute($D1 data1, $D2 data2) {
-      return ($R) AbstractWrapper.this.execute(new Object[] { data1 ,data2 });
+      return ($R) AbstractWrapperAction.this.execute(new Object[] { data1 ,data2 });
     }
   }
 
@@ -121,7 +121,7 @@ public abstract class AbstractWrapper extends AbstractAction implements Wrapper 
     @Override
     @SuppressWarnings("unchecked")
     public $R execute($D1 data1, $D2 data2, $D3 data3) {
-      return ($R) AbstractWrapper.this.execute(new Object[] { data1 ,data2, data3 });
+      return ($R) AbstractWrapperAction.this.execute(new Object[] { data1 ,data2, data3 });
     }
   }
 
@@ -129,7 +129,7 @@ public abstract class AbstractWrapper extends AbstractAction implements Wrapper 
     @Override
     @SuppressWarnings("unchecked")
     public $R execute($D1 data1, $D2 data2, $D3 data3, $D4 data4) {
-      return ($R) AbstractWrapper.this.execute(new Object[] { data1 ,data2, data3, data4 });
+      return ($R) AbstractWrapperAction.this.execute(new Object[] { data1 ,data2, data3, data4 });
     }
   }
 
@@ -137,7 +137,7 @@ public abstract class AbstractWrapper extends AbstractAction implements Wrapper 
     @Override
     @SuppressWarnings("unchecked")
     public $R execute($D1 data1, $D2 data2, $D3 data3, $D4 data4, $D5 data5) {
-      return ($R) AbstractWrapper.this.execute(new Object[] { data1 ,data2, data3, data4, data5 });
+      return ($R) AbstractWrapperAction.this.execute(new Object[] { data1 ,data2, data3, data4, data5 });
     }
   }
 
@@ -145,7 +145,7 @@ public abstract class AbstractWrapper extends AbstractAction implements Wrapper 
     @Override
     @SuppressWarnings("unchecked")
     public $R execute($D1 data1, $D2 data2, $D3 data3, $D4 data4, $D5 data5, $D6 data6) {
-      return ($R) AbstractWrapper.this.execute(new Object[] { data1 ,data2, data3, data4, data5, data6 });
+      return ($R) AbstractWrapperAction.this.execute(new Object[] { data1 ,data2, data3, data4, data5, data6 });
     }
   }
 }

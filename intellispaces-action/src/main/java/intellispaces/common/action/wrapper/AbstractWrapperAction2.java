@@ -3,11 +3,11 @@ package intellispaces.common.action.wrapper;
 import intellispaces.common.action.AbstractAction2;
 import intellispaces.common.action.Action2;
 
-public abstract class AbstractWrapper2<R, D1, D2> extends AbstractAction2<R, D1, D2> implements Wrapper2<R, D1, D2> {
+public abstract class AbstractWrapperAction2<R, D1, D2> extends AbstractAction2<R, D1, D2> implements WrapperAction2<R, D1, D2> {
   private final Action2<R, D1, D2> wrappedAction;
 
-  public AbstractWrapper2(Action2<R, D1, D2> action) {
-    this.wrappedAction = action;
+  public AbstractWrapperAction2(Action2<R, D1, D2> wrappedAction) {
+    this.wrappedAction = wrappedAction;
   }
 
   @Override

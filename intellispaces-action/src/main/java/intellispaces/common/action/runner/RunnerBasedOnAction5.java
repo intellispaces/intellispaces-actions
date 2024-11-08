@@ -1,9 +1,9 @@
 package intellispaces.common.action.runner;
 
 import intellispaces.common.action.Action5;
-import intellispaces.common.action.wrapper.Wrapper5;
+import intellispaces.common.action.wrapper.WrapperAction5;
 
-class RunnerBasedOnAction5 extends AbstractRunner implements Wrapper5<Void, Void, Void, Void, Void, Void> {
+class RunnerBasedOnAction5 extends AbstractRunner implements WrapperAction5<Void, Void, Void, Void, Void, Void> {
   private final Action5<Void, Void, Void, Void, Void, Void> action;
 
   RunnerBasedOnAction5(Action5<Void, Void, Void, Void, Void, Void> action) {

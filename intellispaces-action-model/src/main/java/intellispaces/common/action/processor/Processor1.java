@@ -2,8 +2,8 @@ package intellispaces.common.action.processor;
 
 import intellispaces.common.action.Action;
 import intellispaces.common.action.Action1;
-import intellispaces.common.action.wrapper.Wrapper;
-import intellispaces.common.action.wrapper.Wrapper1;
+import intellispaces.common.action.wrapper.WrapperAction;
+import intellispaces.common.action.wrapper.WrapperAction1;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -37,7 +37,7 @@ public interface Processor1<D> extends Action1<D, D>, Consumer<D> {
     process(value);
   }
 
-  Processor1<D> wrapActionAsProcessor(Function<Action, Wrapper> wrapperFactory);
+  Processor1<D> wrapActionAsProcessor(Function<Action, WrapperAction> wrapperFactory);
 
-  Processor1<D> wrapAction1AsProcessor(Function<Action1<D, D>, Wrapper1<D, D>> wrapperFactory);
+  Processor1<D> wrapAction1AsProcessor(Function<Action1<D, D>, WrapperAction1<D, D>> wrapperFactory);
 }

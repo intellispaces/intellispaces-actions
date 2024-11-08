@@ -1,9 +1,9 @@
 package intellispaces.common.action.getter;
 
 import intellispaces.common.action.Action5;
-import intellispaces.common.action.wrapper.Wrapper5;
+import intellispaces.common.action.wrapper.WrapperAction5;
 
-class GetterBasedOnAction5<R> extends AbstractGetter<R> implements Wrapper5<R, Void, Void, Void, Void, Void> {
+class GetterBasedOnAction5<R> extends AbstractGetter<R> implements WrapperAction5<R, Void, Void, Void, Void, Void> {
   private final Action5<R, Void, Void, Void, Void, Void> wrappedAction;
 
   GetterBasedOnAction5(Action5<R, Void, Void, Void, Void, Void> action) {

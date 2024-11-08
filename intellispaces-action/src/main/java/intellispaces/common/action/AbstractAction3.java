@@ -1,10 +1,10 @@
 package intellispaces.common.action;
 
-import intellispaces.common.action.wrapper.Wrapper;
-import intellispaces.common.action.wrapper.Wrapper3;
-import intellispaces.common.action.wrapper.Wrapper4;
-import intellispaces.common.action.wrapper.Wrapper5;
-import intellispaces.common.action.wrapper.Wrapper6;
+import intellispaces.common.action.wrapper.WrapperAction;
+import intellispaces.common.action.wrapper.WrapperAction3;
+import intellispaces.common.action.wrapper.WrapperAction4;
+import intellispaces.common.action.wrapper.WrapperAction5;
+import intellispaces.common.action.wrapper.WrapperAction6;
 import intellispaces.common.base.exception.UnexpectedExceptions;
 import intellispaces.common.base.object.ObjectFunctions;
 
@@ -719,61 +719,33 @@ public abstract class AbstractAction3<R, D1, D2, D3> implements Action3<R, D1, D
   }
 
   @Override
-  public <A extends Wrapper> A wrapAction(Function<Action, A> wrapperFactory) {
+  public <A extends WrapperAction> A wrapAction(Function<Action, A> wrapperFactory) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper3<R, D1, D2, D3>> W wrapAction3(
+  public <W extends WrapperAction3<_R, _D1, _D2, _D3>, _R, _D1, _D2, _D3> W wrapAction3(
       Function<Action3<R, D1, D2, D3>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper4<R, D1, D2, D3, Void>> W wrapAction4(
+  public <W extends WrapperAction4<_R, _D1, _D2, _D3, _D4>, _R, _D1, _D2, _D3, _D4> W wrapAction4(
       Function<Action4<R, D1, D2, D3, Void>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper5<R, D1, D2, D3, Void, Void>> W wrapAction5(
+  public <W extends WrapperAction5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> W wrapAction5(
       Function<Action5<R, D1, D2, D3, Void, Void>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
   }
 
   @Override
-  public <W extends Wrapper6<R, D1, D2, D3, Void, Void, Void>> W wrapAction6(
-      Function<Action6<R, D1, D2, D3, Void, Void, Void>, W> wrapperFactory
-  ) {
-    return wrapperFactory.apply(this);
-  }
-
-  @Override
-  public <W extends Wrapper3<_R, _D1, _D2, _D3>, _R, _D1, _D2, _D3> W convertAction3(
-      Function<Action3<R, D1, D2, D3>, W> wrapperFactory
-  ) {
-    return wrapperFactory.apply(this);
-  }
-
-  @Override
-  public <W extends Wrapper4<_R, _D1, _D2, _D3, _D4>, _R, _D1, _D2, _D3, _D4> W convertAction4(
-      Function<Action4<R, D1, D2, D3, Void>, W> wrapperFactory
-  ) {
-    return wrapperFactory.apply(this);
-  }
-
-  @Override
-  public <W extends Wrapper5<_R, _D1, _D2, _D3, _D4, _D5>, _R, _D1, _D2, _D3, _D4, _D5> W convertAction5(
-      Function<Action5<R, D1, D2, D3, Void, Void>, W> wrapperFactory
-  ) {
-    return wrapperFactory.apply(this);
-  }
-
-  @Override
-  public <W extends Wrapper6<_R, _D1, _D2, _D3, _D4, _D5, _D6>, _R, _D1, _D2, _D3, _D4, _D5, _D6> W convertAction6(
+  public <W extends WrapperAction6<_R, _D1, _D2, _D3, _D4, _D5, _D6>, _R, _D1, _D2, _D3, _D4, _D5, _D6> W wrapAction6(
       Function<Action6<R, D1, D2, D3, Void, Void, Void>, W> wrapperFactory
   ) {
     return wrapperFactory.apply(this);
