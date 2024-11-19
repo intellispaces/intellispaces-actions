@@ -1,12 +1,12 @@
-package tech.intellispaces.action.dataextractor;
+package tech.intellispaces.action.dataadapter;
 
 import tech.intellispaces.action.AbstractAction2;
 
 import java.util.Objects;
 
-public class DirectDataExtractorAction<T>
+public class DirectDataAdapterAction<T>
     extends AbstractAction2<T, Object[], Integer>
-    implements DataExtractorAction<T>
+    implements DataAdapterAction<T>
 {
   @Override
   public T execute(Object[] allData, Integer dataIndex) {

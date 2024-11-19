@@ -1,6 +1,6 @@
 package tech.intellispaces.action.text;
 
-import tech.intellispaces.action.dataextractor.DataExtractors;
+import tech.intellispaces.action.dataadapter.DataAdapters;
 import tech.intellispaces.action.interceptor.skip.SkipInterceptors;
 import tech.intellispaces.action.processor.ProcessorAction1;
 import tech.intellispaces.action.processor.ProcessorActions;
@@ -22,8 +22,8 @@ public class StringActions {
   public static ProcessorAction1<StringBuilder> commaAppender() {
     return ProcessorActions.processorAction1(
       separatorAppender().convertToAction1(
-          DataExtractors.direct(),
-          DataExtractors.predefined(DEFAULT_SEPARATOR)
+          DataAdapters.direct(),
+          DataAdapters.predefined(DEFAULT_SEPARATOR)
       )
     );
   }

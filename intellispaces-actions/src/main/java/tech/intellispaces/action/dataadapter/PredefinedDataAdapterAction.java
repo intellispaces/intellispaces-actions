@@ -1,14 +1,14 @@
-package tech.intellispaces.action.dataextractor;
+package tech.intellispaces.action.dataadapter;
 
 import tech.intellispaces.action.AbstractAction2;
 
-public class PredefinedDataExtractorAction<T>
+public class PredefinedDataAdapterAction<T>
     extends AbstractAction2<T, Object[], Integer>
-    implements DataExtractorAction<T>
+    implements DataAdapterAction<T>
 {
   private final T target;
 
-  public PredefinedDataExtractorAction(T target) {
+  public PredefinedDataAdapterAction(T target) {
     this.target = target;
   }
 

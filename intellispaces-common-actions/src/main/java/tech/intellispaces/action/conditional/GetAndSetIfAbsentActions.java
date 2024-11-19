@@ -6,8 +6,8 @@ import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static tech.intellispaces.action.dataextractor.DataExtractors.direct;
-import static tech.intellispaces.action.dataextractor.DataExtractors.predefined;
+import static tech.intellispaces.action.dataadapter.DataAdapters.direct;
+import static tech.intellispaces.action.dataadapter.DataAdapters.predefined;
 
 /**
  * Provider of the {@link GetAndSetIfAbsentAction} action.

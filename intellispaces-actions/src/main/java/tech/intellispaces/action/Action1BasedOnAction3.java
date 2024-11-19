@@ -1,18 +1,18 @@
 package tech.intellispaces.action;
 
-import tech.intellispaces.action.dataextractor.DataExtractorAction;
+import tech.intellispaces.action.dataadapter.DataAdapterAction;
 
 class Action1BasedOnAction3<R, _D, D1, D2, D3> extends AbstractAction1<R, _D> {
   private final Action3<R, D1, D2, D3> action3;
-  private final DataExtractorAction<D1> dataExtractor1;
-  private final DataExtractorAction<D2> dataExtractor2;
-  private final DataExtractorAction<D3> dataExtractor3;
+  private final DataAdapterAction<D1> dataExtractor1;
+  private final DataAdapterAction<D2> dataExtractor2;
+  private final DataAdapterAction<D3> dataExtractor3;
 
   Action1BasedOnAction3(
       Action3<R, D1, D2, D3> action3,
-      DataExtractorAction<D1> dataExtractor1,
-      DataExtractorAction<D2> dataExtractor2,
-      DataExtractorAction<D3> dataExtractor3
+      DataAdapterAction<D1> dataExtractor1,
+      DataAdapterAction<D2> dataExtractor2,
+      DataAdapterAction<D3> dataExtractor3
   ) {
     this.action3 = action3;
     this.dataExtractor1 = dataExtractor1;

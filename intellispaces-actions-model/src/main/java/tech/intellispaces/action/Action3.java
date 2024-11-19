@@ -1,6 +1,6 @@
 package tech.intellispaces.action;
 
-import tech.intellispaces.action.dataextractor.DataExtractorAction;
+import tech.intellispaces.action.dataadapter.DataAdapterAction;
 import tech.intellispaces.action.wrapper.WrapperAction3;
 
 import java.util.function.Function;
@@ -243,9 +243,9 @@ public interface Action3<R, D1, D2, D3> extends Action {
    * @param <_D> the action input data type.
    */
   <_D> Action1<R, _D> convertToAction1(
-      DataExtractorAction<D1> dataExtractor1,
-      DataExtractorAction<D2> dataExtractor2,
-      DataExtractorAction<D3> dataExtractor3
+      DataAdapterAction<D1> dataExtractor1,
+      DataAdapterAction<D2> dataExtractor2,
+      DataAdapterAction<D3> dataExtractor3
   );
 
   /**

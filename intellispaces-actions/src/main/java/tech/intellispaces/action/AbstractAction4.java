@@ -1,6 +1,6 @@
 package tech.intellispaces.action;
 
-import tech.intellispaces.action.dataextractor.DataExtractorAction;
+import tech.intellispaces.action.dataadapter.DataAdapterAction;
 import tech.intellispaces.action.exception.IrregularActionFormExceptions;
 import tech.intellispaces.action.wrapper.WrapperAction;
 import tech.intellispaces.action.wrapper.WrapperAction4;
@@ -537,10 +537,10 @@ public abstract class AbstractAction4<R, D1, D2, D3, D4> implements Action4<R, D
 
   @Override
   public <_D> Action1<R, _D> convertToAction1(
-      DataExtractorAction<D1> dataExtractor1,
-      DataExtractorAction<D2> dataExtractor2,
-      DataExtractorAction<D3> dataExtractor3,
-      DataExtractorAction<D4> dataExtractor4
+      DataAdapterAction<D1> dataExtractor1,
+      DataAdapterAction<D2> dataExtractor2,
+      DataAdapterAction<D3> dataExtractor3,
+      DataAdapterAction<D4> dataExtractor4
   ) {
     return new Action1BasedOnAction4<>(this, dataExtractor1, dataExtractor2, dataExtractor3, dataExtractor4);
   }
