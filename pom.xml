@@ -1,36 +1,40 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <description>Actions.</description>
+
     <parent>
-        <groupId>intellispaces-parent</groupId>
-        <artifactId>intellispaces-base-pom</artifactId>
+        <groupId>tech.intellispaces.parent</groupId>
+        <artifactId>intellispaces-parent-pom</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>intellispaces-common</groupId>
-    <artifactId>intellispaces-action-parent</artifactId>
+    <groupId>tech.intellispaces.common</groupId>
+    <artifactId>intellispaces-actions-parent</artifactId>
     <packaging>pom</packaging>
 
 	<modules>
-        <module>intellispaces-action-model</module>
-	    <module>intellispaces-action</module>
-        <module>intellispaces-base-action</module>
+        <module>intellispaces-actions-model</module>
+	    <module>intellispaces-actions</module>
+        <module>intellispaces-common-actions</module>
 	</modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>intellispaces-common</groupId>
-            <artifactId>intellispaces-base</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
 
     <dependencyManagement>
         <dependencies>
             <!-- Intellispaces -->
             <dependency>
-                <groupId>intellispaces-common</groupId>
-                <artifactId>intellispaces-action-model</artifactId>
+                <groupId>tech.intellispaces.common</groupId>
+                <artifactId>intellispaces-entities</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.intellispaces.common</groupId>
+                <artifactId>intellispaces-entities-model</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>tech.intellispaces.common</groupId>
+                <artifactId>intellispaces-actions-model</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
