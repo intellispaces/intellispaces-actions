@@ -16,29 +16,29 @@ public abstract class AbstractAction2<R, D1, D2> implements Action2<R, D1, D2> {
 
   @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object[] allData) {
-    if (allData == null || allData.length != 2) {
+  public R execute(Object... inputData) {
+    if (inputData == null || inputData.length != 2) {
       throw IrregularActionFormExceptions.withMessage("Action form 2 requires two input data");
     }
-    return execute((D1) allData[0], (D2) allData[1]);
+    return execute((D1) inputData[0], (D2) inputData[1]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public int executeReturnInt(Object[] allData) {
-    if (allData == null || allData.length != 2) {
+  public int executeReturnInt(Object... inputData) {
+    if (inputData == null || inputData.length != 2) {
       throw IrregularActionFormExceptions.withMessage("Action form 2 requires two input data");
     }
-    return executeReturnInt((D1) allData[0], (D2) allData[1]);
+    return executeReturnInt((D1) inputData[0], (D2) inputData[1]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(Object[] allData) {
-    if (allData == null || allData.length != 2) {
+  public double executeReturnDouble(Object... inputData) {
+    if (inputData == null || inputData.length != 2) {
       throw IrregularActionFormExceptions.withMessage("Action form 2 requires two input data");
     }
-    return executeReturnDouble((D1) allData[0], (D2) allData[1]);
+    return executeReturnDouble((D1) inputData[0], (D2) inputData[1]);
   }
 
   @Override

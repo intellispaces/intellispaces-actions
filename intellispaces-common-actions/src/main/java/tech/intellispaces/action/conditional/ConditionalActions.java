@@ -15,6 +15,10 @@ public interface ConditionalActions {
     return GetAndSetIfAbsentActions.get(dataClass);
   }
 
+  static <R, D> GetAndSetIfAbsentAction<R, D> getAndSetIfAbsentAction(Class<D> dataClass, Class<R> resultClass) {
+    return GetAndSetIfAbsentActions.get(dataClass);
+  }
+
   static <R, D> Action1<R, D> getAndSetIfAbsentAction(
       Class<D> dataClass,
       Function<D, R> getter,

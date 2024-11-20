@@ -6,7 +6,7 @@ import tech.intellispaces.action.wrapper.WrapperAction0;
 import java.util.function.Function;
 
 /**
- * The runnable action.<p/>
+ * The runnable action form.<p/>
  *
  * This is the action form that does not take input data and does not return a result data.
  */

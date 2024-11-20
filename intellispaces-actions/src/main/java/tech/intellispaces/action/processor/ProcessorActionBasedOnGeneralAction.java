@@ -16,8 +16,8 @@ class ProcessorActionBasedOnGeneralAction extends AbstractProcessorAction implem
   }
 
   @Override
-  public void process(Object[] allData) {
-    action.execute(allData);
+  public void process(Object... inputData) {
+    action.execute(inputData);
   }
 
   @Override

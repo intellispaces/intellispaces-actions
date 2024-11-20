@@ -9,8 +9,8 @@ import java.util.function.Function;
 /**
  * The processor action form 4.<p/>
  *
- * This action form takes four input data to process, it can to change one or more input data and
- * does not return a result data.
+ * This action form takes four input data to process and does not return a result data.
+ * Input data can be changed.
  *
  * @param <D1> first processed data type.
  * @param <D2> second processed data type.

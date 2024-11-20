@@ -23,17 +23,17 @@ class SkipFirstTimeInterceptor extends AbstractAction implements WrapperAction {
   }
 
   @Override
-  public Object execute(Object[] allData) {
-    return executor.execute(() -> interceptedAction.execute(allData));
+  public Object execute(Object... inputData) {
+    return executor.execute(() -> interceptedAction.execute(inputData));
   }
 
   @Override
-  public int executeReturnInt(Object[] allData) {
-    return executor.executeReturnInt(() -> interceptedAction.executeReturnInt(allData));
+  public int executeReturnInt(Object... inputData) {
+    return executor.executeReturnInt(() -> interceptedAction.executeReturnInt(inputData));
   }
 
   @Override
-  public double executeReturnDouble(Object[] allData) {
-    return executor.executeReturnDouble(() -> interceptedAction.executeReturnDouble(allData));
+  public double executeReturnDouble(Object... inputData) {
+    return executor.executeReturnDouble(() -> interceptedAction.executeReturnDouble(inputData));
   }
 }

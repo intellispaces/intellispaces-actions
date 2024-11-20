@@ -9,17 +9,17 @@ public class DirectDataAdapterAction<T>
     implements DataAdapterAction<T>
 {
   @Override
-  public T execute(Object[] allData, Integer dataIndex) {
-    Objects.requireNonNull(allData);
-    return execute(allData, (int) dataIndex);
+  public T execute(Object[] inputData, Integer dataIndex) {
+    Objects.requireNonNull(inputData);
+    return execute(inputData, (int) dataIndex);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public T execute(Object[] allData, int dataIndex) {
-    if (dataIndex < 0 || dataIndex >= allData.length) {
+  public T execute(Object[] inputData, int dataIndex) {
+    if (dataIndex < 0 || dataIndex >= inputData.length) {
       throw new IndexOutOfBoundsException();
     }
-    return (T) allData[dataIndex];
+    return (T) inputData[dataIndex];
   }
 }

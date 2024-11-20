@@ -7,16 +7,22 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * The supplier action.<p/>
+ * The supplier action form.<p/>
  *
- * This action form does not take input data and returns a result data.
+ * This action form does not take input data and returns a single result data.
  *
  * @param <R> result data type.
  */
 public interface SupplierAction<R> extends Action0<R>, Supplier<R> {
 
+  /**
+   * The special form of the get method to avoid autoboxing.
+   */
   int getInt();
 
+  /**
+   * The special form of the get method to avoid autoboxing.
+   */
   double getDouble();
 
   /**

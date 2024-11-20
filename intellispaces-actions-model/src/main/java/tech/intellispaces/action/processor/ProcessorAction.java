@@ -7,10 +7,10 @@ import tech.intellispaces.action.wrapper.WrapperAction;
 import java.util.function.Function;
 
 /**
- * The processor action general form.<p/>
+ * The processor action form.<p/>
  *
- * This action form takes any number of input data to process, it can to change one or more input data and
- * does not return a result data.
+ * This action form takes array of input data to process and does not return a result data.
+ * Input data can be changed.
  */
 public interface ProcessorAction extends Action {
 
@@ -18,9 +18,9 @@ public interface ProcessorAction extends Action {
    * Executes action.</p>
    * This method processes and change one or more input data.
    *
-   * @param allData the processed data.
+   * @param inputData the processed data.
    */
-  void process(Object[] allData);
+  void process(Object... inputData);
 
   /**
    * Combines this action into a chain with the next action.
@@ -33,10 +33,10 @@ public interface ProcessorAction extends Action {
   /**
    * Returns presentation of this action as {@link RunnableAction}.
    *
-   * @param allData the processed data.
+   * @param inputData the processed data.
    * @return the runnable action.
    */
-  RunnableAction asRunnable(Object[] allData);
+  RunnableAction asRunnable(Object... inputData);
 
   /**
    * Wraps this processor action using the wrapper factory and

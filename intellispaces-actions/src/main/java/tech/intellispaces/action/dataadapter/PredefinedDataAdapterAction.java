@@ -13,22 +13,22 @@ public class PredefinedDataAdapterAction<T>
   }
 
   @Override
-  public T execute(Object[] allData, Integer dataIndex) {
+  public T execute(Object[] inputData, Integer dataIndex) {
     return target;
   }
 
   @Override
-  public T execute(Object[] allData, int dataIndex) {
+  public T execute(Object[] inputData, int dataIndex) {
     return target;
   }
 
   @Override
-  public int executeReturnInt(Object[] allData, Integer dataIndex) {
+  public int executeReturnInt(Object[] inputData, Integer dataIndex) {
     return (int) target;
   }
 
   @Override
-  public double executeReturnDouble(Object[] allData, Integer dataIndex) {
+  public double executeReturnDouble(Object[] inputData, Integer dataIndex) {
     return (double) target;
   }
 }

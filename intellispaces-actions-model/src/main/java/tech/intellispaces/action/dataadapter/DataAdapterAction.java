@@ -3,12 +3,21 @@ package tech.intellispaces.action.dataadapter;
 import tech.intellispaces.action.Action2;
 
 /**
- * Action data adapter action.
+ * Action data adapter.<p/>
+ *
+ * This action converts input data from one action to input data another action.
  *
  * @param <T> target data type.
  */
 public interface DataAdapterAction<T> extends Action2<T, Object[], Integer> {
 
+  /**
+   * Converts input data from origin action to input data target action.
+   *
+   * @param inputData array of input data of the origin action.
+   * @param dataIndex data index of the input data of the target action.
+   * @return the input data of the target action.
+   */
   @Override
-  T execute(Object[] allData, Integer dataIndex);
+  T execute(Object[] inputData, Integer dataIndex);
 }

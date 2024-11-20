@@ -10,17 +10,17 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Tests for {@link CacheActions} class.
+ * Tests for {@link CachedSupplierActions} class.
  */
-public class CacheActionsTest {
+public class CachedSupplierActionsTest {
 
   @Test
-  public void testCachedLazySupplierAction_whenSupplier() {
+  public void testCachedSupplierAction_whenSupplier() {
     // Given
     Deque<String> deque = new ArrayDeque<>(List.of("a", "b", "c"));
 
     // When
-    SupplierAction<String> supplierActionAction = CacheActions.cachedLazySupplierAction(deque::pollFirst);
+    SupplierAction<String> supplierActionAction = CachedSupplierActions.get(deque::pollFirst);
     String result1 = supplierActionAction.get();
     String result2 = supplierActionAction.get();
     String result3 = supplierActionAction.get();
@@ -31,12 +31,12 @@ public class CacheActionsTest {
   }
 
   @Test
-  public void testCachedLazySupplierAction_whenFunction() {
+  public void testGet_whenFunction() {
     // Given
     Deque<String> deque = new ArrayDeque<>(List.of("a", "b", "c"));
 
     // When
-    SupplierAction<String> supplierActionAction = CacheActions.cachedLazySupplierAction(v -> deque.pollFirst(), 1);
+    SupplierAction<String> supplierActionAction = CachedSupplierActions.get(v -> deque.pollFirst(), 1);
     String result1 = supplierActionAction.get();
     String result2 = supplierActionAction.get();
     String result3 = supplierActionAction.get();
@@ -47,12 +47,12 @@ public class CacheActionsTest {
   }
 
   @Test
-  public void testCachedLazySupplierAction_whenBiFunction() {
+  public void testGet_whenBiFunction() {
     // Given
     Deque<String> deque = new ArrayDeque<>(List.of("a", "b", "c"));
 
     // When
-    SupplierAction<String> supplierActionAction = CacheActions.cachedLazySupplierAction((v1, v2) -> deque.pollFirst(), 1, 2);
+    SupplierAction<String> supplierActionAction = CachedSupplierActions.get((v1, v2) -> deque.pollFirst(), 1, 2);
     String result1 = supplierActionAction.get();
     String result2 = supplierActionAction.get();
     String result3 = supplierActionAction.get();
@@ -63,12 +63,12 @@ public class CacheActionsTest {
   }
 
   @Test
-  public void testCachedLazySupplierAction_whenTriFunction() {
+  public void testGet_whenTriFunction() {
     // Given
     Deque<String> deque = new ArrayDeque<>(List.of("a", "b", "c"));
 
     // When
-    SupplierAction<String> supplierActionAction = CacheActions.cachedLazySupplierAction((v1, v2, v3) -> deque.pollFirst(), 1, 2, 3);
+    SupplierAction<String> supplierActionAction = CachedSupplierActions.get((v1, v2, v3) -> deque.pollFirst(), 1, 2, 3);
     String result1 = supplierActionAction.get();
     String result2 = supplierActionAction.get();
     String result3 = supplierActionAction.get();
@@ -79,12 +79,12 @@ public class CacheActionsTest {
   }
 
   @Test
-  public void testCachedLazySupplierAction_whenQuadriFunction() {
+  public void testGet_whenQuadriFunction() {
     // Given
     Deque<String> deque = new ArrayDeque<>(List.of("a", "b", "c"));
 
     // When
-    SupplierAction<String> supplierActionAction = CacheActions.cachedLazySupplierAction((v1, v2, v3, v4) -> deque.pollFirst(), 1, 2, 3, 4);
+    SupplierAction<String> supplierActionAction = CachedSupplierActions.get((v1, v2, v3, v4) -> deque.pollFirst(), 1, 2, 3, 4);
     String result1 = supplierActionAction.get();
     String result2 = supplierActionAction.get();
     String result3 = supplierActionAction.get();

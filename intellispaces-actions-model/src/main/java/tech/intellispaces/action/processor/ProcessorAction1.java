@@ -10,8 +10,8 @@ import java.util.function.Function;
 /**
  * The processor action form 1.<p/>
  *
- * This action form takes single input data to process, it can to change input data and
- * does not return a result data.
+ * This action form takes single input data to process and does not return a result data.
+ * Input data can be changed.
  *
  * @param <D> processed data type.
  */

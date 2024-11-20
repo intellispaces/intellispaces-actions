@@ -14,24 +14,24 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public R execute(Object[] allData) {
-    if (allData != null && allData.length > 0) {
+  public R execute(Object... inputData) {
+    if (inputData != null && inputData.length > 0) {
       throw IrregularActionFormExceptions.withMessage("Action form 0 does not require any input data");
     }
     return execute();
   }
 
   @Override
-  public int executeReturnInt(Object[] allData) {
-    if (allData != null && allData.length > 0) {
+  public int executeReturnInt(Object... inputData) {
+    if (inputData != null && inputData.length > 0) {
       throw IrregularActionFormExceptions.withMessage("Action form 0 does not require any input data");
     }
     return executeReturnInt();
   }
 
   @Override
-  public double executeReturnDouble(Object[] allData) {
-    if (allData != null && allData.length > 0) {
+  public double executeReturnDouble(Object... inputData) {
+    if (inputData != null && inputData.length > 0) {
       throw IrregularActionFormExceptions.withMessage("Action form 0 does not require any input data");
     }
     return executeReturnDouble();

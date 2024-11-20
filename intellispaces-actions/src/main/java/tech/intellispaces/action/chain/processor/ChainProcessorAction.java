@@ -34,9 +34,9 @@ class ChainProcessorAction extends AbstractProcessorAction {
   }
 
   @Override
-  public void process(Object[] allData) {
+  public void process(Object... inputData) {
     for (var subAction : subActions) {
-      subAction.execute(allData);
+      subAction.execute(inputData);
     }
   }
 

@@ -5,9 +5,9 @@ import tech.intellispaces.action.Action1;
 import java.util.function.Function;
 
 /**
- * The mapper action.</p>
+ * The mapper action form.</p>
  *
- * This is the action form that take single input data and maps it to returned result data.
+ * This is the action form that take single input data and maps it to returned result data. Input data is not changed.
  *
  * @param <R> action return type.
  * @param <D> input data type.

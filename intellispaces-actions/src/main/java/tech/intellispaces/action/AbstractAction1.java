@@ -15,29 +15,29 @@ public abstract class AbstractAction1<R, D> implements Action1<R, D> {
 
   @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object[] allData) {
-    if (allData == null || allData.length != 1) {
+  public R execute(Object... inputData) {
+    if (inputData == null || inputData.length != 1) {
       throw IrregularActionFormExceptions.withMessage("Action form 1 requires single input data");
     }
-    return execute((D) allData[0]);
+    return execute((D) inputData[0]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public int executeReturnInt(Object[] allData) {
-    if (allData == null || allData.length != 1) {
+  public int executeReturnInt(Object... inputData) {
+    if (inputData == null || inputData.length != 1) {
       throw IrregularActionFormExceptions.withMessage("Action form 1 requires single input data");
     }
-    return executeReturnInt((D) allData[0]);
+    return executeReturnInt((D) inputData[0]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(Object[] allData) {
-    if (allData == null || allData.length != 1) {
+  public double executeReturnDouble(Object... inputData) {
+    if (inputData == null || inputData.length != 1) {
       throw IrregularActionFormExceptions.withMessage("Action form 1 requires single input data");
     }
-    return executeReturnDouble((D) allData[0]);
+    return executeReturnDouble((D) inputData[0]);
   }
 
   @Override

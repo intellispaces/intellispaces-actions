@@ -16,29 +16,29 @@ public abstract class AbstractAction3<R, D1, D2, D3> implements Action3<R, D1, D
 
   @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object[] allData) {
-    if (allData == null || allData.length != 3) {
+  public R execute(Object... inputData) {
+    if (inputData == null || inputData.length != 3) {
       throw IrregularActionFormExceptions.withMessage("Action form 3 requires three input data");
     }
-    return execute((D1) allData[0], (D2) allData[1], (D3) allData[2]);
+    return execute((D1) inputData[0], (D2) inputData[1], (D3) inputData[2]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public int executeReturnInt(Object[] allData) {
-    if (allData == null || allData.length != 3) {
+  public int executeReturnInt(Object... inputData) {
+    if (inputData == null || inputData.length != 3) {
       throw IrregularActionFormExceptions.withMessage("Action form 3 requires three input data");
     }
-    return executeReturnInt((D1) allData[0], (D2) allData[1], (D3) allData[2]);
+    return executeReturnInt((D1) inputData[0], (D2) inputData[1], (D3) inputData[2]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(Object[] allData) {
-    if (allData == null || allData.length != 3) {
+  public double executeReturnDouble(Object... inputData) {
+    if (inputData == null || inputData.length != 3) {
       throw IrregularActionFormExceptions.withMessage("Action form 3 requires three input data");
     }
-    return executeReturnDouble((D1) allData[0], (D2) allData[1], (D3) allData[2]);
+    return executeReturnDouble((D1) inputData[0], (D2) inputData[1], (D3) inputData[2]);
   }
 
   @Override

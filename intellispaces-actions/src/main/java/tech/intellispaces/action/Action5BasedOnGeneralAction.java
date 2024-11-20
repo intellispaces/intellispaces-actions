@@ -10,19 +10,19 @@ class Action5BasedOnGeneralAction<R, D1, D2, D3, D4, D5> extends AbstractAction5
   @Override
   @SuppressWarnings("unchecked")
   public R execute(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5) {
-    Object[] allData = { data1, data2, data3, data4, data5 };
-    return (R) action.execute(allData);
+    Object[] inputData = { data1, data2, data3, data4, data5 };
+    return (R) action.execute(inputData);
   }
 
   @Override
   public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5) {
-    Object[] allData = { data1, data2, data3, data4, data5 };
-    return action.executeReturnInt(allData);
+    Object[] inputData = { data1, data2, data3, data4, data5 };
+    return action.executeReturnInt(inputData);
   }
 
   @Override
   public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5) {
-    Object[] allData = { data1, data2, data3, data4, data5 };
-    return action.executeReturnDouble(allData);
+    Object[] inputData = { data1, data2, data3, data4, data5 };
+    return action.executeReturnDouble(inputData);
   }
 }

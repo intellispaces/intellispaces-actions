@@ -8,7 +8,7 @@ import java.util.function.Function;
 /**
  * The action.<p/>
  *
- * The action is an object that implements some operation executed on input data and then
+ * The action is an object that implements some single operation executed on input data and then
  * optionality returns single result data.<p/>
  *
  * The action takes array of the input data and returns result data.
@@ -19,24 +19,24 @@ public interface Action {
   /**
    * Executes action.
    *
-   * @param allData the input data that the action is being executed on.
+   * @param inputData the input data that the action is being executed on.
    * @return action result data.
    */
-  Object execute(Object[] allData);
+  Object execute(Object... inputData);
 
   /**
    * The special form of the execute method to avoid autoboxing.
    *
    * @return action result data.
    */
-  int executeReturnInt(Object[] allData);
+  int executeReturnInt(Object... inputData);
 
   /**
    * The special form of the execute method to avoid autoboxing.
    *
    * @return action result data.
    */
-  double executeReturnDouble(Object[] allData);
+  double executeReturnDouble(Object... inputData);
 
   /**
    * Action order.</p>

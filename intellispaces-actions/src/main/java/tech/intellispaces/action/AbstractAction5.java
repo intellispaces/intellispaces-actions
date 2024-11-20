@@ -15,29 +15,29 @@ public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<
 
   @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object[] allData) {
-    if (allData == null || allData.length != 5) {
+  public R execute(Object... inputData) {
+    if (inputData == null || inputData.length != 5) {
       throw IrregularActionFormExceptions.withMessage("Action form 4 requires five input data");
     }
-    return execute((D1) allData[0], (D2) allData[1], (D3) allData[2], (D4) allData[3], (D5) allData[4]);
+    return execute((D1) inputData[0], (D2) inputData[1], (D3) inputData[2], (D4) inputData[3], (D5) inputData[4]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public int executeReturnInt(Object[] allData) {
-    if (allData == null || allData.length != 5) {
+  public int executeReturnInt(Object... inputData) {
+    if (inputData == null || inputData.length != 5) {
       throw IrregularActionFormExceptions.withMessage("Action form 4 requires five input data");
     }
-    return executeReturnInt((D1) allData[0], (D2) allData[1], (D3) allData[2], (D4) allData[3], (D5) allData[4]);
+    return executeReturnInt((D1) inputData[0], (D2) inputData[1], (D3) inputData[2], (D4) inputData[3], (D5) inputData[4]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(Object[] allData) {
-    if (allData == null || allData.length != 5) {
+  public double executeReturnDouble(Object... inputData) {
+    if (inputData == null || inputData.length != 5) {
       throw IrregularActionFormExceptions.withMessage("Action form 4 requires five input data");
     }
-    return executeReturnDouble((D1) allData[0], (D2) allData[1], (D3) allData[2], (D4) allData[3], (D5) allData[4]);
+    return executeReturnDouble((D1) inputData[0], (D2) inputData[1], (D3) inputData[2], (D4) inputData[3], (D5) inputData[4]);
   }
 
   @Override
