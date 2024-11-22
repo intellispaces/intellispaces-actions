@@ -103,8 +103,7 @@ public abstract class AbstractProcessorAction4<D1, D2, D3, D4>
     process(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4));
   }
 
-  @Override
-  public ProcessorAction4<D1, D2, D3, D4> then(Action4<Void, D1, D2, D3, D4> nextAction) {
+  public ProcessorAction4<D1, D2, D3, D4> andThen(Action4<Void, D1, D2, D3, D4> nextAction) {
     return ProcessorActions.processorAction4(ChainProcessorActions.get(this, nextAction));
   }
 

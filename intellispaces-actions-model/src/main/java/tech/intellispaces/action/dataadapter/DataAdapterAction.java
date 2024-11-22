@@ -14,10 +14,10 @@ public interface DataAdapterAction<T> extends Action2<T, Object[], Integer> {
   /**
    * Converts input data from origin action to input data target action.
    *
-   * @param inputData array of input data of the origin action.
-   * @param dataIndex data index of the input data of the target action.
+   * @param inputs array of input data of the origin action.
+   * @param index data index of the input data of the target action.
    * @return the input data of the target action.
    */
   @Override
-  T execute(Object[] inputData, Integer dataIndex);
+  T execute(Object[] inputs, Integer index);
 }

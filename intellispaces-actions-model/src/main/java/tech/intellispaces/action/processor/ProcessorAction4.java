@@ -190,7 +190,7 @@ public interface ProcessorAction4<D1, D2, D3, D4> extends Action4<Void, D1, D2, 
    * @param nextAction the next action.
    * @return the processor action that combines this action and the next action.
    */
-  ProcessorAction4<D1, D2, D3, D4> then(Action4<Void, D1, D2, D3, D4> nextAction);
+  ProcessorAction4<D1, D2, D3, D4> andThen(Action4<Void, D1, D2, D3, D4> nextAction);
 
   /**
    * Returns presentation of this action as {@link RunnableAction}.

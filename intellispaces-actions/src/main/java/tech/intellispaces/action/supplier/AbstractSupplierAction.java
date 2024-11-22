@@ -6,7 +6,7 @@ import tech.intellispaces.action.wrapper.WrapperAction0;
 
 import java.util.function.Function;
 
-abstract class AbstractSupplierAction<R> extends AbstractAction0<R> implements SupplierAction<R> {
+public abstract class AbstractSupplierAction<R> extends AbstractAction0<R> implements SupplierAction<R> {
 
   @Override
   public R execute() {

@@ -24,8 +24,7 @@ public abstract class AbstractProcessorAction3<D1, D2, D3>
     process(arg1, arg2, arg3);
   }
 
-  @Override
-  public ProcessorAction3<D1, D2, D3> then(Action3<Void, D1, D2, D3> nextAction) {
+  public ProcessorAction3<D1, D2, D3> andThen(Action3<Void, D1, D2, D3> nextAction) {
     return ProcessorActions.processorAction3(ChainProcessorActions.get(this, nextAction));
   }
 

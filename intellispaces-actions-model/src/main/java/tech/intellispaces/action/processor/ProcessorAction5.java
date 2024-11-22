@@ -398,7 +398,7 @@ public interface ProcessorAction5<D1, D2, D3, D4, D5> extends Action5<Void, D1, 
    * @param nextAction the next action.
    * @return the processor action that combines this action and the next action.
    */
-  ProcessorAction5<D1, D2, D3, D4, D5> then(Action5<Void, D1, D2, D3, D4, D5> nextAction);
+  ProcessorAction5<D1, D2, D3, D4, D5> andThen(Action5<Void, D1, D2, D3, D4, D5> nextAction);
 
   /**
    * Returns presentation of this action as {@link RunnableAction}.

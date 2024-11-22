@@ -392,7 +392,7 @@ public abstract class AbstractProcessorAction6<D1, D2, D3, D4, D5, D6>
   }
 
   @Override
-  public ProcessorAction6<D1, D2, D3, D4, D5, D6> then(Action6<Void, D1, D2, D3, D4, D5, D6> nextAction) {
+  public ProcessorAction6<D1, D2, D3, D4, D5, D6> andThen(Action6<Void, D1, D2, D3, D4, D5, D6> nextAction) {
     return ProcessorActions.processorAction6(ChainProcessorActions.get(this, nextAction));
   }
 

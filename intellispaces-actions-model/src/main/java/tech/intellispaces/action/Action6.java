@@ -7,16 +7,16 @@ import java.util.function.Function;
 /**
  * The action form 6.<p/>
  *
- * This is the action form that takes six input data and returns result.
- * The input data can be changed or remain unchanged.
+ * This is the action form that takes six inputs and returns result.
+ * Inputs can be changed or remain unchanged.
  *
- * @param <R> action return type.
- * @param <D1> first processed data type.
- * @param <D2> second processed data type.
- * @param <D3> third processed data type.
- * @param <D4> fourth processed data type.
- * @param <D5> fifth processed data type.
- * @param <D6> sixth data type.
+ * @param <R> the action return type.
+ * @param <D1> the first input type.
+ * @param <D2> the second input type.
+ * @param <D3> the third input type.
+ * @param <D4> the fourth input type.
+ * @param <D5> the fifth input type.
+ * @param <D6> the sixth input type.
  */
 public interface Action6<R, D1, D2, D3, D4, D5, D6> extends Action {
 

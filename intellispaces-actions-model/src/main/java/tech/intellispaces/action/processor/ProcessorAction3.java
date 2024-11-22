@@ -95,7 +95,7 @@ public interface ProcessorAction3<D1, D2, D3> extends Action3<Void, D1, D2, D3>,
    * @param nextAction the next action.
    * @return the processor action that combines this action and the next action.
    */
-  ProcessorAction3<D1, D2, D3> then(Action3<Void, D1, D2, D3> nextAction);
+  ProcessorAction3<D1, D2, D3> andThen(Action3<Void, D1, D2, D3> nextAction);
 
   /**
    * Returns presentation of this action as {@link RunnableAction}.

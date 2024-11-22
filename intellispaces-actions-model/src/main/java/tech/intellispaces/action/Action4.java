@@ -8,14 +8,14 @@ import java.util.function.Function;
 /**
  * The action form 4.<p/>
  *
- * This is the action form that takes four input data and returns result.
- * The input data can be changed or remain unchanged.
+ * This is the action form that takes four inputs and returns result.
+ * Inputs can be changed or remain unchanged.
  *
- * @param <R> action return type.
- * @param <D1> first processed data type.
- * @param <D2> second processed data type.
- * @param <D3> third processed data type.
- * @param <D4> fourth processed data type.
+ * @param <R> the action return type.
+ * @param <D1> the first processed data type.
+ * @param <D2> the second processed data type.
+ * @param <D3> the third processed data type.
+ * @param <D4> the fourth processed data type.
  */
 public interface Action4<R, D1, D2, D3, D4> extends Action {
 

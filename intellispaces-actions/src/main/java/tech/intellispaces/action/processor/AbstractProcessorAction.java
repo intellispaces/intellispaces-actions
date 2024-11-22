@@ -12,29 +12,29 @@ import java.util.function.Function;
 public abstract class AbstractProcessorAction extends AbstractAction implements ProcessorAction {
 
   @Override
-  public Object execute(Object... inputData) {
-    process(inputData);
+  public Object execute(Object[] inputs) {
+    process(inputs);
     return null;
   }
 
   @Override
-  public int executeReturnInt(Object... inputData) {
+  public int executeReturnInt(Object[] inputs) {
     throw new UnsupportedOperationException();
   }
 
   @Override
-  public double executeReturnDouble(Object... inputData) {
+  public double executeReturnDouble(Object[] inputs) {
     throw new UnsupportedOperationException();
   }
 
   @Override
-  public ProcessorAction then(Action nextAction) {
+  public ProcessorAction andThen(Action nextAction) {
     return new ProcessorActionBasedOnGeneralAction(ChainProcessorActions.get(this, nextAction));
   }
 
   @Override
-  public RunnableAction asRunnable(Object... inputData) {
-    return Actions.runnableAction(this::process, inputData);
+  public RunnableAction asRunnable(Object[] inputs) {
+    return Actions.runnableAction(this::process, inputs);
   }
 
   @Override

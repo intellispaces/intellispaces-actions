@@ -18,7 +18,7 @@ public abstract class AbstractRunnableAction
   }
 
   @Override
-  public RunnableAction then(Action0<Void> nextAction) {
+  public RunnableAction andThen(Action0<Void> nextAction) {
     return new RunnableActionBasedOnAction0(ChainRunnableActions.get(this, nextAction));
   }
 

@@ -51,7 +51,7 @@ public interface ProcessorAction2<D1, D2> extends Action2<Void, D1, D2>, BiConsu
    * @param nextAction the next action.
    * @return the processor action that combines this action and the next action.
    */
-  ProcessorAction2<D1, D2> then(Action2<Void, D1, D2> nextAction);
+  ProcessorAction2<D1, D2> andThen(Action2<Void, D1, D2> nextAction);
 
   /**
    * Returns presentation of this action as {@link RunnableAction}.

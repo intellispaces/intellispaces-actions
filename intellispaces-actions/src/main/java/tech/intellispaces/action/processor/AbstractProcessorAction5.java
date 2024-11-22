@@ -200,7 +200,7 @@ public abstract class AbstractProcessorAction5<D1, D2, D3, D4, D5>
   }
 
   @Override
-  public ProcessorAction5<D1, D2, D3, D4, D5> then(Action5<Void, D1, D2, D3, D4, D5> nextAction) {
+  public ProcessorAction5<D1, D2, D3, D4, D5> andThen(Action5<Void, D1, D2, D3, D4, D5> nextAction) {
     return ProcessorActions.processorAction5(ChainProcessorActions.get(this, nextAction));
   }
 

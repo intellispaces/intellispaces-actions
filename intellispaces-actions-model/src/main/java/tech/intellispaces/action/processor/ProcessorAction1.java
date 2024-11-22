@@ -31,7 +31,7 @@ public interface ProcessorAction1<D> extends Action1<Void, D>, Consumer<D> {
    * @param nextAction the next action.
    * @return the processor action that combines this action and the next action.
    */
-  ProcessorAction1<D> then(Action1<Void, D> nextAction);
+  ProcessorAction1<D> andThen(Action1<Void, D> nextAction);
 
   /**
    * Returns presentation of this action as {@link RunnableAction}.

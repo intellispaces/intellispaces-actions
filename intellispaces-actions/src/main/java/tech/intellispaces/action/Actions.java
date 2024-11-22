@@ -12,6 +12,7 @@ import tech.intellispaces.action.supplier.SupplierActions;
 import tech.intellispaces.entity.function.QuadriConsumer;
 import tech.intellispaces.entity.function.QuadriFunction;
 import tech.intellispaces.entity.function.QuintiConsumer;
+import tech.intellispaces.entity.function.QuintiFunction;
 import tech.intellispaces.entity.function.SexiConsumer;
 import tech.intellispaces.entity.function.TriConsumer;
 import tech.intellispaces.entity.function.TriFunction;
@@ -139,6 +140,10 @@ public interface Actions {
     return FunctionActions.ofQuadriFunction(function);
   }
 
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> get(QuintiFunction<D1, D2, D3, D4, D5, R> function) {
+    return FunctionActions.ofQuintiFunction(function);
+  }
+
   static <R, D1, D2, D3> Action3<R, D1, D2, D3> get(
     TriFunction<D1, D2, D3, R> function,
     Class<R> resultClass,
@@ -158,6 +163,20 @@ public interface Actions {
       Class<D4> dataClass4
   ) {
     return FunctionActions.ofQuadriFunction(function, resultClass, dataClass1, dataClass2, dataClass3, dataClass4);
+  }
+
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> get(
+      QuintiFunction<D1, D2, D3, D4, D5, R> function,
+      Class<R> resultClass,
+      Class<D1> dataClass1,
+      Class<D2> dataClass2,
+      Class<D3> dataClass3,
+      Class<D4> dataClass4,
+      Class<D5> dataClass5
+  ) {
+    return FunctionActions.ofQuintiFunction(
+        function, resultClass, dataClass1, dataClass2, dataClass3, dataClass4, dataClass5
+    );
   }
 
   static <D1, D2> Action2<Integer, D1, D2> get(TwoObjectsToIntFunction<D1, D2> function) {

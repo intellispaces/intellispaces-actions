@@ -20,7 +20,7 @@ public interface RunnableAction extends Action0<Void> {
    * @param nextAction the next action.
    * @return the processor action that combines this action and the next action.
    */
-  RunnableAction then(Action0<Void> nextAction);
+  RunnableAction andThen(Action0<Void> nextAction);
 
   /**
    * Wraps this runnable action using the wrapper factory.

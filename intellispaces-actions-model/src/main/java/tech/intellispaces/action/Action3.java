@@ -8,13 +8,13 @@ import java.util.function.Function;
 /**
  * The action form 3.<p/>
  *
- * This is the action form that takes three input data and returns result.
- * The input data can be changed or remain unchanged.
+ * This is the action form that takes three inputs and returns result.
+ * Inputs can be changed or remain unchanged.
  *
- * @param <R> action return type.
- * @param <D1> first processed data type.
- * @param <D2> second processed data type.
- * @param <D3> third processed data type.
+ * @param <R> the action return type.
+ * @param <D1> the first input type.
+ * @param <D2> the second input type.
+ * @param <D3> the third input type.
  */
 public interface Action3<R, D1, D2, D3> extends Action {
 

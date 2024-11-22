@@ -25,7 +25,7 @@ public abstract class AbstractProcessorAction2<D1, D2>
   }
 
   @Override
-  public ProcessorAction2<D1, D2> then(Action2<Void, D1, D2> nextAction) {
+  public ProcessorAction2<D1, D2> andThen(Action2<Void, D1, D2> nextAction) {
     return ProcessorActions.processorAction2(ChainProcessorActions.get(this, nextAction));
   }
 

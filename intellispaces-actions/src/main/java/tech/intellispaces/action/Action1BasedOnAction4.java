@@ -25,31 +25,31 @@ class Action1BasedOnAction4<R, _D, D1, D2, D3, D4> extends AbstractAction1<R, _D
 
   @Override
   public R execute(_D data) {
-    Object[] inputData = { data };
-    D1 targetData1 = dataExtractor1.execute(inputData, 0);
-    D2 targetData2 = dataExtractor2.execute(inputData, 1);
-    D3 targetData3 = dataExtractor3.execute(inputData, 2);
-    D4 targetData4 = dataExtractor4.execute(inputData, 3);
+    Object[] inputs = { data };
+    D1 targetData1 = dataExtractor1.execute(inputs, 0);
+    D2 targetData2 = dataExtractor2.execute(inputs, 1);
+    D3 targetData3 = dataExtractor3.execute(inputs, 2);
+    D4 targetData4 = dataExtractor4.execute(inputs, 3);
     return action4.execute(targetData1, targetData2, targetData3, targetData4);
   }
 
   @Override
   public int executeReturnInt(_D data) {
-    Object[] inputData = { data };
-    D1 targetData1 = dataExtractor1.execute(inputData, 0);
-    D2 targetData2 = dataExtractor2.execute(inputData, 1);
-    D3 targetData3 = dataExtractor3.execute(inputData, 2);
-    D4 targetData4 = dataExtractor4.execute(inputData, 3);
+    Object[] inputs = { data };
+    D1 targetData1 = dataExtractor1.execute(inputs, 0);
+    D2 targetData2 = dataExtractor2.execute(inputs, 1);
+    D3 targetData3 = dataExtractor3.execute(inputs, 2);
+    D4 targetData4 = dataExtractor4.execute(inputs, 3);
     return action4.executeReturnInt(targetData1, targetData2, targetData3, targetData4);
   }
 
   @Override
   public double executeReturnDouble(_D data) {
-    Object[] inputData = { data };
-    D1 targetData1 = dataExtractor1.execute(inputData, 0);
-    D2 targetData2 = dataExtractor2.execute(inputData, 1);
-    D3 targetData3 = dataExtractor3.execute(inputData, 2);
-    D4 targetData4 = dataExtractor4.execute(inputData, 3);
+    Object[] inputs = { data };
+    D1 targetData1 = dataExtractor1.execute(inputs, 0);
+    D2 targetData2 = dataExtractor2.execute(inputs, 1);
+    D3 targetData3 = dataExtractor3.execute(inputs, 2);
+    D4 targetData4 = dataExtractor4.execute(inputs, 3);
     return action4.executeReturnDouble(targetData1, targetData2, targetData3, targetData4);
   }
 }

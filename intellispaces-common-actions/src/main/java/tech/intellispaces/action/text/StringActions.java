@@ -41,7 +41,7 @@ public class StringActions {
    * on each call.
    */
   public static RunnableAction commaAppender(StringBuilder sb1, StringBuilder sb2) {
-    return commaAppender(sb1).then(
+    return commaAppender(sb1).andThen(
         commaAppender(sb2));
   }
 
@@ -70,7 +70,7 @@ public class StringActions {
    */
   public static RunnableAction skipFirstTimeCommaAppender(StringBuilder sb1, StringBuilder sb2) {
     return skipFirstTimeCommaAppender(sb1)
-        .then(skipFirstTimeCommaAppender(sb2));
+        .andThen(skipFirstTimeCommaAppender(sb2));
   }
 
   private StringActions() {}

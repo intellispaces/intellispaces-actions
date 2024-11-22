@@ -7,7 +7,14 @@ import tech.intellispaces.action.wrapper.WrapperAction0;
 
 class CachedInterceptor0<R> extends AbstractAction0<R> implements WrapperAction0<R> {
   private final Action0<R> interceptedAction;
-  private final CachedInterceptorExecutor<R> executor = new CachedInterceptorExecutor<>();
+
+  private R cachedValue = null;
+  private int cachedIntValue;
+  private double cachedDoubleValue;
+
+  private boolean isCachedValue = false;
+  private boolean isCachedIntValue = false;
+  private boolean isCachedDoubleValue = false;
 
   CachedInterceptor0(Action0<R> interceptedAction) {
     this.interceptedAction = interceptedAction;
@@ -19,17 +26,49 @@ class CachedInterceptor0<R> extends AbstractAction0<R> implements WrapperAction0
   }
 
   @Override
+  @SuppressWarnings("unchecked")
   public R execute() {
-    return executor.execute(interceptedAction::execute);
+    if (isCachedValue) {
+      return cachedValue;
+    }
+    if (isCachedIntValue) {
+      cachedValue = (R) Integer.valueOf(cachedIntValue);
+    } else if (isCachedDoubleValue) {
+      cachedValue = (R) Double.valueOf(cachedDoubleValue);
+    } else {
+      cachedValue = interceptedAction.execute();
+    }
+    isCachedValue = true;
+    return cachedValue;
   }
 
   @Override
   public int executeReturnInt() {
-    return executor.executeReturnInt(interceptedAction::executeReturnInt);
+    if (isCachedIntValue) {
+      return cachedIntValue;
+    }
+    if (isCachedValue) {
+      cachedIntValue = (Integer) cachedValue;
+      isCachedIntValue = true;
+      return cachedIntValue;
+    }
+    cachedIntValue = interceptedAction.executeReturnInt();
+    isCachedIntValue = true;
+    return cachedIntValue;
   }
 
   @Override
   public double executeReturnDouble() {
-    return executor.executeReturnDouble(interceptedAction::executeReturnDouble);
+    if (isCachedDoubleValue) {
+      return cachedDoubleValue;
+    }
+    if (isCachedValue) {
+      cachedDoubleValue = (Double) cachedValue;
+      isCachedDoubleValue = true;
+      return cachedDoubleValue;
+    }
+    cachedDoubleValue = interceptedAction.executeReturnDouble();
+    isCachedDoubleValue = true;
+    return cachedDoubleValue;
   }
 }

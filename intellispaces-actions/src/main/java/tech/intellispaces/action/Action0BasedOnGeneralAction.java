@@ -10,19 +10,19 @@ class Action0BasedOnGeneralAction<R> extends AbstractAction0<R> {
   @Override
   @SuppressWarnings("unchecked")
   public R execute() {
-    Object[] inputData = {};
-    return (R) action.execute(inputData);
+    Object[] inputs = {};
+    return (R) action.execute(inputs);
   }
 
   @Override
   public int executeReturnInt() {
-    Object[] inputData = {};
-    return action.executeReturnInt(inputData);
+    Object[] inputs = {};
+    return action.executeReturnInt(inputs);
   }
 
   @Override
   public double executeReturnDouble() {
-    Object[] inputData = {};
-    return action.executeReturnDouble(inputData);
+    Object[] inputs = {};
+    return action.executeReturnDouble(inputs);
   }
 }

@@ -15,13 +15,13 @@ public abstract class AbstractAction implements Action {
   }
 
   @Override
-  public int executeReturnInt(Object... inputData) {
-    return (Integer) execute(inputData);
+  public int executeReturnInt(Object[] inputs) {
+    return (Integer) execute(inputs);
   }
 
   @Override
-  public double executeReturnDouble(Object... inputData) {
-    return (Double) execute(inputData);
+  public double executeReturnDouble(Object[] inputs) {
+    return (Double) execute(inputs);
   }
 
   @Override

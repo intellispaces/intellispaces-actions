@@ -50,7 +50,7 @@ public class ActionsTest {
     // Given
     List<Integer> values = new ArrayList<>();
     RunnableAction runnableAction = Actions.runnableAction(values::add, 1)
-        .then(Actions.runnableAction(values::add, 2));
+        .andThen(Actions.runnableAction(values::add, 2));
 
     // When
     runnableAction.execute();

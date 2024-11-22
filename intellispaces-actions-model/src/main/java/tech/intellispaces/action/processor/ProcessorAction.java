@@ -18,9 +18,9 @@ public interface ProcessorAction extends Action {
    * Executes action.</p>
    * This method processes and change one or more input data.
    *
-   * @param inputData the processed data.
+   * @param inputs the processed data.
    */
-  void process(Object... inputData);
+  void process(Object[] inputs);
 
   /**
    * Combines this action into a chain with the next action.
@@ -28,15 +28,15 @@ public interface ProcessorAction extends Action {
    * @param nextAction the next action.
    * @return the processor action that combines this action and the next action.
    */
-  ProcessorAction then(Action nextAction);
+  ProcessorAction andThen(Action nextAction);
 
   /**
    * Returns presentation of this action as {@link RunnableAction}.
    *
-   * @param inputData the processed data.
+   * @param inputs the processed data.
    * @return the runnable action.
    */
-  RunnableAction asRunnable(Object... inputData);
+  RunnableAction asRunnable(Object[] inputs);
 
   /**
    * Wraps this processor action using the wrapper factory and

@@ -7,11 +7,11 @@ import java.util.function.Function;
 /**
  * The action form 1.<p/>
  *
- * This is the action form that takes single input data and returns result data.
- * The input data can be changed or remain unchanged.
+ * This is the action form that takes single input and returns result.
+ * The input can be changed or remain unchanged.
  *
- * @param <R> action return type.
- * @param <D> processed data type.
+ * @param <R> the action return type.
+ * @param <D> the input type.
  */
 public interface Action1<R, D> extends Action {
 

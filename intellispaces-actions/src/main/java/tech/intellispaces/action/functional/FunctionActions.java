@@ -8,7 +8,7 @@ import tech.intellispaces.action.Action4;
 import tech.intellispaces.action.Action5;
 import tech.intellispaces.action.supplier.SupplierActions;
 import tech.intellispaces.entity.function.QuadriFunction;
-import tech.intellispaces.entity.function.QuinFunction;
+import tech.intellispaces.entity.function.QuintiFunction;
 import tech.intellispaces.entity.function.TriFunction;
 import tech.intellispaces.entity.function.primitive.ObjectAndDoubleToDoubleFunction;
 import tech.intellispaces.entity.function.primitive.ObjectAndDoubleToIntFunction;
@@ -212,14 +212,14 @@ public interface FunctionActions {
     return new FunctionalAction4<>(function);
   }
 
-  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuinFunction(
-      QuinFunction<D1, D2, D3, D4, D5, R> function
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuintiFunction(
+      QuintiFunction<D1, D2, D3, D4, D5, R> function
   ) {
-    return ofQuinFunction(function, (Type<R>) null, null, null, null, null, null);
+    return ofQuintiFunction(function, (Type<R>) null, null, null, null, null, null);
   }
 
-  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuinFunction(
-      QuinFunction<D1, D2, D3, D4, D5, R> function,
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuintiFunction(
+      QuintiFunction<D1, D2, D3, D4, D5, R> function,
       Class<R> resultClass,
       Class<D1> dataClass1,
       Class<D2> dataClass2,
@@ -227,7 +227,7 @@ public interface FunctionActions {
       Class<D4> dataClass4,
       Class<D5> dataClass5
   ) {
-    return ofQuinFunction(
+    return ofQuintiFunction(
         function,
         Types.get(resultClass),
         Types.get(dataClass1),
@@ -238,8 +238,8 @@ public interface FunctionActions {
     );
   }
 
-  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuinFunction(
-      QuinFunction<D1, D2, D3, D4, D5, R> function,
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuintiFunction(
+      QuintiFunction<D1, D2, D3, D4, D5, R> function,
       Type<R> resultType,
       Type<D1> dataType1,
       Type<D2> dataType2,

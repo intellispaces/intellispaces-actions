@@ -1,6 +1,6 @@
 package tech.intellispaces.action;
 
-import tech.intellispaces.action.exception.IrregularActionFormExceptions;
+import tech.intellispaces.action.exception.IrregularActionTypeExceptions;
 import tech.intellispaces.action.wrapper.WrapperAction;
 import tech.intellispaces.action.wrapper.WrapperAction1;
 
@@ -15,29 +15,29 @@ public abstract class AbstractAction1<R, D> implements Action1<R, D> {
 
   @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object... inputData) {
-    if (inputData == null || inputData.length != 1) {
-      throw IrregularActionFormExceptions.withMessage("Action form 1 requires single input data");
+  public R execute(Object[] inputs) {
+    if (inputs == null || inputs.length != 1) {
+      throw IrregularActionTypeExceptions.withMessage("Action form 1 requires single input data");
     }
-    return execute((D) inputData[0]);
+    return execute((D) inputs[0]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public int executeReturnInt(Object... inputData) {
-    if (inputData == null || inputData.length != 1) {
-      throw IrregularActionFormExceptions.withMessage("Action form 1 requires single input data");
+  public int executeReturnInt(Object[] inputs) {
+    if (inputs == null || inputs.length != 1) {
+      throw IrregularActionTypeExceptions.withMessage("Action form 1 requires single input data");
     }
-    return executeReturnInt((D) inputData[0]);
+    return executeReturnInt((D) inputs[0]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(Object... inputData) {
-    if (inputData == null || inputData.length != 1) {
-      throw IrregularActionFormExceptions.withMessage("Action form 1 requires single input data");
+  public double executeReturnDouble(Object[] inputs) {
+    if (inputs == null || inputs.length != 1) {
+      throw IrregularActionTypeExceptions.withMessage("Action form 1 requires single input data");
     }
-    return executeReturnDouble((D) inputData[0]);
+    return executeReturnDouble((D) inputs[0]);
   }
 
   @Override
@@ -84,7 +84,7 @@ public abstract class AbstractAction1<R, D> implements Action1<R, D> {
 
   @Override
   public <_R> Action0<_R> castToAction0() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 1 can not be represented as action form 0");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 1 can not be represented as action form 0");
   }
 
   @Override
@@ -95,27 +95,27 @@ public abstract class AbstractAction1<R, D> implements Action1<R, D> {
 
   @Override
   public <_R, _D1, _D2> Action2<_R, _D1, _D2> castToAction2() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 1 can not be represented as action form 2");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 1 can not be represented as action form 2");
   }
 
   @Override
   public <_R, _D1, _D2, _D3> Action3<_R, _D1, _D2, _D3> castToAction3() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 1 can not be represented as action form 3");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 1 can not be represented as action form 3");
   }
 
   @Override
   public <_R, _D1, _D2, _D3, _D4> Action4<_R, _D1, _D2, _D3, _D4> castToAction4() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 1 can not be represented as action form 4");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 1 can not be represented as action form 4");
   }
 
   @Override
   public <_R, _D1, _D2, _D3, _D4, _D5> Action5<_R, _D1, _D2, _D3, _D4, _D5> castToAction5() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 1 can not be represented as action form 5");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 1 can not be represented as action form 5");
   }
 
   @Override
   public <_R, _D1, _D2, _D3, _D4, _D5, _D6> Action6<_R, _D1, _D2, _D3, _D4, _D5, _D6> castToAction6() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 1 can not be represented as action form 6");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 1 can not be represented as action form 6");
   }
 
   @Override

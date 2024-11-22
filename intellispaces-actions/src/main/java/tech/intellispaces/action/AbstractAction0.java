@@ -1,6 +1,6 @@
 package tech.intellispaces.action;
 
-import tech.intellispaces.action.exception.IrregularActionFormExceptions;
+import tech.intellispaces.action.exception.IrregularActionTypeExceptions;
 import tech.intellispaces.action.wrapper.WrapperAction;
 import tech.intellispaces.action.wrapper.WrapperAction0;
 
@@ -14,25 +14,25 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
-  public R execute(Object... inputData) {
-    if (inputData != null && inputData.length > 0) {
-      throw IrregularActionFormExceptions.withMessage("Action form 0 does not require any input data");
+  public R execute(Object[] inputs) {
+    if (inputs != null && inputs.length > 0) {
+      throw IrregularActionTypeExceptions.withMessage("Action form 0 does not require any input data");
     }
     return execute();
   }
 
   @Override
-  public int executeReturnInt(Object... inputData) {
-    if (inputData != null && inputData.length > 0) {
-      throw IrregularActionFormExceptions.withMessage("Action form 0 does not require any input data");
+  public int executeReturnInt(Object[] inputs) {
+    if (inputs != null && inputs.length > 0) {
+      throw IrregularActionTypeExceptions.withMessage("Action form 0 does not require any input data");
     }
     return executeReturnInt();
   }
 
   @Override
-  public double executeReturnDouble(Object... inputData) {
-    if (inputData != null && inputData.length > 0) {
-      throw IrregularActionFormExceptions.withMessage("Action form 0 does not require any input data");
+  public double executeReturnDouble(Object[] inputs) {
+    if (inputs != null && inputs.length > 0) {
+      throw IrregularActionTypeExceptions.withMessage("Action form 0 does not require any input data");
     }
     return executeReturnDouble();
   }
@@ -55,32 +55,32 @@ public abstract class AbstractAction0<R> implements Action0<R> {
 
   @Override
   public <_R, _D> Action1<_R, _D> castToAction1() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 0 can not be represented as action form 1");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 0 can not be represented as action form 1");
   }
 
   @Override
   public <_R, _D1, _D2> Action2<_R, _D1, _D2> castToAction2() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 0 can not be represented as action form 2");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 0 can not be represented as action form 2");
   }
 
   @Override
   public <_R, _D1, _D2, _D3> Action3<_R, _D1, _D2, _D3> castToAction3() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 0 can not be represented as action form 3");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 0 can not be represented as action form 3");
   }
 
   @Override
   public <_R, _D1, _D2, _D3, _D4> Action4<_R, _D1, _D2, _D3, _D4> castToAction4() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 0 can not be represented as action form 4");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 0 can not be represented as action form 4");
   }
 
   @Override
   public <_R, _D1, _D2, _D3, _D4, _D5> Action5<_R, _D1, _D2, _D3, _D4, _D5> castToAction5() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 0 can not be represented as action form 5");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 0 can not be represented as action form 5");
   }
 
   @Override
   public <_R, _D1, _D2, _D3, _D4, _D5, _D6> Action6<_R, _D1, _D2, _D3, _D4, _D5, _D6> castToAction6() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 0 can not be represented as action form 6");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 0 can not be represented as action form 6");
   }
 
   @Override

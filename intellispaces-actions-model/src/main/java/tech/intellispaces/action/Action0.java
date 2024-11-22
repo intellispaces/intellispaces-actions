@@ -7,7 +7,7 @@ import java.util.function.Function;
 /**
  * The action form 0.<p/>
  *
- * This is the action form that does not take input data but returns result data.
+ * This is the action form that does not take input but returns result data.
  *
  * @param <R> action return type.
  */

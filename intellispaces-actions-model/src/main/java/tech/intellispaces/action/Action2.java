@@ -8,12 +8,12 @@ import java.util.function.Function;
 /**
  * The action form 2.<p/>
  *
- * This is the action form that takes two input data and returns result.
- * The input data can be changed or remain unchanged.
+ * This is the action form that takes two inputs and returns result.
+ * Inputs can be changed or remain unchanged.
  *
- * @param <R> action return type.
- * @param <D1> first processed data type.
- * @param <D2> second processed data type.
+ * @param <R> the action return type.
+ * @param <D1> the first input type.
+ * @param <D2> the second input type.
  */
 public interface Action2<R, D1, D2> extends Action {
 

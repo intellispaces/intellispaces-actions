@@ -5,32 +5,34 @@ import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
 class FirstTimeInterceptorExecutor<R> {
+  private final R defaultResult;
   private boolean first = true;
 
+  FirstTimeInterceptorExecutor(R defaultResult) {
+    this.defaultResult = defaultResult;
+  }
+
   R execute(Supplier<R> resultSuppler) {
-    R result = null;
     if (first) {
-      result = resultSuppler.get();
+      first = false;
+      return resultSuppler.get();
     }
-    first = false;
-    return result;
+    return defaultResult;
   }
 
   int executeReturnInt(IntSupplier resultSupplier) {
-    int result = 0;
     if (first) {
-      result = resultSupplier.getAsInt();
+      first = false;
+      return resultSupplier.getAsInt();
     }
-    first = false;
-    return result;
+    return (int) defaultResult;
   }
 
   double executeReturnDouble(DoubleSupplier resultSupplier) {
-    double result = 0;
     if (first) {
-      result = resultSupplier.getAsDouble();
+      first = false;
+      return resultSupplier.getAsDouble();
     }
-    first = false;
-    return result;
+    return (double) defaultResult;
   }
 }

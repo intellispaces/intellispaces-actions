@@ -1,6 +1,6 @@
 package tech.intellispaces.action;
 
-import tech.intellispaces.action.exception.IrregularActionFormExceptions;
+import tech.intellispaces.action.exception.IrregularActionTypeExceptions;
 import tech.intellispaces.action.wrapper.WrapperAction;
 import tech.intellispaces.action.wrapper.WrapperAction6;
 
@@ -15,29 +15,29 @@ public abstract class AbstractAction6<R, D1, D2, D3, D4, D5, D6> implements Acti
 
   @Override
   @SuppressWarnings("unchecked")
-  public R execute(Object... inputData) {
-    if (inputData == null || inputData.length != 6) {
-      throw IrregularActionFormExceptions.withMessage("Action form 4 requires six input data");
+  public R execute(Object[] inputs) {
+    if (inputs == null || inputs.length != 6) {
+      throw IrregularActionTypeExceptions.withMessage("Action form 4 requires six input data");
     }
-    return execute((D1) inputData[0], (D2) inputData[1], (D3) inputData[2], (D4) inputData[3], (D5) inputData[4], (D6) inputData[5]);
+    return execute((D1) inputs[0], (D2) inputs[1], (D3) inputs[2], (D4) inputs[3], (D5) inputs[4], (D6) inputs[5]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public int executeReturnInt(Object... inputData) {
-    if (inputData == null || inputData.length != 6) {
-      throw IrregularActionFormExceptions.withMessage("Action form 4 requires six input data");
+  public int executeReturnInt(Object[] inputs) {
+    if (inputs == null || inputs.length != 6) {
+      throw IrregularActionTypeExceptions.withMessage("Action form 4 requires six input data");
     }
-    return executeReturnInt((D1) inputData[0], (D2) inputData[1], (D3) inputData[2], (D4) inputData[3], (D5) inputData[4], (D6) inputData[5]);
+    return executeReturnInt((D1) inputs[0], (D2) inputs[1], (D3) inputs[2], (D4) inputs[3], (D5) inputs[4], (D6) inputs[5]);
   }
 
   @Override
   @SuppressWarnings("unchecked")
-  public double executeReturnDouble(Object... inputData) {
-    if (inputData == null || inputData.length != 6) {
-      throw IrregularActionFormExceptions.withMessage("Action form 4 requires five six data");
+  public double executeReturnDouble(Object[] inputs) {
+    if (inputs == null || inputs.length != 6) {
+      throw IrregularActionTypeExceptions.withMessage("Action form 4 requires five six data");
     }
-    return executeReturnDouble((D1) inputData[0], (D2) inputData[1], (D3) inputData[2], (D4) inputData[3], (D5) inputData[4], (D6) inputData[5]);
+    return executeReturnDouble((D1) inputs[0], (D2) inputs[1], (D3) inputs[2], (D4) inputs[3], (D5) inputs[4], (D6) inputs[5]);
   }
 
   @Override
@@ -664,32 +664,32 @@ public abstract class AbstractAction6<R, D1, D2, D3, D4, D5, D6> implements Acti
 
   @Override
   public <_R> Action0<_R> castToAction0() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 6 can not be represented as action form 0");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 6 can not be represented as action form 0");
   }
 
   @Override
   public <_R, _D> Action1<_R, _D> castToAction1() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 6 can not be represented as action form 1");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 6 can not be represented as action form 1");
   }
 
   @Override
   public <_R, _D1, _D2> Action2<_R, _D1, _D2> castToAction2() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 6 can not be represented as action form 2");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 6 can not be represented as action form 2");
   }
 
   @Override
   public <_R, _D1, _D2, _D3> Action3<_R, _D1, _D2, _D3> castToAction3() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 6 can not be represented as action form 3");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 6 can not be represented as action form 3");
   }
 
   @Override
   public <_R, _D1, _D2, _D3, _D4> Action4<_R, _D1, _D2, _D3, _D4> castToAction4() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 6 can not be represented as action form 4");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 6 can not be represented as action form 4");
   }
 
   @Override
   public <_R, _D1, _D2, _D3, _D4, _D5> Action5<_R, _D1, _D2, _D3, _D4, _D5> castToAction5() {
-    throw IrregularActionFormExceptions.withMessage("Action of form 6 can not be represented as action form 5");
+    throw IrregularActionTypeExceptions.withMessage("Action of form 6 can not be represented as action form 5");
   }
 
   @Override

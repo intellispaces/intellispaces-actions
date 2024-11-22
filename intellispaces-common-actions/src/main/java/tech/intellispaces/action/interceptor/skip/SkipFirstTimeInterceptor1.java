@@ -5,12 +5,11 @@ import tech.intellispaces.action.Action;
 import tech.intellispaces.action.Action1;
 import tech.intellispaces.action.wrapper.WrapperAction1;
 
-class SkipFirstTimeInterceptor1<R, D> extends AbstractAction1<R, D> implements WrapperAction1<R, D> {
+public class SkipFirstTimeInterceptor1<R, D> extends AbstractAction1<R, D> implements WrapperAction1<R, D> {
   private final Action1<R, D> interceptedAction;
   private final SkipFirstTimeInterceptorExecutor<R> executor = new SkipFirstTimeInterceptorExecutor<>();
 
-
-  SkipFirstTimeInterceptor1(Action1<R, D> interceptedAction) {
+  public SkipFirstTimeInterceptor1(Action1<R, D> interceptedAction) {
     this.interceptedAction = interceptedAction;
   }
 

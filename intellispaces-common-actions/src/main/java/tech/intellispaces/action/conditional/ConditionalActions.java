@@ -11,20 +11,20 @@ import java.util.function.Supplier;
  */
 public interface ConditionalActions {
 
-  static <R, D> GetAndSetIfAbsentAction<R, D> getAndSetIfAbsentAction(Class<D> dataClass) {
-    return GetAndSetIfAbsentActions.get(dataClass);
+  static <R, D> GetOrSetIfAbsentAction<R, D> getOrSetIfAbsentAction(Class<D> dataClass) {
+    return GetOrSetIfAbsentActions.get(dataClass);
   }
 
-  static <R, D> GetAndSetIfAbsentAction<R, D> getAndSetIfAbsentAction(Class<D> dataClass, Class<R> resultClass) {
-    return GetAndSetIfAbsentActions.get(dataClass);
+  static <R, D> GetOrSetIfAbsentAction<R, D> getOrSetIfAbsentAction(Class<D> dataClass, Class<R> resultClass) {
+    return GetOrSetIfAbsentActions.get(dataClass);
   }
 
-  static <R, D> Action1<R, D> getAndSetIfAbsentAction(
+  static <R, D> Action1<R, D> getOrSetIfAbsentAction(
       Class<D> dataClass,
       Function<D, R> getter,
       BiConsumer<D, R> setter,
       Supplier<R> supplier
   ) {
-    return GetAndSetIfAbsentActions.get(dataClass, getter, setter, supplier);
+    return GetOrSetIfAbsentActions.get(dataClass, getter, setter, supplier);
   }
 }
