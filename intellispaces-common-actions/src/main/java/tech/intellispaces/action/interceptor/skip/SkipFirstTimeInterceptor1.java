@@ -7,10 +7,15 @@ import tech.intellispaces.action.wrapper.WrapperAction1;
 
 public class SkipFirstTimeInterceptor1<R, D> extends AbstractAction1<R, D> implements WrapperAction1<R, D> {
   private final Action1<R, D> interceptedAction;
-  private final SkipFirstTimeInterceptorExecutor<R> executor = new SkipFirstTimeInterceptorExecutor<>();
+  private final SkipFirstTimeInterceptorExecutor<R> executor;
 
   public SkipFirstTimeInterceptor1(Action1<R, D> interceptedAction) {
+    this(interceptedAction, null);
+  }
+
+  public SkipFirstTimeInterceptor1(Action1<R, D> interceptedAction, R defaultResult) {
     this.interceptedAction = interceptedAction;
+    this.executor = new SkipFirstTimeInterceptorExecutor<>(defaultResult);
   }
 
   @Override

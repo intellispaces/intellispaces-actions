@@ -13,16 +13,16 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 /**
- * Tests for class {@link FirstTimeInterceptor0}.
+ * Tests for class {@link SkipFollowingTimesInterceptor0}.
  */
-public class FirstTimeInterceptor0Test {
+public class SkipFollowingTimesInterceptor0Test {
 
   @Test
-  public void test1() {
+  public void testExecuteAndThenExecuteReturnInt() {
     // Given
     var counter = new AtomicInteger();
     Action0<Integer> action0 = spy(Actions.get(counter::incrementAndGet));
-    var interceptor = new FirstTimeInterceptor0<>(action0, 3);
+    var interceptor = new SkipFollowingTimesInterceptor0<>(action0, 3);
 
     // When
     Integer result1 = interceptor.execute();
@@ -41,11 +41,11 @@ public class FirstTimeInterceptor0Test {
   }
 
   @Test
-  public void test2() {
+  public void testExecuteAndThenExecuteReturnDouble() {
     // Given
     var counter = new AtomicInteger();
     Action0<Double> action0 = spy(Actions.get(() -> (double) counter.incrementAndGet()));
-    var interceptor = new FirstTimeInterceptor0<>(action0, 3.0);
+    var interceptor = new SkipFollowingTimesInterceptor0<>(action0, 3.0);
 
     // When
     Double result1 = interceptor.execute();
@@ -64,11 +64,11 @@ public class FirstTimeInterceptor0Test {
   }
 
   @Test
-  public void test3() {
+  public void testExecuteReturnIntAndThanExecute() {
     // Given
     var counter = new AtomicInteger();
     Action0<Integer> action0 = spy(Actions.get(counter::incrementAndGet));
-    var interceptor = new FirstTimeInterceptor0<>(action0, 3);
+    var interceptor = new SkipFollowingTimesInterceptor0<>(action0, 3);
 
     // When
     int result1 = interceptor.executeReturnInt();
@@ -87,11 +87,11 @@ public class FirstTimeInterceptor0Test {
   }
 
   @Test
-  public void test4() {
+  public void testExecuteReturnDoubleAndThenExecute() {
     // Given
     var counter = new AtomicInteger();
     Action0<Double> action0 = spy(Actions.get(() -> (double) counter.incrementAndGet()));
-    var interceptor = new FirstTimeInterceptor0<>(action0, 3.0);
+    var interceptor = new SkipFollowingTimesInterceptor0<>(action0, 3.0);
 
     // When
     double result1 = interceptor.executeReturnDouble();
@@ -110,11 +110,11 @@ public class FirstTimeInterceptor0Test {
   }
 
   @Test
-  public void test5() {
+  public void testExecute_whenNoDefaultResult() {
     // Given
     var counter = new AtomicInteger();
     Action0<Integer> action0 = spy(Actions.get(counter::incrementAndGet));
-    var interceptor = new FirstTimeInterceptor0<>(action0);
+    var interceptor = new SkipFollowingTimesInterceptor0<>(action0);
 
     // When
     Integer result1 = interceptor.execute();

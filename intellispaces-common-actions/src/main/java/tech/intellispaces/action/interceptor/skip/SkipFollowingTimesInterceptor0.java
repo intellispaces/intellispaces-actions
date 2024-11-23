@@ -5,17 +5,17 @@ import tech.intellispaces.action.Action;
 import tech.intellispaces.action.Action0;
 import tech.intellispaces.action.wrapper.WrapperAction0;
 
-public class FirstTimeInterceptor0<R> extends AbstractAction0<R> implements WrapperAction0<R> {
+public class SkipFollowingTimesInterceptor0<R> extends AbstractAction0<R> implements WrapperAction0<R> {
   private final Action0<R> interceptedAction;
-  private final FirstTimeInterceptorExecutor<R> executor;
+  private final SkipFollowingTimesInterceptorExecutor<R> executor;
 
-  public FirstTimeInterceptor0(Action0<R> interceptedAction) {
+  public SkipFollowingTimesInterceptor0(Action0<R> interceptedAction) {
     this(interceptedAction, null);
   }
 
-  FirstTimeInterceptor0(Action0<R> interceptedAction, R defaultResult) {
+  public SkipFollowingTimesInterceptor0(Action0<R> interceptedAction, R defaultResult) {
     this.interceptedAction = interceptedAction;
-    this.executor = new FirstTimeInterceptorExecutor<>(defaultResult);
+    this.executor = new SkipFollowingTimesInterceptorExecutor<>(defaultResult);
   }
 
   @Override

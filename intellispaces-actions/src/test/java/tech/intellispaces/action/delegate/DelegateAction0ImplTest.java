@@ -7,7 +7,6 @@ import tech.intellispaces.action.broker.BrokerAction0;
 import tech.intellispaces.action.broker.BrokerActions;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.verify;
 

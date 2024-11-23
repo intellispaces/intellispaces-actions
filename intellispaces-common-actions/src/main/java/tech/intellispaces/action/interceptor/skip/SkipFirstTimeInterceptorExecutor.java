@@ -4,33 +4,35 @@ import java.util.function.DoubleSupplier;
 import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
-public class SkipFirstTimeInterceptorExecutor<R> {
+class SkipFirstTimeInterceptorExecutor<R> {
+  private final R defaultResult;
   private boolean first = true;
 
+  SkipFirstTimeInterceptorExecutor(R defaultResult) {
+    this.defaultResult = defaultResult;
+  }
+
   R execute(Supplier<R> resultSuppler) {
-    R result = null;
-    if (!first) {
-      result = resultSuppler.get();
+    if (first) {
+      first = false;
+      return defaultResult;
     }
-    first = false;
-    return result;
+    return resultSuppler.get();
   }
 
   int executeReturnInt(IntSupplier resultSupplier) {
-    int result = 0;
-    if (!first) {
-      result = resultSupplier.getAsInt();
+    if (first) {
+      first = false;
+      return (int) defaultResult;
     }
-    first = false;
-    return result;
+    return resultSupplier.getAsInt();
   }
 
   double executeReturnDouble(DoubleSupplier resultSupplier) {
-    double result = 0;
-    if (!first) {
-      result = resultSupplier.getAsDouble();
+    if (first) {
+      first = false;
+      return (double) defaultResult;
     }
-    first = false;
-    return result;
+    return resultSupplier.getAsDouble();
   }
 }

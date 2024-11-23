@@ -66,8 +66,7 @@ public interface Actions {
     return FunctionActions.ofConsumer(consumer, dataType);
   }
 
-  static <D> Action1<Void, D> get(Consumer<D> consumer, Class<D> dataClass
-  ) {
+  static <D> Action1<Void, D> get(Consumer<D> consumer, Class<D> dataClass) {
     return FunctionActions.ofConsumer(consumer, dataClass);
   }
 

@@ -4,11 +4,11 @@ import java.util.function.DoubleSupplier;
 import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
-class FirstTimeInterceptorExecutor<R> {
+class SkipFollowingTimesInterceptorExecutor<R> {
   private final R defaultResult;
   private boolean first = true;
 
-  FirstTimeInterceptorExecutor(R defaultResult) {
+  SkipFollowingTimesInterceptorExecutor(R defaultResult) {
     this.defaultResult = defaultResult;
   }
 
