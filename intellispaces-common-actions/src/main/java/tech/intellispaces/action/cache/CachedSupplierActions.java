@@ -16,7 +16,7 @@ import java.util.function.Supplier;
 public interface CachedSupplierActions {
 
   /**
-   * Returns supplier action based on supplier function.
+   * Returns cached supplier action based on supplier function.
    *
    * @param supplier value supplier
    * @param <R> the supplier result value type.
@@ -28,7 +28,7 @@ public interface CachedSupplierActions {
   }
 
   /**
-   * Returns supplier action based on calculating function and single function argument.
+   * Returns cached supplier action based on calculating function and single function argument.
    *
    * @param function the calculating function.
    * @param arg the function argument.
@@ -41,7 +41,7 @@ public interface CachedSupplierActions {
   }
 
   /**
-   * Returns supplier action based on calculating function and the pair of function argument.
+   * Returns cached supplier action based on calculating function and the pair of function argument.
    *
    * @param function calculating function.
    * @param arg1 the first function argument.
@@ -60,7 +60,7 @@ public interface CachedSupplierActions {
   }
 
   /**
-   * Returns supplier action based on calculating function and three function argument.
+   * Returns cached supplier action based on calculating function and three function argument.
    *
    * @param function the calculating function.
    * @param arg1 the first function argument.
@@ -82,7 +82,7 @@ public interface CachedSupplierActions {
   }
 
   /**
-   * Returns supplier action based on calculating function and four function argument.
+   * Returns cached supplier action based on calculating function and four function argument.
    *
    * @param function calculating function.
    * @param arg1 the first function argument.
