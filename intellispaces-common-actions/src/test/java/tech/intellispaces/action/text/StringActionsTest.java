@@ -14,6 +14,51 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 public class StringActionsTest {
 
   @Test
+  public void testSeparatorAppenderProcessorAction() {
+    // Given
+    ProcessorAction1<StringBuilder> commaAppender = StringActions.separatorAppender(";");
+
+    // When
+    var sb = new StringBuilder();
+    commaAppender.process(sb);
+    commaAppender.process(sb);
+    commaAppender.process(sb);
+
+    // Then
+    assertThat(sb.toString()).isEqualTo(";;;");
+  }
+
+  @Test
+  public void testSeparatorAppenderRunnableAction_whenSingleStringBuilder() {
+    // Given
+    var sb = new StringBuilder();
+    RunnableAction commaAppender = StringActions.separatorAppender(sb, ";");
+
+    // When
+    commaAppender.run();
+    commaAppender.run();
+    commaAppender.run();
+
+    // Then
+    assertThat(sb.toString()).isEqualTo(";;;");
+  }
+
+  @Test
+  public void testSkipFirstTimeSeparatorAppenderRunnableAction_whenSingleStringBuilder() {
+    // Given
+    var sb = new StringBuilder();
+    RunnableAction commaAppender = StringActions.skipFirstTimeSeparatorAppender(sb, ";");
+
+    // When
+    commaAppender.run();
+    commaAppender.run();
+    commaAppender.run();
+
+    // Then
+    assertThat(sb.toString()).isEqualTo(";;");
+  }
+
+  @Test
   public void testCommaAppenderProcessorAction() {
     // Given
     ProcessorAction1<StringBuilder> commaAppender = StringActions.commaAppender();

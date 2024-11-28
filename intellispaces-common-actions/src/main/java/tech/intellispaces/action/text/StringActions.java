@@ -11,8 +11,48 @@ import tech.intellispaces.action.runnable.RunnableAction;
  */
 public class StringActions {
 
+  /**
+   * Returns separator appender action.
+   */
   public static SeparatorAppenderAction separatorAppender() {
     return INSTANCE;
+  }
+
+  /**
+   * Returns processor action that takes the instance of the {@link StringBuilder} and adds the separator on each call.
+   *
+   * @param separator the separator.
+   */
+  public static ProcessorAction1<StringBuilder> separatorAppender(String separator) {
+    return ProcessorActions.processorAction1(
+        separatorAppender().convertToAction1(
+            DataAdapters.direct(),
+            DataAdapters.predefined(separator)
+        )
+    );
+  }
+
+  /**
+   * Returns runnable action that adds the separator to given instance of the {@link StringBuilder}
+   * on each call.
+   *
+   * @param sb the string builder.
+   * @param separator the separator.
+   */
+  public static RunnableAction separatorAppender(StringBuilder sb, String separator) {
+    return separatorAppender(separator).asRunnable(sb);
+  }
+
+  /**
+   * Returns runnable action that adds the separator to two instances pf the {@link StringBuilder}.
+   * The runner does not add the separator on the first call, but adds it on each subsequent call.
+   *
+   * @param sb the string builder.
+   * @param separator the separator.
+   */
+  public static RunnableAction skipFirstTimeSeparatorAppender(StringBuilder sb, String separator) {
+    return separatorAppender(sb, separator)
+        .wrapRunnableAction(SkipInterceptors.skipFirstTimeInterceptorFactory0());
   }
 
   /**
@@ -31,6 +71,8 @@ public class StringActions {
   /**
    * Returns runnable action that adds the separator {@code ", "} to given instance of the {@link StringBuilder}
    * on each call.
+   *
+   * @param sb the string builder.
    */
   public static RunnableAction commaAppender(StringBuilder sb) {
     return commaAppender().asRunnable(sb);
@@ -39,6 +81,9 @@ public class StringActions {
   /**
    * Returns runnable action that adds the separator {@code ", "} to two instances pf the {@link StringBuilder}
    * on each call.
+   *
+   * @param sb1 the first string builder.
+   * @param sb2 the second string builder.
    */
   public static RunnableAction commaAppender(StringBuilder sb1, StringBuilder sb2) {
     return commaAppender(sb1).andThen(
@@ -58,6 +103,8 @@ public class StringActions {
   /**
    * Returns runnable action that adds the separator {@code ", "} to two instances pf the {@link StringBuilder}/
    * The runner does not add the separator on the first call, but adds it on each subsequent call.
+   *
+   * @param sb the string builder.
    */
   public static RunnableAction skipFirstTimeCommaAppender(StringBuilder sb) {
     return commaAppender(sb)
@@ -67,6 +114,9 @@ public class StringActions {
   /**
    * Returns runnable action that adds the separator {@code ", "} to two instances pf the {@link StringBuilder}.
    * The action does not add a separator on the first call, but adds it on each subsequent call.
+   *
+   * @param sb1 the first string builder.
+   * @param sb2 the second string builder.
    */
   public static RunnableAction skipFirstTimeCommaAppender(StringBuilder sb1, StringBuilder sb2) {
     return skipFirstTimeCommaAppender(sb1)
