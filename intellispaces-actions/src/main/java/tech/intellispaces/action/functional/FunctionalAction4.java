@@ -1,7 +1,7 @@
 package tech.intellispaces.action.functional;
 
 import tech.intellispaces.action.AbstractAction4;
-import tech.intellispaces.entity.function.QuadriFunction;
+import tech.intellispaces.general.function.QuadriFunction;
 
 class FunctionalAction4<R, D1, D2, D3, D4> extends AbstractAction4<R, D1, D2, D3, D4> {
   private final QuadriFunction<D1, D2, D3, D4, R> function;

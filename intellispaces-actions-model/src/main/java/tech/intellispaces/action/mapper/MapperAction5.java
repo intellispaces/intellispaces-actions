@@ -1,7 +1,7 @@
 package tech.intellispaces.action.mapper;
 
 import tech.intellispaces.action.Action5;
-import tech.intellispaces.entity.function.QuintiFunction;
+import tech.intellispaces.general.function.QuintiFunction;
 
 /**
  * The mapper action form 5.</p>

@@ -3,7 +3,7 @@ package tech.intellispaces.action.processor;
 import tech.intellispaces.action.Action3;
 import tech.intellispaces.action.runnable.RunnableAction;
 import tech.intellispaces.action.wrapper.WrapperAction3;
-import tech.intellispaces.entity.function.TriConsumer;
+import tech.intellispaces.general.function.TriConsumer;
 
 import java.util.function.Function;
 

@@ -2,7 +2,7 @@ package tech.intellispaces.action.chain.processor;
 
 import tech.intellispaces.action.Action;
 import tech.intellispaces.action.processor.AbstractProcessorAction;
-import tech.intellispaces.entity.exception.UnexpectedExceptions;
+import tech.intellispaces.general.exception.UnexpectedExceptions;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,7 +1,7 @@
 package tech.intellispaces.action.mapper;
 
 import tech.intellispaces.action.Action3;
-import tech.intellispaces.entity.function.TriFunction;
+import tech.intellispaces.general.function.TriFunction;
 
 /**
  * The mapper action form 3.</p>

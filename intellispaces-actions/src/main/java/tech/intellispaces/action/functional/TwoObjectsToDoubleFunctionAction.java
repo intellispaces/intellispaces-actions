@@ -1,7 +1,7 @@
 package tech.intellispaces.action.functional;
 
 import tech.intellispaces.action.AbstractAction2;
-import tech.intellispaces.entity.function.primitive.TwoObjectsToDoubleFunction;
+import tech.intellispaces.general.function.primitive.TwoObjectsToDoubleFunction;
 
 class TwoObjectsToDoubleFunctionAction<D1, D2> extends AbstractAction2<Double, D1, D2> {
   private final TwoObjectsToDoubleFunction<D1, D2> function;

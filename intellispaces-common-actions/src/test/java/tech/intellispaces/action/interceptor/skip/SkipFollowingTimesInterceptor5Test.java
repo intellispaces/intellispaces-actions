@@ -13,9 +13,9 @@ import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-import static tech.intellispaces.entity.type.PrimitiveFunctions.booleanToDouble;
-import static tech.intellispaces.entity.type.PrimitiveFunctions.booleanToInt;
-import static tech.intellispaces.entity.type.PrimitiveFunctions.booleanToString;
+import static tech.intellispaces.general.type.PrimitiveFunctions.booleanToDouble;
+import static tech.intellispaces.general.type.PrimitiveFunctions.booleanToInt;
+import static tech.intellispaces.general.type.PrimitiveFunctions.booleanToString;
 
 /**
  * Tests for class {@link SkipFollowingTimesInterceptor5}.
