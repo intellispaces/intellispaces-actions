@@ -1,5 +1,7 @@
 package tech.intellispaces.action;
 
+import tech.intellispaces.action.dataadapter.DataAdapterAction;
+import tech.intellispaces.action.dataadapter.DataAdapters;
 import tech.intellispaces.action.exception.IrregularActionTypeExceptions;
 import tech.intellispaces.action.wrapper.WrapperAction;
 import tech.intellispaces.action.wrapper.WrapperAction1;
@@ -116,6 +118,16 @@ public abstract class AbstractAction1<R, D> implements Action1<R, D> {
   @Override
   public <_R, _D1, _D2, _D3, _D4, _D5, _D6> Action6<_R, _D1, _D2, _D3, _D4, _D5, _D6> castToAction6() {
     throw IrregularActionTypeExceptions.withMessage("Action of form 1 can not be represented as action form 6");
+  }
+
+  @Override
+  public Action0<R> convertToAction0(DataAdapterAction<D> dataExtractor) {
+    return new Action0ConvertedFromAction1<>(this, dataExtractor);
+  }
+
+  @Override
+  public Action0<R> convertToAction0(D data) {
+    return convertToAction0(DataAdapters.predefined(data));
   }
 
   @Override

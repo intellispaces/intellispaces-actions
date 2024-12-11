@@ -1,5 +1,6 @@
 package tech.intellispaces.action;
 
+import tech.intellispaces.action.dataadapter.DataAdapterAction;
 import tech.intellispaces.action.wrapper.WrapperAction1;
 
 import java.util.function.Function;
@@ -59,6 +60,22 @@ public interface Action1<R, D> extends Action {
    * The special form of the execute method to avoid autoboxing.
    */
   double executeReturnDouble(double data);
+
+  /**
+   * Converts this action to the {@link Action0 action form 0}.
+   *
+   * @param dataExtractor the data extractor.
+   * @return the action {@link Action0}.
+   */
+  Action0<R> convertToAction0(DataAdapterAction<D> dataExtractor);
+
+  /**
+   * Converts this action to the {@link Action0 action form 0}.
+   *
+   * @param data the data.
+   * @return the action {@link Action0}.
+   */
+  Action0<R> convertToAction0(D data);
 
   /**
    * Converts this action to the {@link Action2 action form 2}.

@@ -1,6 +1,7 @@
 package tech.intellispaces.action;
 
 import tech.intellispaces.action.dataadapter.DataAdapterAction;
+import tech.intellispaces.action.dataadapter.DataAdapters;
 import tech.intellispaces.action.exception.IrregularActionTypeExceptions;
 import tech.intellispaces.action.wrapper.WrapperAction;
 import tech.intellispaces.action.wrapper.WrapperAction3;
@@ -318,6 +319,24 @@ public abstract class AbstractAction3<R, D1, D2, D3> implements Action3<R, D1, D
       DataAdapterAction<D3> dataExtractor3
   ) {
     return new Action1BasedOnAction3<>(this, dataExtractor1, dataExtractor2, dataExtractor3);
+  }
+
+  @Override
+  public <_D1, _D2> Action2<R, _D1, _D2> convertToAction2(
+      DataAdapterAction<D1> dataExtractor1,
+      DataAdapterAction<D2> dataExtractor2,
+      DataAdapterAction<D3> dataExtractor3
+  ) {
+    return new Action2ConvertedFromAction3<>(this, dataExtractor1, dataExtractor2, dataExtractor3);
+  }
+
+  @Override
+  public Action2<R, D2, D3> convertToAction2(D1 data) {
+    return convertToAction2(
+        DataAdapters.predefined(data),
+        DataAdapters.direct(),
+        DataAdapters.direct()
+    );
   }
 
   @Override

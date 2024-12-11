@@ -136,6 +136,14 @@ public interface Action2<R, D1, D2> extends Action {
   );
 
   /**
+   * Converts this action to the {@link Action1 action form 1}.
+   *
+   * @param data the data.
+   * @return the action {@link Action1}.
+   */
+  Action1<R, D2> convertToAction1(D1 data);
+
+  /**
    * Converts this action to the {@link Action3 action form 3}.
    */
   Action3<R, D1, D2, Void> convertToAction3();
