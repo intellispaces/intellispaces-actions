@@ -200,7 +200,7 @@ public abstract class AbstractAction2<R, D1, D2> implements Action2<R, D1, D2> {
   public Action1<R, D2> convertToAction1(D1 data) {
     return convertToAction1(
         DataAdapters.predefined(data),
-        DataAdapters.direct()
+        DataAdapters.fixed(0)
     );
   }
 

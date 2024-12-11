@@ -5,8 +5,12 @@ package tech.intellispaces.action.dataadapter;
  */
 public interface DataAdapters {
 
-  static <T> DataAdapterAction<T> direct() {
-    return new DirectDataAdapterAction<>();
+  static <T> DataAdapterAction<T> oneToOne() {
+    return new OneToOneDataAdapterAction<>();
+  }
+
+  static <T> DataAdapterAction<T> fixed(int index) {
+    return new FixedDataAdapterAction<>(index);
   }
 
   static <T> DataAdapterAction<T> predefined(T data) {

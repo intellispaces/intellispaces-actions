@@ -6,7 +6,7 @@ import java.util.function.BiConsumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import static tech.intellispaces.action.dataadapter.DataAdapters.direct;
+import static tech.intellispaces.action.dataadapter.DataAdapters.oneToOne;
 import static tech.intellispaces.action.dataadapter.DataAdapters.predefined;
 
 /**
@@ -27,7 +27,7 @@ public class GetOrSetIfAbsentActions {
   ) {
     GetOrSetIfAbsentAction<R, D> action = get(dataClass);
     return action.convertToAction1(
-        direct(),
+        oneToOne(),
         predefined(getter),
         predefined(setter),
         predefined(supplier)

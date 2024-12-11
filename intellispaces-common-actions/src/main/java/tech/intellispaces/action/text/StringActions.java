@@ -26,7 +26,7 @@ public class StringActions {
   public static ProcessorAction1<StringBuilder> separatorAppender(String separator) {
     return ProcessorActions.processorAction1(
         separatorAppender().convertToAction1(
-            DataAdapters.direct(),
+            DataAdapters.oneToOne(),
             DataAdapters.predefined(separator)
         )
     );
@@ -62,7 +62,7 @@ public class StringActions {
   public static ProcessorAction1<StringBuilder> commaAppender() {
     return ProcessorActions.processorAction1(
       separatorAppender().convertToAction1(
-          DataAdapters.direct(),
+          DataAdapters.oneToOne(),
           DataAdapters.predefined(DEFAULT_SEPARATOR)
       )
     );

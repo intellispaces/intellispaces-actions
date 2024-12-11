@@ -2,13 +2,13 @@ package tech.intellispaces.action.dataadapter;
 
 import tech.intellispaces.action.AbstractAction2;
 
-public class PredefinedDataAdapterAction<T>
+class PredefinedDataAdapterAction<T>
     extends AbstractAction2<T, Object[], Integer>
     implements DataAdapterAction<T>
 {
   private final T target;
 
-  public PredefinedDataAdapterAction(T target) {
+  PredefinedDataAdapterAction(T target) {
     this.target = target;
   }
 

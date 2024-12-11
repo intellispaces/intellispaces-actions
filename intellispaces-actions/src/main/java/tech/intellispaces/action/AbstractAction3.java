@@ -334,8 +334,8 @@ public abstract class AbstractAction3<R, D1, D2, D3> implements Action3<R, D1, D
   public Action2<R, D2, D3> convertToAction2(D1 data) {
     return convertToAction2(
         DataAdapters.predefined(data),
-        DataAdapters.direct(),
-        DataAdapters.direct()
+        DataAdapters.fixed(0),
+        DataAdapters.fixed(1)
     );
   }
 
