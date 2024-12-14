@@ -9,6 +9,7 @@ import tech.intellispaces.action.Action5;
 import tech.intellispaces.action.supplier.SupplierActions;
 import tech.intellispaces.general.function.QuadriFunction;
 import tech.intellispaces.general.function.QuintiFunction;
+import tech.intellispaces.general.function.TriConsumer;
 import tech.intellispaces.general.function.TriFunction;
 import tech.intellispaces.general.function.primitive.ObjectAndDoubleToDoubleFunction;
 import tech.intellispaces.general.function.primitive.ObjectAndDoubleToIntFunction;
@@ -101,6 +102,22 @@ public interface FunctionActions {
       BiConsumer<D1, D2> consumer, Type<D1> dataType1, Type<D2> dataType2
   ) {
     return new BiConsumerAction<>(consumer);
+  }
+
+  static <D1, D2, D3> Action3<Void, D1, D2, D3> ofTriConsumer(TriConsumer<D1, D2, D3> consumer) {
+    return ofTriConsumer(consumer, (Type<D1>) null, null, null);
+  }
+
+  static <D1, D2, D3> Action3<Void, D1, D2, D3> ofTriConsumer(
+      TriConsumer<D1, D2, D3> consumer, Class<D1> dataClass1, Class<D2> dataClass2, Class<D3> dataClass3
+  ) {
+    return ofTriConsumer(consumer, Types.get(dataClass1), Types.get(dataClass2), Types.get(dataClass3));
+  }
+
+  static <D1, D2, D3> Action3<Void, D1, D2, D3> ofTriConsumer(
+      TriConsumer<D1, D2, D3> consumer, Type<D1> dataType1, Type<D2> dataType2, Type<D3> dataType3
+  ) {
+    return new TriConsumerAction<>(consumer);
   }
 
   static <R, D> Action1<R, D> ofFunction(Function<D, R> function) {
