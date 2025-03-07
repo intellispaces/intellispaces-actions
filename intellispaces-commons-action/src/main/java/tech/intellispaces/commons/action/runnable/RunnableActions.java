@@ -1,9 +1,9 @@
 package tech.intellispaces.commons.action.runnable;
 
-import tech.intellispaces.commons.base.function.QuadriConsumer;
-import tech.intellispaces.commons.base.function.QuintiConsumer;
-import tech.intellispaces.commons.base.function.SexiConsumer;
-import tech.intellispaces.commons.base.function.TriConsumer;
+import tech.intellispaces.commons.function.QuadriConsumer;
+import tech.intellispaces.commons.function.QuintiConsumer;
+import tech.intellispaces.commons.function.SexiConsumer;
+import tech.intellispaces.commons.function.TriConsumer;
 
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;

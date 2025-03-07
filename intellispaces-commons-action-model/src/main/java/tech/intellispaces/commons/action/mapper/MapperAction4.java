@@ -1,7 +1,7 @@
 package tech.intellispaces.commons.action.mapper;
 
 import tech.intellispaces.commons.action.Action4;
-import tech.intellispaces.commons.base.function.QuadriFunction;
+import tech.intellispaces.commons.function.QuadriFunction;
 
 /**
  * The mapper action form 4.</p>

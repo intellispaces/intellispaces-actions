@@ -11,8 +11,8 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-import static tech.intellispaces.commons.base.type.PrimitiveFunctions.booleanToDouble;
-import static tech.intellispaces.commons.base.type.PrimitiveFunctions.booleanToInt;
+import static tech.intellispaces.commons.type.PrimitiveFunctions.booleanToDouble;
+import static tech.intellispaces.commons.type.PrimitiveFunctions.booleanToInt;
 
 /**
  * Tests for class {@link SkipFirstTimeInterceptor1}.

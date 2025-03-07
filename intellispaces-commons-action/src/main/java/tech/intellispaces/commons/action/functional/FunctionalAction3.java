@@ -1,7 +1,7 @@
 package tech.intellispaces.commons.action.functional;
 
 import tech.intellispaces.commons.action.AbstractAction3;
-import tech.intellispaces.commons.base.function.TriFunction;
+import tech.intellispaces.commons.function.TriFunction;
 
 class FunctionalAction3<R, D1, D2, D3> extends AbstractAction3<R, D1, D2, D3> {
   private final TriFunction<D1, D2, D3, R> function;

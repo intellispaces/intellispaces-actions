@@ -1,6 +1,6 @@
 package tech.intellispaces.commons.action;
 
-import tech.intellispaces.commons.base.object.Objects;
+import tech.intellispaces.commons.object.Objects;
 
 class Action0BasedOnAction1<R> extends AbstractAction0<R> {
   private final Action1<R, Void> action1;

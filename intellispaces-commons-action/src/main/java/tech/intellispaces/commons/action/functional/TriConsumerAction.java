@@ -1,7 +1,7 @@
 package tech.intellispaces.commons.action.functional;
 
 import tech.intellispaces.commons.action.processor.AbstractProcessorAction3;
-import tech.intellispaces.commons.base.function.TriConsumer;
+import tech.intellispaces.commons.function.TriConsumer;
 
 class TriConsumerAction<D1, D2, D3> extends AbstractProcessorAction3<D1, D2, D3> {
   private final TriConsumer<D1, D2, D3> consumer;

@@ -9,7 +9,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>intellispaces-commons-base-action</artifactId>
+    <artifactId>intellispaces-commons-action-base</artifactId>
     <packaging>jar</packaging>
 	
     <build>
@@ -33,7 +33,7 @@
         <!-- Intellispaces -->
         <dependency>
             <groupId>tech.intellispaces.commons</groupId>
-            <artifactId>intellispaces-commons-base-model</artifactId>
+            <artifactId>intellispaces-commons-model</artifactId>
         </dependency>
         <dependency>
             <groupId>tech.intellispaces.commons</groupId>

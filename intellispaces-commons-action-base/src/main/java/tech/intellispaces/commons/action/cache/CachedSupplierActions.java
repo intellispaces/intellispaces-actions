@@ -3,8 +3,8 @@ package tech.intellispaces.commons.action.cache;
 import tech.intellispaces.commons.action.interceptor.cache.CacheInterceptors;
 import tech.intellispaces.commons.action.supplier.SupplierAction;
 import tech.intellispaces.commons.action.supplier.SupplierActions;
-import tech.intellispaces.commons.base.function.QuadriFunction;
-import tech.intellispaces.commons.base.function.TriFunction;
+import tech.intellispaces.commons.function.QuadriFunction;
+import tech.intellispaces.commons.function.TriFunction;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;

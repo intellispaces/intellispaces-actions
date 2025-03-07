@@ -1,7 +1,7 @@
 package tech.intellispaces.commons.action.functional;
 
 import tech.intellispaces.commons.action.AbstractAction5;
-import tech.intellispaces.commons.base.function.QuintiFunction;
+import tech.intellispaces.commons.function.QuintiFunction;
 
 class FunctionalAction5<R, D1, D2, D3, D4, D5> extends AbstractAction5<R, D1, D2, D3, D4, D5> {
   private final QuintiFunction<D1, D2, D3, D4, D5, R> function;

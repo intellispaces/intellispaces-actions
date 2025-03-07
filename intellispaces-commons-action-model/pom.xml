@@ -28,7 +28,7 @@
     <dependencies>
         <dependency>
             <groupId>tech.intellispaces.commons</groupId>
-            <artifactId>intellispaces-commons-base-model</artifactId>
+            <artifactId>intellispaces-commons-model</artifactId>
         </dependency>
     </dependencies>
 </project>

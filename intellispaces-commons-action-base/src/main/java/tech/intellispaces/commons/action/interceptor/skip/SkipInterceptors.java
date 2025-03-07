@@ -8,7 +8,7 @@ import tech.intellispaces.commons.action.wrapper.WrapperAction;
 import tech.intellispaces.commons.action.wrapper.WrapperAction0;
 import tech.intellispaces.commons.action.wrapper.WrapperAction1;
 import tech.intellispaces.commons.action.wrapper.WrapperAction5;
-import tech.intellispaces.commons.base.exception.NotImplementedExceptions;
+import tech.intellispaces.commons.exception.NotImplementedExceptions;
 
 import java.util.function.Function;
 

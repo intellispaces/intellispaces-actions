@@ -1,6 +1,6 @@
 package tech.intellispaces.commons.action.supplier;
 
-import tech.intellispaces.commons.base.type.Type;
+import tech.intellispaces.commons.type.Type;
 
 /**
  * Provider of resettable supplier actions.

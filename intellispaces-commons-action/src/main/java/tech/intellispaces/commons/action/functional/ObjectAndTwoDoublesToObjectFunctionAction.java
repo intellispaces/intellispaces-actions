@@ -1,7 +1,7 @@
 package tech.intellispaces.commons.action.functional;
 
 import tech.intellispaces.commons.action.AbstractAction3;
-import tech.intellispaces.commons.base.function.primitive.ObjectAndTwoDoublesToObjectFunction;
+import tech.intellispaces.commons.function.primitive.ObjectAndTwoDoublesToObjectFunction;
 
 class ObjectAndTwoDoublesToObjectFunctionAction<R, D> extends AbstractAction3<R, D, Double, Double> {
   private final ObjectAndTwoDoublesToObjectFunction<D, R> function;

@@ -1,7 +1,7 @@
 package tech.intellispaces.commons.action.mapper;
 
 import tech.intellispaces.commons.action.Action3;
-import tech.intellispaces.commons.base.function.TriFunction;
+import tech.intellispaces.commons.function.TriFunction;
 
 /**
  * The mapper action form 3.</p>

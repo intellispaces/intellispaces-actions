@@ -1,6 +1,6 @@
 package tech.intellispaces.commons.action.exception;
 
-import tech.intellispaces.commons.base.exception.UnexpectedException;
+import tech.intellispaces.commons.exception.UnexpectedException;
 
 public class IrregularActionTypeException extends UnexpectedException {
 
