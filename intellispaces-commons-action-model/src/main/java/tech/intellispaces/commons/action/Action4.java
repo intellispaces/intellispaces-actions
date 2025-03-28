@@ -452,6 +452,33 @@ public interface Action4<R, D1, D2, D3, D4> extends Action {
   );
 
   /**
+   * Converts this action to the {@link Action3 action form 3}.
+   *
+   * @param dataExtractor1 the first data extractor.
+   * @param dataExtractor2 the second data extractor.
+   * @param dataExtractor3 the third data extractor.
+   * @param dataExtractor4 the fourth data extractor.
+   * @return the action {@link Action3}.
+   * @param <_D1> the first input data type.
+   * @param <_D2> the second input data type.
+   * @param <_D3> the third input data type.
+   */
+  <_D1, _D2, _D3> Action3<R, _D1, _D2, _D3> convertToAction3(
+      DataAdapterAction<D1> dataExtractor1,
+      DataAdapterAction<D2> dataExtractor2,
+      DataAdapterAction<D3> dataExtractor3,
+      DataAdapterAction<D4> dataExtractor4
+  );
+
+  /**
+   * Converts this action to the {@link Action3 action form 3}.
+   *
+   * @param data the data.
+   * @return the action {@link Action3}.
+   */
+  Action3<R, D2, D3, D4> convertToAction3(D1 data);
+
+  /**
    * Converts this action to the {@link Action5 action form 5}.
    */
   Action5<R, D1, D2, D3, D4, Void> convertToAction5();
