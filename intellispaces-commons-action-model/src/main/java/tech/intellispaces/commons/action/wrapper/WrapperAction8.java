@@ -1,9 +1,9 @@
 package tech.intellispaces.commons.action.wrapper;
 
-import tech.intellispaces.commons.action.Action6;
+import tech.intellispaces.commons.action.Action8;
 
 /**
- * The wrapper action that wraps the action of the {@link Action6 action form 6}.
+ * The wrapper action that wraps the action of the {@link Action8 action form 8}.
  *
  * @param <R> the action return type.
  * @param <D1> the first processed data type.
@@ -11,7 +11,7 @@ import tech.intellispaces.commons.action.Action6;
  * @param <D3> the third processed data type.
  * @param <D4> the fourth processed data type.
  * @param <D5> the fifth processed data type.
- * @param <D6> the sixth data type.
+ * @param <D6> the processed sixth data type.
  */
-public interface WrapperAction6<R, D1, D2, D3, D4, D5, D6> extends WrapperAction, Action6<R, D1, D2, D3, D4, D5, D6> {
+public interface WrapperAction8<R, D1, D2, D3, D4, D5, D6, D7, D8> extends WrapperAction, Action8<R, D1, D2, D3, D4, D5, D6, D7, D8> {
 }

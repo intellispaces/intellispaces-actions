@@ -84,6 +84,26 @@ public abstract class AbstractAction0<R> implements Action0<R> {
   }
 
   @Override
+  public <_R, _D1, _D2, _D3, _D4, _D5, _D6, _D7> Action7<_R, _D1, _D2, _D3, _D4, _D5, _D6, _D7> castToAction7() {
+    throw IrregularActionTypeExceptions.withMessage("Action of form 0 can not be represented as action form 7");
+  }
+
+  @Override
+  public <_R, _D1, _D2, _D3, _D4, _D5, _D6, _D7, _D8> Action8<_R, _D1, _D2, _D3, _D4, _D5, _D6, _D7, _D8> castToAction8() {
+    throw IrregularActionTypeExceptions.withMessage("Action of form 0 can not be represented as action form 8");
+  }
+
+  @Override
+  public <_R, _D1, _D2, _D3, _D4, _D5, _D6, _D7, _D8, _D9> Action9<_R, _D1, _D2, _D3, _D4, _D5, _D6, _D7, _D8, _D9> castToAction9() {
+    throw IrregularActionTypeExceptions.withMessage("Action of form 0 can not be represented as action form 8");
+  }
+
+  @Override
+  public <_R, _D1, _D2, _D3, _D4, _D5, _D6, _D7, _D8, _D9, _D10> Action10<_R, _D1, _D2, _D3, _D4, _D5, _D6, _D7, _D8, _D9, _D10> castToAction10() {
+    throw IrregularActionTypeExceptions.withMessage("Action of form 0 can not be represented as action form 10");
+  }
+
+  @Override
   public Action1<R, Void> convertToAction1() {
     return new Action1BasedOnAction0<>(this);
   }

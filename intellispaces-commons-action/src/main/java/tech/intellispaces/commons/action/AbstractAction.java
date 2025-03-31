@@ -58,4 +58,24 @@ public abstract class AbstractAction implements Action {
   public <R, D1, D2, D3, D4, D5, D6> Action6<R, D1, D2, D3, D4, D5, D6> castToAction6() {
     return new Action6BasedOnGeneralAction<>(this);
   }
+
+  @Override
+  public <R, D1, D2, D3, D4, D5, D6, D7> Action7<R, D1, D2, D3, D4, D5, D6, D7> castToAction7() {
+    return new Action7BasedOnGeneralAction<>(this);
+  }
+
+  @Override
+  public <R, D1, D2, D3, D4, D5, D6, D7, D8> Action8<R, D1, D2, D3, D4, D5, D6, D7, D8> castToAction8() {
+    return new Action8BasedOnGeneralAction<>(this);
+  }
+
+  @Override
+  public <R, D1, D2, D3, D4, D5, D6, D7, D8, D9> Action9<R, D1, D2, D3, D4, D5, D6, D7, D8, D9> castToAction9() {
+    return new Action9BasedOnGeneralAction<>(this);
+  }
+
+  @Override
+  public <R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> Action10<R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> castToAction10() {
+    return new Action10BasedOnGeneralAction<>(this);
+  }
 }

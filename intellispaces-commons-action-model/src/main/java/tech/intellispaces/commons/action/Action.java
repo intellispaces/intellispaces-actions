@@ -87,6 +87,30 @@ public interface Action {
   <R, D1, D2, D3, D4, D5, D6> Action6<R, D1, D2, D3, D4, D5, D6> castToAction6();
 
   /**
+   * Tries to return the {@link Action7 action form 7} of this action or
+   * throws {@link IrregularActionTypeException} if this action is not {@link Action6}.
+   */
+  <R, D1, D2, D3, D4, D5, D6, D7> Action7<R, D1, D2, D3, D4, D5, D6, D7> castToAction7();
+
+  /**
+   * Tries to return the {@link Action8 action form 8} of this action or
+   * throws {@link IrregularActionTypeException} if this action is not {@link Action6}.
+   */
+  <R, D1, D2, D3, D4, D5, D6, D7, D8> Action8<R, D1, D2, D3, D4, D5, D6, D7, D8> castToAction8();
+
+  /**
+   * Tries to return the {@link Action9 action form 9} of this action or
+   * throws {@link IrregularActionTypeException} if this action is not {@link Action6}.
+   */
+  <R, D1, D2, D3, D4, D5, D6, D7, D8, D9> Action9<R, D1, D2, D3, D4, D5, D6, D7, D8, D9> castToAction9();
+
+  /**
+   * Tries to return the {@link Action10 action form 10} of this action or
+   * throws {@link IrregularActionTypeException} if this action is not {@link Action6}.
+   */
+  <R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> Action10<R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> castToAction10();
+
+  /**
    * Wrap this action.
    *
    * @param wrapperFactory the wrapper action factory. It is the function that converts this action to wrapper action.
