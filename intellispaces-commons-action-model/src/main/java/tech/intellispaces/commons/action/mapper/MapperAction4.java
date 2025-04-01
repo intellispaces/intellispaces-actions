@@ -1,7 +1,7 @@
 package tech.intellispaces.commons.action.mapper;
 
 import tech.intellispaces.commons.action.Action4;
-import tech.intellispaces.commons.function.QuadriFunction;
+import tech.intellispaces.commons.function.Function4;
 
 /**
  * The mapper action form 4.</p>
@@ -15,7 +15,7 @@ import tech.intellispaces.commons.function.QuadriFunction;
  * @param <D4> the fourth input type.
  */
 public interface MapperAction4<R, D1, D2, D3, D4>
-    extends Action4<R, D1, D2, D3, D4>, QuadriFunction<D1, D2, D3, D4, R>
+    extends Action4<R, D1, D2, D3, D4>, Function4<D1, D2, D3, D4, R>
 {
   /**
    * Maps input data to result.

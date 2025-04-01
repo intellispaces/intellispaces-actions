@@ -1,5 +1,7 @@
 package tech.intellispaces.commons.action;
 
+import tech.intellispaces.commons.action.dataadapter.DataAdapterAction;
+import tech.intellispaces.commons.action.dataadapter.DataAdapters;
 import tech.intellispaces.commons.action.exception.IrregularActionTypeExceptions;
 import tech.intellispaces.commons.action.wrapper.WrapperAction;
 import tech.intellispaces.commons.action.wrapper.WrapperAction6;
@@ -660,6 +662,38 @@ public abstract class AbstractAction6<R, D1, D2, D3, D4, D5, D6> implements Acti
   @SuppressWarnings("unchecked")
   public double executeReturnDouble(D1 data1, double data2, double data3, double data4, double data5, double data6) {
     return executeReturnDouble(data1, (D2) Double.valueOf(data2), (D3) Double.valueOf(data3), (D4) Double.valueOf(data4), (D5) Double.valueOf(data5), (D6) Double.valueOf(data6));
+  }
+
+  @Override
+  public <_D1, _D2, _D3, _D4, _D5> Action5<R, _D1, _D2, _D3, _D4, _D5> convertToAction5(
+      DataAdapterAction<D1> dataExtractor1,
+      DataAdapterAction<D2> dataExtractor2,
+      DataAdapterAction<D3> dataExtractor3,
+      DataAdapterAction<D4> dataExtractor4,
+      DataAdapterAction<D5> dataExtractor5,
+      DataAdapterAction<D6> dataExtractor6
+  ) {
+    return new Action5ConvertedFromAction6<>(
+        this,
+        dataExtractor1,
+        dataExtractor2,
+        dataExtractor3,
+        dataExtractor4,
+        dataExtractor5,
+        dataExtractor6
+    );
+  }
+
+  @Override
+  public Action5<R, D2, D3, D4, D5, D6> convertToAction5(D1 data) {
+    return convertToAction5(
+        DataAdapters.predefined(data),
+        DataAdapters.fixed(0),
+        DataAdapters.fixed(1),
+        DataAdapters.fixed(2),
+        DataAdapters.fixed(3),
+        DataAdapters.fixed(4)
+    );
   }
 
   @Override

@@ -454,14 +454,14 @@ public interface Action4<R, D1, D2, D3, D4> extends Action {
   /**
    * Converts this action to the {@link Action3 action form 3}.
    *
-   * @param dataExtractor1 the first data extractor.
-   * @param dataExtractor2 the second data extractor.
-   * @param dataExtractor3 the third data extractor.
-   * @param dataExtractor4 the fourth data extractor.
-   * @return the action {@link Action3}.
-   * @param <_D1> the first input data type.
-   * @param <_D2> the second input data type.
-   * @param <_D3> the third input data type.
+   * @param dataExtractor1 a first data extractor.
+   * @param dataExtractor2 a second data extractor.
+   * @param dataExtractor3 a third data extractor.
+   * @param dataExtractor4 a fourth data extractor.
+   * @return an action {@link Action3}.
+   * @param <_D1> a first input data type.
+   * @param <_D2> a second input data type.
+   * @param <_D3> a third input data type.
    */
   <_D1, _D2, _D3> Action3<R, _D1, _D2, _D3> convertToAction3(
       DataAdapterAction<D1> dataExtractor1,
@@ -492,13 +492,13 @@ public interface Action4<R, D1, D2, D3, D4> extends Action {
    * Wraps this action using the wrapper factory and returns action in the form of the action 4.
    *
    * @param wrapperFactory the wrapper factory. It is the function that converts this action to wrapper action.
-   * @return the wrapper action.
-   * @param <W> the wrapper type.
-   * @param <_R> the wrapper return data type.
-   * @param <_D1> the wrapper first data type.
-   * @param <_D2> the wrapper second data type.
-   * @param <_D3> the wrapper third data type.
-   * @param <_D4> the wrapper fourth data type.
+   * @return a wrapper action.
+   * @param <W> a wrapper type.
+   * @param <_R> a wrapper return data type.
+   * @param <_D1> a wrapper first data type.
+   * @param <_D2> a wrapper second data type.
+   * @param <_D3> a wrapper third data type.
+   * @param <_D4> a wrapper fourth data type.
    */
   <W extends WrapperAction4<_R, _D1, _D2, _D3, _D4>, _R, _D1, _D2, _D3, _D4> Action4<_R, _D1, _D2, _D3, _D4> wrapAction4(
       Function<Action4<R, D1, D2, D3, D4>, W> wrapperFactory

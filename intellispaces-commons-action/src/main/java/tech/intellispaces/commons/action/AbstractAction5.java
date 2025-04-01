@@ -1,5 +1,7 @@
 package tech.intellispaces.commons.action;
 
+import tech.intellispaces.commons.action.dataadapter.DataAdapterAction;
+import tech.intellispaces.commons.action.dataadapter.DataAdapters;
 import tech.intellispaces.commons.action.exception.IrregularActionTypeExceptions;
 import tech.intellispaces.commons.action.wrapper.WrapperAction;
 import tech.intellispaces.commons.action.wrapper.WrapperAction5;
@@ -964,6 +966,35 @@ public abstract class AbstractAction5<R, D1, D2, D3, D4, D5> implements Action5<
   @Override
   public <_R, _D1, _D2, _D3, _D4, _D5, _D6, _D7, _D8, _D9, _D10> Action10<_R, _D1, _D2, _D3, _D4, _D5, _D6, _D7, _D8, _D9, _D10> castToAction10() {
     throw IrregularActionTypeExceptions.withMessage("Action of form 5 can not be represented as action form 10");
+  }
+
+  @Override
+  public <_D1, _D2, _D3, _D4> Action4<R, _D1, _D2, _D3, _D4> convertToAction4(
+      DataAdapterAction<D1> dataExtractor1,
+      DataAdapterAction<D2> dataExtractor2,
+      DataAdapterAction<D3> dataExtractor3,
+      DataAdapterAction<D4> dataExtractor4,
+      DataAdapterAction<D5> dataExtractor5
+  ) {
+    return new Action4ConvertedFromAction5<>(
+        this,
+        dataExtractor1,
+        dataExtractor2,
+        dataExtractor3,
+        dataExtractor4,
+        dataExtractor5
+    );
+  }
+
+  @Override
+  public Action4<R, D2, D3, D4, D5> convertToAction4(D1 data) {
+    return convertToAction4(
+        DataAdapters.predefined(data),
+        DataAdapters.fixed(0),
+        DataAdapters.fixed(1),
+        DataAdapters.fixed(2),
+        DataAdapters.fixed(3)
+    );
   }
 
   @Override

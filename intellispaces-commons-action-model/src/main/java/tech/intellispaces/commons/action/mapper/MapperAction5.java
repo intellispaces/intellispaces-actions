@@ -1,7 +1,7 @@
 package tech.intellispaces.commons.action.mapper;
 
 import tech.intellispaces.commons.action.Action5;
-import tech.intellispaces.commons.function.QuintiFunction;
+import tech.intellispaces.commons.function.Function5;
 
 /**
  * The mapper action form 5.</p>
@@ -16,7 +16,7 @@ import tech.intellispaces.commons.function.QuintiFunction;
  * @param <D5> the fifth input type.
  */
 public interface MapperAction5<R, D1, D2, D3, D4, D5>
-    extends Action5<R, D1, D2, D3, D4, D5>, QuintiFunction<D1, D2, D3, D4, D5, R>
+    extends Action5<R, D1, D2, D3, D4, D5>, Function5<D1, D2, D3, D4, D5, R>
 {
   /**
    * Maps input data to result.

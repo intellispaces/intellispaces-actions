@@ -3,7 +3,7 @@ package tech.intellispaces.commons.action.processor;
 import tech.intellispaces.commons.action.Action3;
 import tech.intellispaces.commons.action.runnable.RunnableAction;
 import tech.intellispaces.commons.action.wrapper.WrapperAction3;
-import tech.intellispaces.commons.function.TriConsumer;
+import tech.intellispaces.commons.function.Consumer3;
 
 import java.util.function.Function;
 
@@ -17,7 +17,7 @@ import java.util.function.Function;
  * @param <D2> second processed data type.
  * @param <D3> third processed data type.
  */
-public interface ProcessorAction3<D1, D2, D3> extends Action3<Void, D1, D2, D3>, TriConsumer<D1, D2, D3> {
+public interface ProcessorAction3<D1, D2, D3> extends Action3<Void, D1, D2, D3>, Consumer3<D1, D2, D3> {
 
   /**
    * Executes action.</p>

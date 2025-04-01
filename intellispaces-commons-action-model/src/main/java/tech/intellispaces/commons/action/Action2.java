@@ -168,10 +168,10 @@ public interface Action2<R, D1, D2> extends Action {
    *
    * @param wrapperFactory the wrapper factory. It is the function that converts this action to wrapper action.
    * @return the wrapper action.
-   * @param <W> the wrapper type.
-   * @param <_R> the wrapper return data type.
-   * @param <_D1> the wrapper first data type.
-   * @param <_D2> the wrapper second data type.
+   * @param <W> a wrapper type.
+   * @param <_R> a wrapper return data type.
+   * @param <_D1> a wrapper first data type.
+   * @param <_D2> a wrapper second data type.
    */
   <W extends WrapperAction2<_R, _D1, _D2>, _R, _D1, _D2> Action2<_R, _D1, _D2> wrapAction2(
       Function<Action2<R, D1, D2>, W> wrapperFactory

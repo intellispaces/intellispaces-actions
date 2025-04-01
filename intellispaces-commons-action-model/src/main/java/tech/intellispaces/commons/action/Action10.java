@@ -1,5 +1,6 @@
 package tech.intellispaces.commons.action;
 
+import tech.intellispaces.commons.action.dataadapter.DataAdapterAction;
 import tech.intellispaces.commons.action.wrapper.WrapperAction10;
 
 import java.util.function.Function;
@@ -38,6 +39,51 @@ public interface Action10<R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> extends Ac
    * The special form of the execute method to avoid autoboxing.
    */
   double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5, D6 data6, D7 data7, D8 data8, D9 data9, D10 data10);
+
+  /**
+   * Converts this action to the {@link Action9 action form 9}.
+   *
+   * @param dataExtractor1 a first data extractor.
+   * @param dataExtractor2 a second data extractor.
+   * @param dataExtractor3 a third data extractor.
+   * @param dataExtractor4 a fourth data extractor.
+   * @param dataExtractor5 a fifth data extractor.
+   * @param dataExtractor6 a sixth data extractor.
+   * @param dataExtractor7 a seventh data extractor.
+   * @param dataExtractor8 an eighth data extractor.
+   * @param dataExtractor9 a ninth data extractor.
+   * @param dataExtractor10 a tenth data extractor.
+   * @return an action {@link Action9}.
+   * @param <_D1> a first input data type.
+   * @param <_D2> a second input data type.
+   * @param <_D3> a third input data type.
+   * @param <_D4> a fourth input data type.
+   * @param <_D5> a fifth input data type.
+   * @param <_D6> a sixth input data type.
+   * @param <_D7> a seventh input data type.
+   * @param <_D8> an eighth input data type.
+   * @param <_D9> a ninth input data type.
+   */
+  <_D1, _D2, _D3, _D4, _D5, _D6, _D7, _D8, _D9> Action9<R, _D1, _D2, _D3, _D4, _D5, _D6, _D7, _D8, _D9> convertToAction9(
+      DataAdapterAction<D1> dataExtractor1,
+      DataAdapterAction<D2> dataExtractor2,
+      DataAdapterAction<D3> dataExtractor3,
+      DataAdapterAction<D4> dataExtractor4,
+      DataAdapterAction<D5> dataExtractor5,
+      DataAdapterAction<D6> dataExtractor6,
+      DataAdapterAction<D7> dataExtractor7,
+      DataAdapterAction<D8> dataExtractor8,
+      DataAdapterAction<D9> dataExtractor9,
+      DataAdapterAction<D10> dataExtractor10
+  );
+
+  /**
+   * Converts this action to the {@link Action9 action form 9}.
+   *
+   * @param data the data.
+   * @return the action {@link Action9}.
+   */
+  Action9<R, D2, D3, D4, D5, D6, D7, D8, D9, D10> convertToAction9(D1 data);
 
   /**
    * Wraps this action using the wrapper factory and returns action in the form of the action 10.

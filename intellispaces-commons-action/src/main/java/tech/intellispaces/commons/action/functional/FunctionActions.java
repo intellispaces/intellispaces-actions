@@ -2,15 +2,25 @@ package tech.intellispaces.commons.action.functional;
 
 import tech.intellispaces.commons.action.Action0;
 import tech.intellispaces.commons.action.Action1;
+import tech.intellispaces.commons.action.Action10;
 import tech.intellispaces.commons.action.Action2;
 import tech.intellispaces.commons.action.Action3;
 import tech.intellispaces.commons.action.Action4;
 import tech.intellispaces.commons.action.Action5;
+import tech.intellispaces.commons.action.Action6;
+import tech.intellispaces.commons.action.Action7;
+import tech.intellispaces.commons.action.Action8;
+import tech.intellispaces.commons.action.Action9;
 import tech.intellispaces.commons.action.supplier.SupplierActions;
-import tech.intellispaces.commons.function.QuadriFunction;
-import tech.intellispaces.commons.function.QuintiFunction;
-import tech.intellispaces.commons.function.TriConsumer;
-import tech.intellispaces.commons.function.TriFunction;
+import tech.intellispaces.commons.function.Function10;
+import tech.intellispaces.commons.function.Function4;
+import tech.intellispaces.commons.function.Function5;
+import tech.intellispaces.commons.function.Consumer3;
+import tech.intellispaces.commons.function.Function3;
+import tech.intellispaces.commons.function.Function6;
+import tech.intellispaces.commons.function.Function7;
+import tech.intellispaces.commons.function.Function8;
+import tech.intellispaces.commons.function.Function9;
 import tech.intellispaces.commons.function.primitive.ObjectAndDoubleToDoubleFunction;
 import tech.intellispaces.commons.function.primitive.ObjectAndDoubleToIntFunction;
 import tech.intellispaces.commons.function.primitive.ObjectAndDoubleToObjectFunction;
@@ -104,18 +114,18 @@ public interface FunctionActions {
     return new BiConsumerAction<>(consumer);
   }
 
-  static <D1, D2, D3> Action3<Void, D1, D2, D3> ofTriConsumer(TriConsumer<D1, D2, D3> consumer) {
-    return ofTriConsumer(consumer, (Type<D1>) null, null, null);
+  static <D1, D2, D3> Action3<Void, D1, D2, D3> ofConsumer3(Consumer3<D1, D2, D3> consumer) {
+    return ofConsumer3(consumer, (Type<D1>) null, null, null);
   }
 
-  static <D1, D2, D3> Action3<Void, D1, D2, D3> ofTriConsumer(
-      TriConsumer<D1, D2, D3> consumer, Class<D1> dataClass1, Class<D2> dataClass2, Class<D3> dataClass3
+  static <D1, D2, D3> Action3<Void, D1, D2, D3> ofConsumer3(
+      Consumer3<D1, D2, D3> consumer, Class<D1> dataClass1, Class<D2> dataClass2, Class<D3> dataClass3
   ) {
-    return ofTriConsumer(consumer, Types.get(dataClass1), Types.get(dataClass2), Types.get(dataClass3));
+    return ofConsumer3(consumer, Types.get(dataClass1), Types.get(dataClass2), Types.get(dataClass3));
   }
 
-  static <D1, D2, D3> Action3<Void, D1, D2, D3> ofTriConsumer(
-      TriConsumer<D1, D2, D3> consumer, Type<D1> dataType1, Type<D2> dataType2, Type<D3> dataType3
+  static <D1, D2, D3> Action3<Void, D1, D2, D3> ofConsumer3(
+      Consumer3<D1, D2, D3> consumer, Type<D1> dataType1, Type<D2> dataType2, Type<D3> dataType3
   ) {
     return new TriConsumerAction<>(consumer);
   }
@@ -166,26 +176,26 @@ public interface FunctionActions {
     return new FunctionalAction2<>(function);
   }
 
-  static <R, D1, D2, D3> Action3<R, D1, D2, D3> ofTriFunction(
-      TriFunction<D1, D2, D3, R> function)
+  static <R, D1, D2, D3> Action3<R, D1, D2, D3> ofFunction3(
+      Function3<D1, D2, D3, R> function)
   {
-    return ofTriFunction(function, (Type<R>) null, null, null, null);
+    return ofFunction3(function, (Type<R>) null, null, null, null);
   }
 
-  static <R, D1, D2, D3> Action3<R, D1, D2, D3> ofTriFunction(
-    TriFunction<D1, D2, D3, R> function,
+  static <R, D1, D2, D3> Action3<R, D1, D2, D3> ofFunction3(
+    Function3<D1, D2, D3, R> function,
     Class<R> resultClass,
     Class<D1> dataClass1,
     Class<D2> dataClass2,
     Class<D3> dataClass3
   ) {
-    return ofTriFunction(
+    return ofFunction3(
         function, Types.get(resultClass), Types.get(dataClass1), Types.get(dataClass2), Types.get(dataClass3)
     );
   }
 
-  static <R, D1, D2, D3> Action3<R, D1, D2, D3> ofTriFunction(
-      TriFunction<D1, D2, D3, R> function,
+  static <R, D1, D2, D3> Action3<R, D1, D2, D3> ofFunction3(
+      Function3<D1, D2, D3, R> function,
       Type<R> resultType,
       Type<D1> dataType1,
       Type<D2> dataType2,
@@ -194,21 +204,21 @@ public interface FunctionActions {
     return new FunctionalAction3<>(function);
   }
 
-  static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> ofQuadriFunction(
-      QuadriFunction<D1, D2, D3, D4, R> function
+  static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> ofFunction4(
+      Function4<D1, D2, D3, D4, R> function
   ) {
-    return ofQuadriFunction(function, (Type<R>) null, null, null, null, null);
+    return ofFunction4(function, (Type<R>) null, null, null, null, null);
   }
 
-  static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> ofQuadriFunction(
-      QuadriFunction<D1, D2, D3, D4, R> function,
+  static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> ofFunction4(
+      Function4<D1, D2, D3, D4, R> function,
       Class<R> resultClass,
       Class<D1> dataClass1,
       Class<D2> dataClass2,
       Class<D3> dataClass3,
       Class<D4> dataClass4
   ) {
-    return ofQuadriFunction(
+    return ofFunction4(
         function,
         Types.get(resultClass),
         Types.get(dataClass1),
@@ -218,8 +228,8 @@ public interface FunctionActions {
     );
   }
 
-  static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> ofQuadriFunction(
-      QuadriFunction<D1, D2, D3, D4, R> function,
+  static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> ofFunction4(
+      Function4<D1, D2, D3, D4, R> function,
       Type<R> resultType,
       Type<D1> dataType1,
       Type<D2> dataType2,
@@ -229,14 +239,14 @@ public interface FunctionActions {
     return new FunctionalAction4<>(function);
   }
 
-  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuintiFunction(
-      QuintiFunction<D1, D2, D3, D4, D5, R> function
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofFunction5(
+      Function5<D1, D2, D3, D4, D5, R> function
   ) {
-    return ofQuintiFunction(function, (Type<R>) null, null, null, null, null, null);
+    return ofFunction5(function, (Type<R>) null, null, null, null, null, null);
   }
 
-  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuintiFunction(
-      QuintiFunction<D1, D2, D3, D4, D5, R> function,
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofFunction5(
+      Function5<D1, D2, D3, D4, D5, R> function,
       Class<R> resultClass,
       Class<D1> dataClass1,
       Class<D2> dataClass2,
@@ -244,7 +254,7 @@ public interface FunctionActions {
       Class<D4> dataClass4,
       Class<D5> dataClass5
   ) {
-    return ofQuintiFunction(
+    return ofFunction5(
         function,
         Types.get(resultClass),
         Types.get(dataClass1),
@@ -255,8 +265,8 @@ public interface FunctionActions {
     );
   }
 
-  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofQuintiFunction(
-      QuintiFunction<D1, D2, D3, D4, D5, R> function,
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> ofFunction5(
+      Function5<D1, D2, D3, D4, D5, R> function,
       Type<R> resultType,
       Type<D1> dataType1,
       Type<D2> dataType2,
@@ -265,6 +275,241 @@ public interface FunctionActions {
       Type<D5> dataType5
   ) {
     return new FunctionalAction5<>(function);
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6> Action6<R, D1, D2, D3, D4, D5, D6> ofFunction6(
+      Function6<D1, D2, D3, D4, D5, D6, R> function
+  ) {
+    return ofFunction6(function, (Type<R>) null, null, null, null, null, null, null);
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6> Action6<R, D1, D2, D3, D4, D5, D6> ofFunction6(
+      Function6<D1, D2, D3, D4, D5, D6, R> function,
+      Class<R> resultClass,
+      Class<D1> dataClass1,
+      Class<D2> dataClass2,
+      Class<D3> dataClass3,
+      Class<D4> dataClass4,
+      Class<D5> dataClass5,
+      Class<D6> dataClass6
+  ) {
+    return ofFunction6(
+        function,
+        Types.get(resultClass),
+        Types.get(dataClass1),
+        Types.get(dataClass2),
+        Types.get(dataClass3),
+        Types.get(dataClass4),
+        Types.get(dataClass5),
+        Types.get(dataClass6)
+    );
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6> Action6<R, D1, D2, D3, D4, D5, D6> ofFunction6(
+      Function6<D1, D2, D3, D4, D5, D6, R> function,
+      Type<R> resultType,
+      Type<D1> dataType1,
+      Type<D2> dataType2,
+      Type<D3> dataType3,
+      Type<D4> dataType4,
+      Type<D5> dataType5,
+      Type<D6> dataType6
+  ) {
+    return new FunctionalAction6<>(function);
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7> Action7<R, D1, D2, D3, D4, D5, D6, D7> ofFunction7(
+      Function7<D1, D2, D3, D4, D5, D6, D7, R> function
+  ) {
+    return ofFunction7(function, (Type<R>) null, null, null, null, null, null, null, null);
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7> Action7<R, D1, D2, D3, D4, D5, D6, D7> ofFunction7(
+      Function7<D1, D2, D3, D4, D5, D6, D7, R> function,
+      Class<R> resultClass,
+      Class<D1> dataClass1,
+      Class<D2> dataClass2,
+      Class<D3> dataClass3,
+      Class<D4> dataClass4,
+      Class<D5> dataClass5,
+      Class<D6> dataClass6,
+      Class<D7> dataClass7
+  ) {
+    return ofFunction7(
+        function,
+        Types.get(resultClass),
+        Types.get(dataClass1),
+        Types.get(dataClass2),
+        Types.get(dataClass3),
+        Types.get(dataClass4),
+        Types.get(dataClass5),
+        Types.get(dataClass6),
+        Types.get(dataClass7)
+    );
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7> Action7<R, D1, D2, D3, D4, D5, D6, D7> ofFunction7(
+      Function7<D1, D2, D3, D4, D5, D6, D7, R> function,
+      Type<R> resultType,
+      Type<D1> dataType1,
+      Type<D2> dataType2,
+      Type<D3> dataType3,
+      Type<D4> dataType4,
+      Type<D5> dataType5,
+      Type<D6> dataType6,
+      Type<D7> dataType7
+  ) {
+    return new FunctionalAction7<>(function);
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7, D8> Action8<R, D1, D2, D3, D4, D5, D6, D7, D8> ofFunction8(
+      Function8<D1, D2, D3, D4, D5, D6, D7, D8, R> function
+  ) {
+    return ofFunction8(function, (Type<R>) null, null, null, null, null, null, null, null, null);
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7, D8> Action8<R, D1, D2, D3, D4, D5, D6, D7, D8> ofFunction8(
+      Function8<D1, D2, D3, D4, D5, D6, D7, D8, R> function,
+      Class<R> resultClass,
+      Class<D1> dataClass1,
+      Class<D2> dataClass2,
+      Class<D3> dataClass3,
+      Class<D4> dataClass4,
+      Class<D5> dataClass5,
+      Class<D6> dataClass6,
+      Class<D7> dataClass7,
+      Class<D8> dataClass8
+  ) {
+    return ofFunction8(
+        function,
+        Types.get(resultClass),
+        Types.get(dataClass1),
+        Types.get(dataClass2),
+        Types.get(dataClass3),
+        Types.get(dataClass4),
+        Types.get(dataClass5),
+        Types.get(dataClass6),
+        Types.get(dataClass7),
+        Types.get(dataClass8)
+    );
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7, D8> Action8<R, D1, D2, D3, D4, D5, D6, D7, D8> ofFunction8(
+      Function8<D1, D2, D3, D4, D5, D6, D7, D8, R> function,
+      Type<R> resultType,
+      Type<D1> dataType1,
+      Type<D2> dataType2,
+      Type<D3> dataType3,
+      Type<D4> dataType4,
+      Type<D5> dataType5,
+      Type<D6> dataType6,
+      Type<D7> dataType7,
+      Type<D8> dataType8
+  ) {
+    return new FunctionalAction8<>(function);
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7, D8, D9> Action9<R, D1, D2, D3, D4, D5, D6, D7, D8, D9> ofFunction9(
+      Function9<D1, D2, D3, D4, D5, D6, D7, D8, D9, R> function
+  ) {
+    return ofFunction9(function, (Type<R>) null, null, null, null, null, null, null, null, null, null);
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7, D8, D9> Action9<R, D1, D2, D3, D4, D5, D6, D7, D8, D9> ofFunction9(
+      Function9<D1, D2, D3, D4, D5, D6, D7, D8, D9, R> function,
+      Class<R> resultClass,
+      Class<D1> dataClass1,
+      Class<D2> dataClass2,
+      Class<D3> dataClass3,
+      Class<D4> dataClass4,
+      Class<D5> dataClass5,
+      Class<D6> dataClass6,
+      Class<D7> dataClass7,
+      Class<D8> dataClass8,
+      Class<D9> dataClass9
+  ) {
+    return ofFunction9(
+        function,
+        Types.get(resultClass),
+        Types.get(dataClass1),
+        Types.get(dataClass2),
+        Types.get(dataClass3),
+        Types.get(dataClass4),
+        Types.get(dataClass5),
+        Types.get(dataClass6),
+        Types.get(dataClass7),
+        Types.get(dataClass8),
+        Types.get(dataClass9)
+    );
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7, D8, D9> Action9<R, D1, D2, D3, D4, D5, D6, D7, D8, D9> ofFunction9(
+      Function9<D1, D2, D3, D4, D5, D6, D7, D8, D9, R> function,
+      Type<R> resultType,
+      Type<D1> dataType1,
+      Type<D2> dataType2,
+      Type<D3> dataType3,
+      Type<D4> dataType4,
+      Type<D5> dataType5,
+      Type<D6> dataType6,
+      Type<D7> dataType7,
+      Type<D8> dataType8,
+      Type<D9> dataType9
+  ) {
+    return new FunctionalAction9<>(function);
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> Action10<R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> ofFunction10(
+      Function10<D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, R> function
+  ) {
+    return ofFunction10(function, (Type<R>) null, null, null, null, null, null, null, null, null, null, null);
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> Action10<R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> ofFunction10(
+      Function10<D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, R> function,
+      Class<R> resultClass,
+      Class<D1> dataClass1,
+      Class<D2> dataClass2,
+      Class<D3> dataClass3,
+      Class<D4> dataClass4,
+      Class<D5> dataClass5,
+      Class<D6> dataClass6,
+      Class<D7> dataClass7,
+      Class<D8> dataClass8,
+      Class<D9> dataClass9,
+      Class<D10> dataClass10
+  ) {
+    return ofFunction10(
+        function,
+        Types.get(resultClass),
+        Types.get(dataClass1),
+        Types.get(dataClass2),
+        Types.get(dataClass3),
+        Types.get(dataClass4),
+        Types.get(dataClass5),
+        Types.get(dataClass6),
+        Types.get(dataClass7),
+        Types.get(dataClass8),
+        Types.get(dataClass9),
+        Types.get(dataClass10)
+    );
+  }
+
+  static <R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> Action10<R, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10> ofFunction10(
+      Function10<D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, R> function,
+      Type<R> resultType,
+      Type<D1> dataType1,
+      Type<D2> dataType2,
+      Type<D3> dataType3,
+      Type<D4> dataType4,
+      Type<D5> dataType5,
+      Type<D6> dataType6,
+      Type<D7> dataType7,
+      Type<D8> dataType8,
+      Type<D9> dataType9,
+      Type<D10> dataType10
+  ) {
+    return new FunctionalAction10<>(function);
   }
 
   static <D> Action1<Integer, D> ofObjectToIntFunction(ObjectToIntFunction<D> function) {

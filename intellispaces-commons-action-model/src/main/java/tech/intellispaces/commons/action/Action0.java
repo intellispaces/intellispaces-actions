@@ -62,9 +62,9 @@ public interface Action0<R> extends Action {
    * Wraps this action using the wrapper factory and returns action in the form of the action 0.
    *
    * @param wrapperFactory the wrapper factory. It is the function that converts this action to wrapper action.
-   * @return the wrapper action.
-   * @param <W> the wrapper type.
-   * @param <_R> the wrapper return data type.
+   * @return a wrapper action.
+   * @param <W> a wrapper type.
+   * @param <_R> a wrapper return data type.
    */
   <W extends WrapperAction0<_R>, _R> Action0<_R> wrapAction0(Function<Action0<R>, W> wrapperFactory);
 }

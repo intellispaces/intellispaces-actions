@@ -3,8 +3,8 @@ package tech.intellispaces.commons.action.cache;
 import tech.intellispaces.commons.action.interceptor.cache.CacheInterceptors;
 import tech.intellispaces.commons.action.supplier.SupplierAction;
 import tech.intellispaces.commons.action.supplier.SupplierActions;
-import tech.intellispaces.commons.function.QuadriFunction;
-import tech.intellispaces.commons.function.TriFunction;
+import tech.intellispaces.commons.function.Function4;
+import tech.intellispaces.commons.function.Function3;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -73,7 +73,7 @@ public interface CachedSupplierActions {
    * @return the supplier action.
    */
   static <R, D1, D2, D3> SupplierAction<R> get(
-      TriFunction<D1, D2, D3, R> function,
+      Function3<D1, D2, D3, R> function,
       D1 arg1,
       D2 arg2,
       D3 arg3
@@ -97,7 +97,7 @@ public interface CachedSupplierActions {
    * @return the supplier action.
    */
   static <R, D1, D2, D3, D4> SupplierAction<R> get(
-      QuadriFunction<D1, D2, D3, D4, R> function,
+      Function4<D1, D2, D3, D4, R> function,
       D1 arg1,
       D2 arg2,
       D3 arg3,

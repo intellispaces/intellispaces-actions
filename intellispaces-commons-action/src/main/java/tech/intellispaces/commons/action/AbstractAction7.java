@@ -1,5 +1,7 @@
 package tech.intellispaces.commons.action;
 
+import tech.intellispaces.commons.action.dataadapter.DataAdapterAction;
+import tech.intellispaces.commons.action.dataadapter.DataAdapters;
 import tech.intellispaces.commons.action.exception.IrregularActionTypeExceptions;
 import tech.intellispaces.commons.action.wrapper.WrapperAction;
 import tech.intellispaces.commons.action.wrapper.WrapperAction7;
@@ -32,12 +34,57 @@ public abstract class AbstractAction7<R, D1, D2, D3, D4, D5, D6, D7> implements 
   }
 
   @Override
+  public int executeReturnInt(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5, D6 data6, D7 data7) {
+    return (Integer) execute(data1, data2, data3, data4, data5, data6, data7);
+  }
+
+  @Override
   @SuppressWarnings("unchecked")
   public double executeReturnDouble(Object[] inputs) {
     if (inputs == null || inputs.length != 7) {
       throw IrregularActionTypeExceptions.withMessage("Action form 7 requires seven data");
     }
     return executeReturnDouble((D1) inputs[0], (D2) inputs[1], (D3) inputs[2], (D4) inputs[3], (D5) inputs[4], (D6) inputs[5], (D7) inputs[6]);
+  }
+
+  @Override
+  public double executeReturnDouble(D1 data1, D2 data2, D3 data3, D4 data4, D5 data5, D6 data6, D7 data7) {
+    return (Double) execute(data1, data2, data3, data4, data5, data6, data7);
+  }
+
+  @Override
+  public <_D1, _D2, _D3, _D4, _D5, _D6> Action6<R, _D1, _D2, _D3, _D4, _D5, _D6> convertToAction6(
+      DataAdapterAction<D1> dataExtractor1,
+      DataAdapterAction<D2> dataExtractor2,
+      DataAdapterAction<D3> dataExtractor3,
+      DataAdapterAction<D4> dataExtractor4,
+      DataAdapterAction<D5> dataExtractor5,
+      DataAdapterAction<D6> dataExtractor6,
+      DataAdapterAction<D7> dataExtractor7
+  ) {
+    return new Action6ConvertedFromAction7<>(
+        this,
+        dataExtractor1,
+        dataExtractor2,
+        dataExtractor3,
+        dataExtractor4,
+        dataExtractor5,
+        dataExtractor6,
+        dataExtractor7
+    );
+  }
+
+  @Override
+  public Action6<R, D2, D3, D4, D5, D6, D7> convertToAction6(D1 data) {
+    return convertToAction6(
+        DataAdapters.predefined(data),
+        DataAdapters.fixed(0),
+        DataAdapters.fixed(1),
+        DataAdapters.fixed(2),
+        DataAdapters.fixed(3),
+        DataAdapters.fixed(4),
+        DataAdapters.fixed(5)
+    );
   }
 
   @Override

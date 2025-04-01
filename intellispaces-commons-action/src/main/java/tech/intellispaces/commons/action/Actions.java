@@ -9,13 +9,13 @@ import tech.intellispaces.commons.action.supplier.ResettableSupplierAction;
 import tech.intellispaces.commons.action.supplier.ResettableSupplierActions;
 import tech.intellispaces.commons.action.supplier.SupplierAction;
 import tech.intellispaces.commons.action.supplier.SupplierActions;
-import tech.intellispaces.commons.function.QuadriConsumer;
-import tech.intellispaces.commons.function.QuadriFunction;
-import tech.intellispaces.commons.function.QuintiConsumer;
-import tech.intellispaces.commons.function.QuintiFunction;
-import tech.intellispaces.commons.function.SexiConsumer;
-import tech.intellispaces.commons.function.TriConsumer;
-import tech.intellispaces.commons.function.TriFunction;
+import tech.intellispaces.commons.function.Consumer4;
+import tech.intellispaces.commons.function.Function4;
+import tech.intellispaces.commons.function.Consumer5;
+import tech.intellispaces.commons.function.Function5;
+import tech.intellispaces.commons.function.Consumer6;
+import tech.intellispaces.commons.function.Consumer3;
+import tech.intellispaces.commons.function.Function3;
 import tech.intellispaces.commons.function.primitive.ObjectAndDoubleToDoubleFunction;
 import tech.intellispaces.commons.function.primitive.ObjectAndDoubleToIntFunction;
 import tech.intellispaces.commons.function.primitive.ObjectAndIntAndDoubleToDoubleFunction;
@@ -131,41 +131,41 @@ public interface Actions {
     return FunctionActions.ofBiFunction(function, resultClass, dataClass1, dataClass2);
   }
 
-  static <R, D1, D2, D3> Action3<R, D1, D2, D3> get(TriFunction<D1, D2, D3, R> function) {
-    return FunctionActions.ofTriFunction(function);
+  static <R, D1, D2, D3> Action3<R, D1, D2, D3> get(Function3<D1, D2, D3, R> function) {
+    return FunctionActions.ofFunction3(function);
   }
 
-  static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> get(QuadriFunction<D1, D2, D3, D4, R> function) {
-    return FunctionActions.ofQuadriFunction(function);
+  static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> get(Function4<D1, D2, D3, D4, R> function) {
+    return FunctionActions.ofFunction4(function);
   }
 
-  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> get(QuintiFunction<D1, D2, D3, D4, D5, R> function) {
-    return FunctionActions.ofQuintiFunction(function);
+  static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> get(Function5<D1, D2, D3, D4, D5, R> function) {
+    return FunctionActions.ofFunction5(function);
   }
 
   static <R, D1, D2, D3> Action3<R, D1, D2, D3> get(
-    TriFunction<D1, D2, D3, R> function,
+    Function3<D1, D2, D3, R> function,
     Class<R> resultClass,
     Class<D1> dataClass1,
     Class<D2> dataClass2,
     Class<D3> dataClass3
   ) {
-    return FunctionActions.ofTriFunction(function, resultClass, dataClass1, dataClass2, dataClass3);
+    return FunctionActions.ofFunction3(function, resultClass, dataClass1, dataClass2, dataClass3);
   }
 
   static <R, D1, D2, D3, D4> Action4<R, D1, D2, D3, D4> get(
-      QuadriFunction<D1, D2, D3, D4, R> function,
+      Function4<D1, D2, D3, D4, R> function,
       Class<R> resultClass,
       Class<D1> dataClass1,
       Class<D2> dataClass2,
       Class<D3> dataClass3,
       Class<D4> dataClass4
   ) {
-    return FunctionActions.ofQuadriFunction(function, resultClass, dataClass1, dataClass2, dataClass3, dataClass4);
+    return FunctionActions.ofFunction4(function, resultClass, dataClass1, dataClass2, dataClass3, dataClass4);
   }
 
   static <R, D1, D2, D3, D4, D5> Action5<R, D1, D2, D3, D4, D5> get(
-      QuintiFunction<D1, D2, D3, D4, D5, R> function,
+      Function5<D1, D2, D3, D4, D5, R> function,
       Class<R> resultClass,
       Class<D1> dataClass1,
       Class<D2> dataClass2,
@@ -173,7 +173,7 @@ public interface Actions {
       Class<D4> dataClass4,
       Class<D5> dataClass5
   ) {
-    return FunctionActions.ofQuintiFunction(
+    return FunctionActions.ofFunction5(
         function, resultClass, dataClass1, dataClass2, dataClass3, dataClass4, dataClass5
     );
   }
@@ -262,24 +262,24 @@ public interface Actions {
     return RunnableActions.get(consumer, data1, data2);
   }
 
-  static <D1, D2, D3> RunnableAction runnableAction(TriConsumer<D1, D2, D3> consumer, D1 data1, D2 data2, D3 data3) {
+  static <D1, D2, D3> RunnableAction runnableAction(Consumer3<D1, D2, D3> consumer, D1 data1, D2 data2, D3 data3) {
     return RunnableActions.get(consumer, data1, data2, data3);
   }
 
   static <D1, D2, D3, D4> RunnableAction runnableAction(
-      QuadriConsumer<D1, D2, D3, D4> consumer, D1 data1, D2 data2, D3 data3, D4 data4
+      Consumer4<D1, D2, D3, D4> consumer, D1 data1, D2 data2, D3 data3, D4 data4
   ) {
     return RunnableActions.get(consumer, data1, data2, data3, data4);
   }
 
   static <D1, D2, D3, D4, D5> RunnableAction runnableAction(
-      QuintiConsumer<D1, D2, D3, D4, D5> consumer, D1 data1, D2 data2, D3 data3, D4 data4, D5 data5
+      Consumer5<D1, D2, D3, D4, D5> consumer, D1 data1, D2 data2, D3 data3, D4 data4, D5 data5
   ) {
     return RunnableActions.get(consumer, data1, data2, data3, data4, data5);
   }
 
   static <D1, D2, D3, D4, D5, D6> RunnableAction runnableAction(
-      SexiConsumer<D1, D2, D3, D4, D5, D6> consumer, D1 data1, D2 data2, D3 data3, D4 data4, D5 data5, D6 data6
+      Consumer6<D1, D2, D3, D4, D5, D6> consumer, D1 data1, D2 data2, D3 data3, D4 data4, D5 data5, D6 data6
   ) {
     return RunnableActions.get(consumer, data1, data2, data3, data4, data5, data6);
   }

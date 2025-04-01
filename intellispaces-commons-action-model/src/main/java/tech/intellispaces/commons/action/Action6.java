@@ -1,5 +1,6 @@
 package tech.intellispaces.commons.action;
 
+import tech.intellispaces.commons.action.dataadapter.DataAdapterAction;
 import tech.intellispaces.commons.action.wrapper.WrapperAction6;
 
 import java.util.function.Function;
@@ -544,6 +545,39 @@ public interface Action6<R, D1, D2, D3, D4, D5, D6> extends Action {
    * The special form of the execute method to avoid autoboxing.
    */
   double executeReturnDouble(D1 data1, double data2, double data3, double data4, double data5, double data6);
+
+  /**
+   * Converts this action to the {@link Action5 action form 5}.
+   *
+   * @param dataExtractor1 a first data extractor.
+   * @param dataExtractor2 a second data extractor.
+   * @param dataExtractor3 a third data extractor.
+   * @param dataExtractor4 a fourth data extractor.
+   * @param dataExtractor5 a fifth data extractor.
+   * @param dataExtractor6 a sixth data extractor.
+   * @return an action {@link Action5}.
+   * @param <_D1> a first input data type.
+   * @param <_D2> a second input data type.
+   * @param <_D3> a third input data type.
+   * @param <_D4> a fourth input data type.
+   * @param <_D5> a fifth input data type.
+   */
+  <_D1, _D2, _D3, _D4, _D5> Action5<R, _D1, _D2, _D3, _D4, _D5> convertToAction5(
+      DataAdapterAction<D1> dataExtractor1,
+      DataAdapterAction<D2> dataExtractor2,
+      DataAdapterAction<D3> dataExtractor3,
+      DataAdapterAction<D4> dataExtractor4,
+      DataAdapterAction<D5> dataExtractor5,
+      DataAdapterAction<D6> dataExtractor6
+  );
+
+  /**
+   * Converts this action to the {@link Action5 action form 5}.
+   *
+   * @param data the data.
+   * @return the action {@link Action5}.
+   */
+  Action5<R, D2, D3, D4, D5, D6> convertToAction5(D1 data);
 
   /**
    * Wraps this action using the wrapper factory and returns action in the form of the action 6.
