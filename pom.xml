@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <description>Action models and providers.</description>
+    <description>A functional-styled library based on the concept of actions.</description>
 
     <parent>
         <groupId>tech.intellispaces</groupId>
@@ -15,7 +15,7 @@
 	<modules>
         <module>intellispaces-actions-model</module>
 	    <module>intellispaces-actions</module>
-        <module>intellispaces-actions-basic</module>
+        <module>intellispaces-actions-common</module>
 	</modules>
 
     <dependencyManagement>
