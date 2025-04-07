@@ -4,37 +4,36 @@
     <description>Action models and providers.</description>
 
     <parent>
-        <groupId>tech.intellispaces.parent</groupId>
+        <groupId>tech.intellispaces</groupId>
         <artifactId>intellispaces-parent-pom</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>tech.intellispaces.commons</groupId>
-    <artifactId>intellispaces-commons-action-parent</artifactId>
+    <artifactId>intellispaces-actions-parent</artifactId>
     <packaging>pom</packaging>
 
 	<modules>
-        <module>intellispaces-commons-action-model</module>
-	    <module>intellispaces-commons-action</module>
-        <module>intellispaces-commons-action-base</module>
+        <module>intellispaces-actions-model</module>
+	    <module>intellispaces-actions</module>
+        <module>intellispaces-actions-basic</module>
 	</modules>
 
     <dependencyManagement>
         <dependencies>
             <!-- Intellispaces -->
             <dependency>
-                <groupId>tech.intellispaces.commons</groupId>
+                <groupId>tech.intellispaces</groupId>
                 <artifactId>intellispaces-commons</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>tech.intellispaces.commons</groupId>
+                <groupId>tech.intellispaces</groupId>
                 <artifactId>intellispaces-commons-model</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>tech.intellispaces.commons</groupId>
-                <artifactId>intellispaces-commons-action-model</artifactId>
+                <groupId>tech.intellispaces</groupId>
+                <artifactId>intellispaces-actions-model</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
