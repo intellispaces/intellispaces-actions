@@ -4,7 +4,7 @@
     <description>Actions model</description>
 
     <parent>
-        <groupId>tech.intellispaces</groupId>
+        <groupId>tech.intellispaces.commons</groupId>
         <artifactId>intellispaces-actions-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -27,7 +27,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>tech.intellispaces</groupId>
+            <groupId>tech.intellispaces.commons</groupId>
             <artifactId>intellispaces-commons-model</artifactId>
         </dependency>
     </dependencies>

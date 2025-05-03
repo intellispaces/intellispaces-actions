@@ -4,7 +4,7 @@
     <description>A functional-styled library based on the concept of actions.</description>
 
     <parent>
-        <groupId>tech.intellispaces</groupId>
+        <groupId>tech.intellispaces.commons</groupId>
         <artifactId>intellispaces-parent-pom</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
@@ -22,17 +22,17 @@
         <dependencies>
             <!-- Intellispaces -->
             <dependency>
-                <groupId>tech.intellispaces</groupId>
+                <groupId>tech.intellispaces.commons</groupId>
                 <artifactId>intellispaces-commons</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>tech.intellispaces</groupId>
+                <groupId>tech.intellispaces.commons</groupId>
                 <artifactId>intellispaces-commons-model</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>tech.intellispaces</groupId>
+                <groupId>tech.intellispaces.commons</groupId>
                 <artifactId>intellispaces-actions-model</artifactId>
                 <version>0.0.1-SNAPSHOT</version>
             </dependency>
